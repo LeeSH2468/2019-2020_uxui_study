@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+
+	<!--[if lte IE 9]
+		<script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"></script>
+		<![endif] -->
+
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+	<link rel="apple-touch-icon" href="./favicon.png">
+
+	<title>웹기초이해하기</title>
+
+	<!-- CSS======================= -->
+	<style>
+		.hidden{font-size:0;}
+
+	</style>
+</head>
+<body>
+	<a href="./basic_01.html">돌아가기</a>
+	<!-- layout===================== -->
+	<h1>웹기초 이해하기</h1>
+	<h2>form 기초1</h2>
+	<p>form이란, 양방향 통신이 가능한 형식으로, 필요한 기능을 입력 또는 선택했을 경우<br />원하는 의사 전달을 가능하도록 요청하는 기능
+	</p>
+	<p><strong>예제</strong> : 검색, 로그인, sns 메신저 보내기, 댓글달기, 회원가입, 주문, 설문조사, 동의서체크 등</p>
+	<p><strong>form 사용시 주의사항</strong> : 백앤드 개발자와 협의를 많이하는 영역이기에 보다 더 정확하게 처리하는 것이 중요</p>
+	<hr />
+
+	<h3>form기본양식</h3>
+	<!-- form을 사용하겠다는 유무처리 
+		method : 정보를 다루는 성격- 공개(get) /보안(post) 
+		action : 작성 및 처리한 자료를 넘겨주는 경로-->
+	<form method="get" action="#">
+		<h4>구역형태</h4>
+		<fieldset>
+			<legend>구역의 제목</legend>
+
+			<label for="yourName">색<span class="hidden">을 지정해주세요.</span></label>
+			<input type="range" id="yourName" name="" value="신난다" />
+
+		</fieldset>
+		<h4>장바구니</h4>
+		<fieldset>
+			<legend>장바구니 물품 항목</legend>
+		</fieldset>
+
+		<h4>배송주소</h4>
+		<fieldset>
+			<legend>주소지 선택</legend>
+		</fieldset>
+
+		<h4>결재시스템</h4>
+		<fieldset>
+			<legend>결재 방식을 선택</legend>
+
+		</fieldset>
+
+		<h4>주문선택</h4>
+		<fieldset>
+			<legend>주문 선택 유무</legend>
+		</fieldset>
+	</form>
+
+
+<hr />
+	<!-- style====================== -->
+	<script></script>
+
+</body>
+</html>

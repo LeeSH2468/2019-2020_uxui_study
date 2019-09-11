@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- form_02.html -->
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=7"> <!--meta:compat -->
+	<!--[if lte IE 9]>
+		<script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"></script>		 <====이 부분은 직접 작성
+	<![endif]-->        																								  <!-- cc:ie9 -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png">     <!-- link:favicon 파일명 맞게 변경(icon,png) -->
+	<link rel="apple-touch-icon" href="favicon.png">											<!--link : touch -->	
+
+	<!-- emmet.io 단축키사이트 -->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.hidden{font-size:0;}
+	</style>
+</head>
+<body>
+	<h1>웹기초 이해하기</h1>
+	<h2>form기능 이해하기2</h2>
+	<form action="./index.html" method="post">
+	<fieldset>
+		<legend>입력형</legend>
+
+		<label for="userId">아이디<span class="hidden">를 입력하세요</span></label>
+			<input type="text" id="userId" name="userId" value="" /> <br />
+	
+		<label for="userPw">비밀번호<span class="hidden">를 입력하세요</span></label>
+			<input type="password" id="userPw" name="userPw" value="" /> <br />
+	
+	</fieldset>
+<!-- ============================================ -->
+	<fieldset>	
+		<legend>선택형</legend>
+		<p>다음중 가장 괜찮은 사람을 고르시오.</p>
+		<ol>
+			<li>				
+					<input type="radio" id="guy_01" name="sel_01" value="" />
+					<label for="guy_01">그린컴퓨터 수원점 강사 이도형</label>
+			</li>
+			<li>
+					<input type="radio" id="guy_02" name="sel_01" value="" />
+					<label for="guy_02">시도쌤</label>
+			</li>
+			<li>
+					<input type="radio" id="guy_03" name="sel_01" value="" />
+					<label for="guy_03">나</label>
+			</li>
+			<li>
+					<input type="radio" id="guy_03" name="sel_01" value="" />
+					<label for="guy_03">내가짱이다</label>
+			</li>									
+		</ol>
+
+		<p>오늘 먹고싶은 음식을 선택하시오.</p>
+		<ul>
+			<li>
+				<label for="selFood_01">칼국수</label>
+				<input type="checkbox" id="selFood_01" neme="food_01" value="칼국수" />
+				</li>
+			<li>
+				<label for="selFood_02">햄버거</label>
+				<input type="checkbox" checked="checked" id="selFood_02" neme="food_01" value="햄버거" />
+				</li>
+			<li>
+				<label for="selFood_03">라면</label>
+				<input type="checkbox" id="selFood_03" neme="food_01" value="라면" />
+				</li>
+			<li>
+				<label for="selFood_04">피자</label>
+				<input type="checkbox" id="selFood_04" neme="food_01" value="피자" />
+				</li>
+			<li>
+				<label for="selFood_05">스파게티</label>
+				<input type="checkbox" id="selFood_05" neme="food_01" value="스파게티" />
+				</li>
+		</ul>
+
+	</fieldset>
+<!-- ============================================ -->
+	<fieldset>	
+		<legend>버튼형</legend>
+		<!-- input type 형식에서 버튼기능은 label을 사용하지 않아도 무방 -->
+		<ul>
+			<li> 
+				<input type="reset" neme="reset" value="취소" />
+			</li>
+			<li> 
+				<input type="submit" name="ok"  value="동의및전송"/>
+			</li>
+			<li> 
+				<input type="image" src="./favicon.png" alt="우산이끼입니다." name="" title="우산이끼다!" />
+			</li>
+			<li>
+				<input type="file" value="" />
+			 </li>
+			<li>
+				<input type="button" name="btn" value="집으로가기" /> 
+			</li>
+		</ul>
+	</fieldset>
+<!-- ============================================ -->
+	<fieldset>	
+		<legend>특수형</legend>
+		<!-- 관리자 형식에 필요한 기능으로 사용자에게는 드러나지 않는 기능 -->
+			<input type="hidden" name="beforName" value="이전에 사용한 이름" />
+	</fieldset>
+<!-- ============================================ -->
+	<fieldset>	
+		<legend>멀티형</legend>
+			<lable for="multiText">전송메세지</lable>
+			<textarea cols="20" rows="5" name="multiText" value="" maxlength="100" readonly="readonly">빠밤!배가고프다!</textarea>
+			<p>
+			<lable for="selProduct">메뉴선택</lable>
+			<select name="selProduct" id="selProduct" multiple="3">
+				<option>상품을 선택하세요.</option>
+				<optgroup label="햄버거">
+				<option value="햄버거세트">감자튀김</option>
+				<option value="햄버거세트">불고기버거</option>
+				<option value="햄버거세트">치즈버거</option>
+				</optgroup>
+				<optgroup label="감튀">
+				<option value="햄버거세트">빅맥</option>
+				<option value="햄버거세트">상하이치킨버거세트</option>
+				</optgroup>
+			</select>
+			</p>
+
+			<button type="reset"> 취소버튼 역할을 하는 요소</button>
+			<button type="submit"> 확인버튼 역할을 하는 요소</button>
+			<button type="button"> 기본버튼 역할을 하는 요소</button>
+
+	</fieldset>
+</form>
+<!-- ============================================ -->
+</body>
+</html>

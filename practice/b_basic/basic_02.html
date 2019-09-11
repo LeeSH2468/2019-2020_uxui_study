@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>웹 기초 이해하기2</title>
+		<style>
+			/*
+			span{background-color:#f50;}
+			strong{font-weight:normal;}
+			em{font-style:nomal; font-size:1.3rem;}
+			ins{text-decoration:none;}
+			ins:hover{color:#f0a;}
+			del{text=decoration:none; font size:0.5rem;}*/
+			img{width:500px; height:330px;}
+		</style>
+	</head>
+	<body>	
+ <a href="./index.html"> 돌아가기</a> 
+		<h1>웹페이지 기초 이해하기</h1>
+		<h2>내용 및 강조의 표현</h2>
+		<p>내용에 일부 영역을 잡아서 별도의 추가 표현을 해보려 합니다.<br />
+			글씨를 <b>굵게</b>, <I>기울기</I>, <u>밑줄</u>, <s>취소선</s>을 처리 및 
+			<span>일부만 별도의 색</span>을 처리
+			하지만 이는 모두 특별한 의미가 없으므로 실제 사용에는 권장하지 않습니다.<br />
+			심지어 <span>S</span>는 완전히 삭제된 요소 <s>절대사용하지않음!</s>
+		</p>	
+		<hr />
+		<p>
+			내용에 단순하게 표현하는 것이 아닌, 더욱 디테일한 강조의 표현을 할 경우
+			<strong>위험, 경고,확실한 강조의 표기</strong>, </p><em>알림의 표기(한 번 더 상기,인지)</em>,<ins>체크메세지표기 기억하게 표시</ins>, <del>처리 후 표기 </del>	같은 내용을 작성하는 것은 따로 있다.<br /><br />
+			내용의 <mark>주의력을 높이기 위해표기하는 방법 : Makr</mark>
+			좀 더 의미있는 코드로 다가가기 위한 형태로서 접근성표기로 따지면, 컴퓨터의 읽기 형태조차 다르게 표현하고, 그것에 따른 의미를 부여하도록 제작.<br />
+			의미를 부여한 코드 : 시멘틱코드 <br />
+			span의 경우 단순하게 시각형태만 처리하는 inline요소의 div형식. 의미는 없다.
+		</p>
+		<hr />
+		<h2>링크,이미지</h2>
+			<p><a href="./index.html">페이지로가기</a></p>
+			<p><a href="./basic_01.html#content">내용으로가기</a></p>
+			![이미지설명](주소)
+		<div>
+			<!-- <img src="주소" alt="이미지설명"/> -->
+			<img src="./img/suwon_cityhall_map.jpg" alt="수원시청주소,연락처" 
+			/>
+		</div>
+	</body>	
+</html>

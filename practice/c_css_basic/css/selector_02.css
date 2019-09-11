@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* selector_02.css*/
+
+a{color:inherit; text-decoration: none;}
+
+.an_01{color:blue;}
+ul > .an_01{color:blue;}
+li > .an_01{color:red;}
+
+li a{background-color:#f0a;}
+ul a{background-color:#0af;}
+
+span{background:#ddd;}
+	a:hover >span{background-color:#4fa;}
+	a:active >span{background-color:blue;}
+	span:focus{background-color:#000;} /*적용x*/
+	a:focus > span{outline:5px solid #000;}
+	a:visited > span{color:#fff;} /*방문한 링크*/
+
+
+	/*focus 처리되는 기능은 : a,button,input,select,textarea */
+
+	p{margin:100px auto; width:500px; height:100px;
+		text-align: center; line-height: 100px;
+		border-width:3px; border-style:solid; border-color:#777;}
+
+	p:before{content:"어떻게될까요?"; color:#00f; font-weight: bold;}
+	p:after{content:"왜이렇게될까?"; color:#f00; font-weight: bold;}
