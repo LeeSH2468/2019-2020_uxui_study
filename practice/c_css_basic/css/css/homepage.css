@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* homepage.css */
+
+/* reset */
+html,body{margin:0; padding:0;}
+header, main, footer, article, section, aside{display:block;}
+ul,ol,li{margin:0; padding:0; border-style:none; list-style:none; } 
+
+
+/* common */
+.clearfix:after,
+.clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+.text_title{font-weight:bold;font-size:3rem;}
+/* design */
+#wrap{margin:auto; width:1900px; height:3560px; background-color:#faa;}
+#headBox{width:100%; height:120px;}
+
+#navBox_01{width:100%; height:30%; background-color:#0ad;}
+#navBox_01>ul {float:right; width:500px; height:100%; display:inline;}
+#navBox_01>ul>li {float:left; display:inline;}
+
+#navBox_02{width:100%; height:70%; background-color:#fa0;}
+#navBox_02>.main_nav {float:right; width:500px; height:100%; display:inline;}
+#navBox_02>.main_nav>li {margin:0; width:100%; height:auto; display:inline; }
+
+#navBox_02>.ico_nav {float:right; width:500px; height:100%; display:inline;}
+#navBox_02>.ico_nav>li{float:right;  width:150px; height:100%; display:inline;}
+/* headBox===================================== */
+#mainBox{width:100%; height:852px; background-color:#a0a;}
+#mainBox>.main_title{margin:auto; width:700px; height:100%; background-color:#0ad;}
+#mainBox>.button>ul{margin:auto;}
+#mainBox>.button>ul>li{float:left;margin:auto;display:block;}
+
+/* main======================================== */
+#viewBox{width:100%; height:900px; background-color:#1ad;}
+#sideBox{width:100%; height:852px; background-color:#6a8;}
+#numBox{width:100%;height:710px; background-color:#a7d;}
+#footBox{width:100%; height:126px; background-color:#aa1;}

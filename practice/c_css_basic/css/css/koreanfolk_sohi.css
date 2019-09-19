@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* koreanfolk_sohi.css */
+
+/* common */
+.clearfix:after,
+.clearfix::after{content:" "; display:block; width: 0;height: 0; clear:both;}
+
+.hidden{display:block; overflow:hidden; position:absolute; width: 0; height: 0;}
+
+/* layout */
+/* #wrap ================== */
+#wrap{width: 100%; min-width:940px; height: 4250px; margin:auto; background-color: #ddd;}
+
+#headBox{width: 1900px; height: 170px; background-color: #aaa;}
+#conBox{width: 1900px; height: 2620px; background: #999;}
+  .con_area{width: 1332px; height: 685px;  margin:auto;}
+
+  .view_area{width: 1332x; height: 970px;  margin:auto; background-color: #da7;}
+  .article_area{background-color: #fca;}
+  .news_area{ background-color: #da7;}
+  .map_area{ background-color: #fca;}
+  
+#footBox{width: 1900px; height: 319px; background-color:#555;}

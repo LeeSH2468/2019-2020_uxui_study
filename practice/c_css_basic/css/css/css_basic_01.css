@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* css_basic_01.css */
+
+.size_check{
+  width:800px;  height:800px; margin:auto;background-color:rgb(170, 255, 174);}
+
+  h3{margin :0; padding :1rem;
+      background-color: #fff;}
+
+  .size_check > p {
+    width:auto; min-width:400px; max-width:0px; height:auto; background-color:#0cc
+  }
+
+  /* 
+    단위 : 1cm => 10mm =>x
+    임의 단위는 있다 (http://www.endmemo.com/sconvert/millimeterpixel.php)
+
+  */
+
+
+    
+  .size_check > ul{margin:0; padding:0;width:100%; height:300px; background-color:#fa0;}
+  .size_check > ul > li{float:left; width:50px; height:50px;
+    border-width:5px; border-style:solid;
+    border-color:#333;
+    text-align:center; line-height:50px; list-style:none;}
+
+    .size_check > ul > li:first-child{background-color:#f07}
+    .size_check > ul > li:nth-child(2){background-color:rgb(0, 255, 76)}
+    .size_check > ul > li:nth-child(2){background-color:rgb(0, 217, 255)}
+    .size_check > ul > li:nth-child(3){background-color:rgb(255, 38, 0)}
+    .size_check > ul > li:nth-child(4){ visibility:visible; background-color:#f07}
+    .size_check > ul > li:nth-child(5){ visibility:hidden; background-color:rgb(0, 153, 255)}
+
+    .over{width:80%; min-width:500px; height:auto; background-color:#0df; padding:1rem; box-sizing:border-box;}
+
+    .over>p {margin:auto; margin-bottom:400px; width:450px; height:200px; width:450px; height:200px; border-width:2px; border-style:solid; border-color:#fa0;}
+
+    .one {overflow:auto;}
+    .two {overflow:hidden;}
+    .three {overflow:auto;}
+    .four {overflow:scroll;}
+    .five {overflow:scroll; overflow-x:hidden;}
+    .six {overflow:hidden;} 
+    
+    .six >span{ padding-right:20px; display:block; overflow:hidden; overflow-y:auto; width:100%; height:100%; background-color:#fff}
+
+    .over > .seven{height:30px; white-space:nowrap;text-overflow:ellipsis; overflow : hidden;}
+    /* overflow : 지정된 크기를 기준으로 내부의 영역이 넘친다면 어떻개 처리할것인가 */

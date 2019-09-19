@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* homepage_02.css */
+
+/* reset */
+html,body{margin:0; width:100%; height:100%; color:#333;}
+h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,pre,img{margin:0; padding:0; border:0;}
+ul,ol,li{list-style:none;}
+table,thead,tbody,tfoot,tr,th,td{margin:0; border-spacing:0; border-collapse:collapse; border:1px solid #777;}
+
+a{color:#777; text-decoration:none;}
+a:hover{color:#f9a;}
+a:focus{outline:2px solid #f04;}
+abbr{text-decoration:none; text-transform:uppercase;}
+button{border:0; cursor:pointer; background-color:transparent; color:#faa; border:2px solid #faa;}
+
+hr{margin:0; padding:0; border-bottom:1px solid #d33;}
+/* html5============== */
+main, header, footer, aside, nav, section, article, figure, figcaption{display:block;}
+
+/* form=============== */
+form, fieldset, legend{margin:0; padding:0; border:0;}
+legend{position:absolute; width:0; height:0; overflow:hidden;}
+input{box-sizing:border-box; text-indent:0.5rem; cursor:pointer;}
+button{border:0; background-color:#07f; color:#fff; cursor:pointer;}
+select, text-area{box-sizing:border-box;}
+
+/* common */
+.clearfix:after,
+.clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+
+/* design */
+#wrap{margin:auto; width:1900px; height:3560px;}
+
+#headBox{width:100%; height:120px; background-color:#07f}
+#navBox_01{width:100%; height:30%; background-color:#f64}
+#navBox_01>ul{float:right; width:400px; height:100%;}
+#navBox_01>ul>li{float:left; width:auto; height:100%;}
+#navBox_02{width:100%; height:70%; background-color:#564}
+#navBox_02>.h1_logo{float:left; width:auto; height:100%;}
+
+#navBox_02>.main_nav{float:left; width:auto; height:100%;}
+#navBox_02>.main_nav>li{margin:20px;float:left; width:auto; height:100;}
+
+#navBox_02>.icon_nav{float:right; width:auto; height:100%;}
+#navBox_02>.icon_nav>li{float:left; width:auto; height:100;}
+/* headBox========================= */
+
+#mainBox{width:100%; height:852px; background-color:#c46}
+#mainBox>.button_pre{width:130px; height:90px; background-color:#082;}
+#mainBox>.main_title{margin:auto; width:700px; height:100px; background-color:#0ad;text-align:center; }
+#mainBox>.button_next{width:130px; height:90px; background-color:#082; position:absolute;}
+#mainBox>.button_unber{margin:auto; width:900px; height:100px; background-color:#eaa; position:absolute;}
+/* mainBox========================= */
+
+#viewBox{width:100%; height:900px; background-color:#af1}
+#viewBox>.view_title{margin:auto; width: 150px; height: 100px; background-color:#298; text-align:center; }
+
+#viewBox>.viewIn_01{margin:30px auto; width:1000px; height: 300px; background-color: #fad;}
+#viewBox>.viewIn_01>.view01{float:left; margin:50px 25px; width: 400px; height: 200px; background-color: #ddd;}
+#viewBox>.viewIn_01>.view01>dl{margin:auto; width: 350px; height: 50px; background-color: #057; font-size:0.3rem;}
+#viewBox>.viewIn_01>.view01>dl>dt{float:left; margin:5px auto; width: 40px; height: 40px; background-color: #a37; font-size:0.3rem; box-sizing:border-box;}
+#viewBox>.viewIn_01>.view01>dl>dd{float:left; margin: auto; width: 250px; height: 20px; background-color: #fa3; font-size:0.3rem; box-sizing:border-box;}
+
+#viewBox>.viewIn_01>.view02{float:left; margin:50px 25px; width: 200px; height: 200px; background-color: #bbb;}
+#viewBox>.viewIn_01>.view03{float:left; margin:50px 25px; width: 200px; height: 200px; background-color: #aaa;}
+
+#viewBox>.viewIn_02{margin:auto; width:1000px; height: 300px; background-color: #aad;}
+#viewBox>.viewIn_02>.view04{float:left; margin:50px 25px auto; width: 200px; height: 200px; background-color: #999;}
+#viewBox>.viewIn_02>.view05{float:left; margin:50px 25px auto; width: 200px; height: 200px; background-color: #555;}
+#viewBox>.viewIn_02>.view06{float:left; margin:50px 25px auto; width: 200px; height: 200px; background-color: #444;}
+#viewBox>.viewIn_02>.view07{float:left; margin:50px 25px auto; width: 200px; height: 200px; background-color: #222;}
+/* viewBox========================= */
+
+#sideBox{width:100%; height:852px; background-color:#dca}
+#sideBox>.side_title{margin:auto; width:500px; height:100px; background-color:#f08a;text-align:center;}
+#sideBox>.videoBox{margin:50px auto; width: 900px; height: 500px; background-color: rgb(55, 67, 121);}
+/* sideBox========================= */
+
+#numBox{width:100%; height:710px; background-color:#55d}
+#numBox>.num_title{margin:auto;width: 300px; height: 100px; background-color: #3ca;text-align:center;}
+#numBox>.numInbox{margin:auto; width: 1500px;height: 500px; background-color:#d28;}
+#numBox>.numInbox>.num_box_01{float:left; margin:50px 30px auto;width: 300px; height: 400px; background-color: #3ca;text-align:center;}
+#numBox>.numInbox>.num_box_02{float:left;  margin:50px 30px auto;width: 300px; height: 400px; background-color: #3ca;text-align:center;}
+#numBox>.numInbox>.num_box_03{float:left;  margin:50px 30px auto;width: 300px; height: 400px; background-color: #3ca;text-align:center;}
+#numBox>.numInbox>.num_box_04{float:left;  margin:50px 30px auto;width: 300px; height: 400px; background-color: #3ca;text-align:center;}
+/* numBox========================= */
+
+#footBox{width:100%; height:126px; background-color:#7dc}
+#footBox>.footLogo{float:left; width: 100px; height: 50px; background-color: #383;}
+#footBox>.footInbox{float:left; width: 300px;height: 50px;background-color: #45a;}
+#footBox>.footInbox>.footList{width: 500px; height:30%;background-color: #a60;}
+#footBox>.footInbox>.footList>ul>li{float:left; margin:10px; width: 130px;height: 30px;background-color: #460;}
+#footBox>.footInbox>.footInfo{width: 500px; height:60%;background-color: #84a;}
+#footBox>.footInbox>.footInfo>dl>dd{font-size:0.8rem;}

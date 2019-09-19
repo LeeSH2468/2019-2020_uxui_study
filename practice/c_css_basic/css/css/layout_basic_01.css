@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* layout_basic_01.css */
+
+/* reset */
+html,body
+h1,h2,h3,h4,h5,h6,hr{margin:0; padding:0; border:0;}
+hr{border-top:1px solid #aaa;behavior:url(../ie/PIE/PIE.htc)}
+
+header, main, footer, article, section, aside{display:block;}
+
+/* design */
+body{background-color:#337;}
+h1,h2{color:#fff; text-align:center;}
+h1>a{color:inherit;}
+hr{border-color:#fff}
+
+#box{margin: 100px auto; width:600px; height:auto;}
+
+#headbox{width:100%; height:100px;background-color:#fa0; text-align:center;}
+#mainbox{width:100%; height:auto;background-color:#faa; text-align:center;}
+#mainbox:after,
+#mainbox::after {content:" "; display:block;width:0; height:0; clear:both;}
+
+ .con_wrap{float:left; width:70%; height:300px;background-color:#fff} 
+  .article_area{ width:100%; height:150px;background-color:#333;}
+  .cont_area{ width:100%; height:150px;background-color:#acc;}
+  .side_area{ /* width:-webkit-calc(100% / 3);
+      width:-moz-calc(100% / 3);
+      width:-ms-calc(100% / 3);
+      width:-ox-calc(100% / 3);
+      width:calc(100% / 3); */
+  float:left; width:30%; height:300px; background-color:#8f8;}
+
+#footbox{width:100%; height:100px;background-color:#33d; text-align:center;}
+
+/* 벤더프리픽스
+      width:-webkit-calc(100% / 3);
+      width:-moz-calc(100% / 3);
+      width:-ms-calc(100% / 3);
+      width:-ox-calc(100% / 3);
+      width:calc(100% / 3); */
