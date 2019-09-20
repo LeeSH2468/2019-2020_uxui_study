@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
       <link rel="stylesheet" href="../reset_test.css">
-        <link rel="stylesheet" href="../css/koreanfolk_sohi.css">
+      <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="../css/koreanfolk_sohi.css">
         <!--[if lte IE 9]>
           <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
           <script src="../ie/PIE/PIE.js"></script>   
@@ -20,27 +21,52 @@
   <!-- headBox ============== -->
   <header id="headBox">
       <div class="unb_area">
-        <h1>한국민속촌</h1>
+        <h1 ><a href="#"><span class="hidden">한국민속촌</span></a></h1>
         <div class="login_area">
            <h2 class="hidden">사용자 편의용 네비게이션 영역</h2>
         </div>
         <div class="lang_area"></div>
       </div>
-
+<!-- unb_area ====================== -->
      <div class="banner_area">
         <nav id="gnb">
             <h2 class="hidden">웹페이지 전체 네비게이션</h2>
         </nav>
      </div>
+<!-- banner_area ====================== -->
      
   </header>
-  <!-- conBox ==============  -->
-  <main id="conBox">
-    <div class="view_area"></div>
-    <div class="article_area con_area"></div>
-    <div class="news_area con_area"></div>
-    <div class="map_area con_area"></div>
 
+
+  <!-- mainBox ==============  -->
+  <main id="mainBox">
+    <div class="view_area con_area">
+      <h2 class="hidden">메인사진</h2>
+      
+    </div> <!-- view_area ================ -->
+
+
+    <div class="event_area con_area">
+      <h2 class="hidden"> 이벤트페이지</h2>
+        <h3>EVENT</h3>
+          <div class="next_but arrow_btn">a</div>
+          <div class="pre_but arrow_btn">a</div>
+          <div class="indicator">인디게이터aaaaa</div>
+          <div class="content"></div>
+    
+    
+        </div> <!-- event_area =================== -->  
+    <article class="news_area con_area">
+      <h2 class="hidden">공지사항 및 게시판</h2>
+      <div class="content"></div>
+
+
+    </article> <!-- news_area _area =================== -->
+    <div class="map_area con_area">
+      <h2 class="hidden">오시는 길</h2>
+        <h3>오시는 길</h3>
+        <div class="content"></div>
+    </div> <!-- map_area =================== -->
   </main>
   <!-- footBox ==============  -->
   <footer id="footBox">
@@ -48,10 +74,6 @@
   </footer>
 
 
-</div>
-
-
-<!-- script ============= -->
-    <script></script>
-  </body>
+  </div>
+</body>
 </html>
