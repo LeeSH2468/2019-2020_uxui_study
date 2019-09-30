@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* rwd_test_02.css */
+
+
+
+
+#wrap{width: 100%; height: auto; margin:auto; background-color: #ccc;}
+#headBox{position:fixed; top:0; left:0; z-index:1000; width: 100%; height: 3.75rem; padding:0.6875rem; box-sizing:border-box; background-color: #333;}
+  #headBox>h1{float:left; width: 7.875rem; height: 1.875rem; background-color: #fff;}
+  #headBox>ul{float:right; width: 5.5625rem;height: 2.375rem;}
+  #headBox>ul>li:nth-child(1){float:left; width: 2.25rem;height: 100%; margin-right: 0.4375rem; background-color: #fff;}
+  #headBox>ul>li:nth-child(2){float:left; width: 2.8125rem;height: 100%; background-color: #fff;}
+#conBox{width: 100%; height: auto; background-color: #999;}
+  #viewBox{width: 100%; height: 45rem; background-color: #ffa;}
+  #infoBox{width: 100%; height: 45rem; margin:auto; padding:1.5rem 1.5rem; box-sizing: border-box; background-color: #494;}
+    .box{width: 12rem; height: 9.75rem; background-color: #aff;}
+
+  .listBox{width: 100%; height: 100%; margin:auto;}
+    #listBox_01{float:left; width: 100%; height: 45rem; background-color: #8bd;}
+    #listBox_02{float:left; display:none;}
+    #listBox_03{float:left; display:none;}
+  
+
+
+#footBox{width: 100%; height: 3.75rem; padding:1.875rem; box-sizing: border-box; background-color: #333;}
+  #footBox>.logo{display:none;}
+
+
+
+/*  ========================================= */
+ @media screen and (max-width:480px){
+  #headBox{min-width:20rem}
+  #conBox{min-width:20rem}
+  #footBox{min-width:20rem}
+} 
+
+/*  ========================================= */
+ @media screen and (min-width:769px) and (max-width:959px){
+  #headBox>h1{width: 10.875rem; height: 2.625rem;}
+
+  #viewBox{height: 28.125rem;}
+  #infoBox{width: auto; height: 13.125rem;}
+  .listBox{width: 100%; height: 33.75rem;}
+    #listBox_01{float:left; width: 50%; height: 33.75rem;}
+    #listBox_02{display:block; float:left; width: 50%; height: 33.75rem; background-color: #a8d;}
+#footBox{height: 7.5rem;}
+} 
+/*  ========================================= */
+ @media screen and (min-width:960px){
+  #headBox>h1{width: 15.625rem; height: 2.5rem;}
+  #headBox>ul{ width: 31.1875rem;height: 1.875rem;}
+  #headBox>ul>li:nth-child(1){width: 3.125rem;height: 1.875rem;}
+  #headBox>ul>li:nth-child(2){width: 26.875rem;height: 1.875rem;}
+
+  #viewBox{height: 28.125rem;}
+  #infoBox{max-width: 60rem;height: 13.125rem;}
+  .listBox{width: 100%; max-width: 60rem; height: 33.75rem; margin:auto;}
+    #listBox_01{width: 33%; height: 33.75rem;}
+    #listBox_02{display:block; width: 34%; height: 33.75rem; background-color: #a8d;}
+    #listBox_03{display:block; width: 33%; height: 33.75rem; background-color: #ad8;}
+
+#footBox{height: 7.5rem;}
+  #footBox>.logo{display:block; width: 15.625rem; height: 2.8125rem; margin-left:3.125rem; box-sizing:border-box; background-color: #6ba;}
+ } 

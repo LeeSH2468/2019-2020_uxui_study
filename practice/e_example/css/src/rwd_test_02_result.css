@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* rwd_test_02_result.css */
+
+/* 작업순서 : 
+  1.큰 틀 체크(반응형일시-모바일먼저 작업)
+  2.각 범위의 큰 형태가 틀어지지 않게 체크
+  3.중간 범위의 형태들 내용잡고, 큰 틀의 높이값 한 번 더 체크
+  4.숨겨진 기능 (큰범위) 미리 세팅 후 확인
+  5.링크, 상세내용들을 체크
+  6.이미지처리, 애니메이션, 제어 등의 기능을 처리
+   */
+
+
+
+/* 공통영역 =============================================== */
+#wrap{width:100%; min-width:320px; height: auto; min-height:500px; padding-top:60px; background-color: #ccc;}
+  #headBox{position:fixed; top:0; left:0; z-index:1000; width: 100%; min-width:320px; height: 60px; background-color: #555;}
+  .area_wrap{margin:auto;width: 100%;  max-width:960px; height: 40px; background-color: #fff;}
+  #contentBox{width: 100%; height: auto;}
+  .view_area{width: 100%;height: 720px; background-color: #8b5;}
+  .tip_area{margin:auto; width: 100%; max-width:960px; height: 720px; background-color: #91a;}
+  .info_area{margin:auto; width: 100%;max-width:960px; height: 720px; background-color: #02a;}
+  #footBox{width: 100%; height:60px; background-color: #222;}
+
+
+/* -design 기준:480px ===============================================*/
+@media screen and (max-width:479px){
+}
+
+
+
+/* design 기준 : 480px =============================================== */
+@media screen and (min-width:480px) and (max-width:767px){
+
+}
+
+/* design 기준 : 768px =============================================== */
+@media screen and (min-width:768px) and (max-width:959px){
+  #footBox{height:120px}
+
+}
+
+/* design 기준 : 960px =============================================== */
+@media screen and (min-width: 960px) {
+#footBox{height:120px}
+
+}

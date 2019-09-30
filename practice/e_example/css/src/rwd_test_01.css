@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* rwd_test_01.css */
+
+#wrap{width: 81.25rem; height: 60rem; background-color: #f71;}
+
+#headBox{width: 100%; height: 9.375rem; background-color: #aaa;}
+  .head_01{float:left; width: 10%; height: 100%; background-color: #7b7;}
+  .head_02{float:left; width: 90%; height: 100%;background-color: #dd9;}
+
+#contentBox{width: 100%; height: 65.625em; background-color: #777;}
+  .con_big_01{width: 100%; height: 28.125rem; background-color: #d8d;}
+  .con_big_02{width: 100%; height: 37.5rem; background-color: #444;}
+  .con_big_02>div{display:block; float:left; width: 25%; height: 37.5rem; border:solid; box-sizing: border-box; background-color: #66d;}
+  .con_big_02>.con_02{background-color:#9c9;}
+  .con_big_02>.con_04{background-color:#9c9;}
+
+  .con_big_03{display: none;}
+  .con_big_04{display: none;}
+
+  /* .con_big_02>div:nth-child(2n){background-color:#9c9;} */
+
+#footBox{width:100%; height: 6.25rem; background-color: #ccc;}
+  .foot_01{float:left; width:10%; height: 6.25rem; background-color: #8bd;}
+  .foot_02{float:left; width: 90%; height: 6.25rem; background-color: #a82;}
+
+
+
+  @media screen and (min-width:769px) and (max-width:960px){
+    #wrap{width:100%; height:100%;}
+  }
+  
+  @media screen and (min-width:481px) and (max-width:768px){
+    #wrap{width: 100%; height: 100%; background-color: #2a7; text-shadow: none;}
+    .head_01{width: 10vw;}
+    .head_02{width: 90vw;}
+    .con_big_01{height:18.75rem;}
+    .con_big_02{height:25rem;}
+
+    .con_big_03{display: block; width: 100%; height: 6.25rem; display:block; background-color: #dd9;}
+    .con_big_04{display: block; width: 100%; height: 12.5rem; display:block; background-color: #f71;}
+  }
+  
+
+  @media screen and (max-width:480px){
+    #wrap{width: 100%; height: 100%; background-color: #2a7; text-shadow: none;}
+    .head_01{width: 100%;}
+    .head_02{display: none;}
+    .con_big_01{width: 100%; height: 25rem;}
+    .con_big_02>div:nth-child(2n){width: 50%; height: 12.5rem;}
+    .foot_01{margin:auto;}
+    
+    
+ 
+  }
+  
