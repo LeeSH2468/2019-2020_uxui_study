@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* koreanfolk_sohi.css */
+
+/* common */
+.clearfix:after,
+.clearfix::after{content:" "; display:block; width: 0;height: 0; clear:both;}
+
+.hidden{display:block; overflow:hidden; position:absolute; width: 0; height: 0;}
+
+/* layout */
+/* #wrap ================== */
+#wrap{width: 100%; min-width:1332px; height: auto; margin:auto; background-color: #ddd;}
+
+#headBox{width: 100%; height: 170px; margin:auto; background-color: #aaa;} /* 헤드박스에 나중에 포지션주기!! */
+
+#mainBox{width: 100%; height: auto; margin:auto; background: #999;}
+/* part별 공통 처리 영역 */
+  .con_area{width: 1332px; height: 718px; padding-top:100px; margin:auto;}
+  .con_area>h3{width: 100%; height:80px; margin-bottom:20px; text-align:center; font-size:80px; line-height:60px;}
+/* view_area ================ */
+  .view_area{margin:auto; background-color: #da7;}
+  
+
+/* event_area ================  */
+  .event_area{position:relative; background-color: #fca;}
+  
+  .arrow_btn{float:left;position:absolute; margin:auto; width: 140px; height: 140px; background-color: #afa;}
+  .next_but{}
+  .pre_but{}
+  .indicator{position:absolute; left:50%; bottom:65px;color:#fff; 
+    width: 348px; height: 40px; background-color: #aaa;}
+  
+  .event_area > .content{width: 100%; height: 100%; margin:auto; background-color: #faf;}
+
+/* news_area ================  */
+  .news_area{ background-color: #da7;}
+
+
+/* map_area ================  */
+  .map_area{background-color: #fca;}
+
+  
+
+
+
+/* footBot==================== */
+#footBox{width: 100%; height: 370px; margin:auto; background-color:#555;}
