@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* national_01_main.css */
+
+/* 공통 */
+
+/* common set =============================== */
+
+
+/* #wrap =============================== */
+#wrap{width: 100%; min-width: 480px;height: auto;}
+
+/* #headBox =============================== */
+#headBox{width: 100%; height: 80px; background-color: #000;}
+
+/* conBox =============================== */
+#conBox{width: 100%; height: auto; }
+
+
+
+/* .play_area =============================== */
+  .play_area{width: 100%; height: 250px; background-color: #aaa;}
+
+
+/* .move_area =============================== */
+  .move_area{width: 100%; height:auto;}
+  .move_area>ul{width: 480px; min-width: 480px; margin:auto;}
+    .move_area>ul>li{display:block; float:left; width: 158px;height: 200px; margin-right:3px; background-color: #777;}
+    .move_area>ul>li:last-child{margin-right:0;}
+
+/* .intro_ng_area =========================== */
+  .intro_ng_area{width: 100%;height: 670px; padding-top:52px;box-sizing:border-box; background-color: #aaa;}
+    .ng_image{width: 100%; height: 200px; background-color: #060;}
+    .ng_01>dl{text-align: center;}
+    .ng_01>dl>dt{margin-bottom:54px;}
+
+/* .intro_sub_area ========================== */
+  .intro_sub_area{width: 100%; height: 1500px; padding:50px; box-sizing:border-box; background-color: #777;}
+  .intro_sub_area dl{text-align:center;}
+  .intro_sub_area dl>dt{margin-bottom:54px;}
+  .intro_sub_area>div{width: 400px; height: 370px; margin:auto; margin-bottom:120px; background-color: #fff;}
+  .sub_image{width:100%; height: 156px; margin:auto; margin-bottom:40px; background-color: #060;}
+
+/* footBox =============================== */
+#footBox{width: 100%; height: 200px; background-color: #aaa;}
+
+
+
+/* - design 기준: 480px (mobile) */
+@media screen and (min-width:480px)  and (max-width:767px) {
+  /* #headBox ======================================== */
+  #gnb, #snsb{display:none;}
+  /* #contentBox ========================================== */
+
+  /* #footBox ============================================ */
+  
+  }/* @media screen and (min-width:480px)  and (max-width:767px)  */
+  
+  
+  
+  
+  /* - 디자인 기준 : 768px (tablet) */
+  @media screen and (min-width:768px)  and (max-width:959px) {
+  /* #headBox ======================================== */
+    
+  
+  /* #contentBox ========================================== */
+    
+  /* #footBox ============================================ */
+  
+    
+  }/* @media screen and 768px ~ 959px */
+  
+  
+  
+  
+  /* - design 기준: 960px  (pc) */
+  @media screen and (min-width:960px) {
+  /* #headBox ======================================== */
+  
+  
+  /* #contentBox ========================================== */
+  
+  /* #footBox ============================================ */
+  
+  }/* @media screen and (min-width:960px) */
