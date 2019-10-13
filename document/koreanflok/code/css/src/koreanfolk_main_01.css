@@ -3,12 +3,12 @@
 
 /* 공통 */
 /* common set ========================================== */
-	h3{width:100%; height:50px; margin-bottom:17px;	text-align: center; font-size:30px; line-height:60px;}
+	h3{width:100%; height:50px; margin-bottom:30px;	text-align: center; font-size:30px; line-height:60px;}
 /* #wrap ============================================ */
 #wrap{width: 100%; min-width:480px; height: auto;}
 
 /* #headBox ======================================== */
-#headBox{width: 100%; height: 70px; padding:20px 15px; box-sizing:border-box; background-color: #777;}
+#headBox{width: 100%; height: 80px; padding:20px 15px; box-sizing:border-box; background-color: #777;}
 h1{width: 84px; height: 40px; margin:auto; background-color: #ada;}
 
 
@@ -20,8 +20,10 @@ h1{width: 84px; height: 40px; margin:auto; background-color: #ada;}
 	.view_area{position:relative; width: 100%; height: 520px; background-color: #555;}
 		.indicator{position:absolute; left:0; right:0; margin:auto; bottom:30px; width: 200px; height: 40px;}
 
-		.indicator > ul > li{float:left; width:29px; margin:auto; margin-right:4px; background-color: #333;
-										padding:2px; box-sizing:border-box; }
+		.indicator > ul > li{float:left; width:30px; margin:auto; margin-right:4px; background-color: #333;
+										padding:2px; box-sizing:border-box;}
+		.indicator > ul > li:last-child{margin-right:0;}
+
 		.indicator a{color:inherit;}
 		
 		.arrow_btn {position:absolute; top:40%; width:auto; height:auto; color:#fff;}           
@@ -31,7 +33,7 @@ h1{width: 84px; height: 40px; margin:auto; background-color: #ada;}
 
 
 	/* .news_area ======================================== */
-	.news_area{width: 100%; height: auto; padding:20px 50px; box-sizing:border-box; background-color: #aaa;}
+	.news_area{width: 100%; height: auto; padding:30px 50px; box-sizing:border-box; background-color: #aaa;}
 	
 		.news_zone01{width: 100%; height:auto;}
 		.news_zone01>div{display:block; width: 100%; height:200px;  margin-bottom:30px;}		
@@ -47,7 +49,7 @@ h1{width: 84px; height: 40px; margin:auto; background-color: #ada;}
 			.group_section{background-color: #5ad;}
 
 	/* .map_area ======================================== */
-	.map_area{width: 100%; height: 100%; padding:50px; box-sizing:border-box; background-color: #777;}
+	.map_area{width: 100%; height: 100%; padding:30px; box-sizing:border-box; background-color: #777;}
 		.transit_section{width: 100%; height: 40px; background-color: #faf; margin-bottom:40px;}
 		.map_pic{width: 100%; height: 400px; background-color: #aaf;}
 
