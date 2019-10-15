@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<!-- jq_02.html -->
+<!-- jq_04_event.html -->
 <html lang="ko-KR">
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형웹 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- -->
   <meta name="description" content="웹페이지 실습에 따른 목차 구성">
   <meta name="keyword" content="html, css, js, web, design, portfolio, webportfolio, sohi">
   <meta name="author" content="sohiLee">
   <meta name="generator" content="illustrator, photoshop, indesign, sublimetext, vscode">
 
+  <link rel="stylesheet" href="../../font/web_gyeonggi/stylesheet.css">
   <link rel="stylesheet" href="../../css/base/reset.css">
   <link rel="stylesheet" href="../../css/base/common.css">
-  <link rel="stylesheet" href="../../css/src/jq_02.css">
+  <link rel="stylesheet" href="../../css/src/jq_04.css">
 <!--[if IE]>
   <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
   <script src="../../ie/PIE/PIE.js"></script>
   <script src="../../ie/Respond/dest/respond.min.js"></script>
-<link rel="stylesheet" href="../../css/src/jq_02.css">
 <![endif]-->
+
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="favicon.png">
   
@@ -35,49 +36,32 @@
   <!-- layout ============== -->
   <div id="wrap">
     <header id="headBox">
-      <h1><a href="../content.html">javascript 기초이해하기</a></h1>
+      <h1><a href="../content.html">jQuery</a></h1>
     </header>
     <main id="contentBox">
-      <h2>jQuery 기본이해하기</h2>
-      <h3>선택자</h3>
-      <div class="box">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quidem.</p>
-    
-      <dl>
-        <dt>제목title</dt>
-        <dd>Lorem ipsum dolor sit amet.</dd>
-        <dd>Lorem ipsum dolor sit amet.</dd>
-        <dd>Lorem ipsum dolor sit amet.</dd>
-      </dl>
-        <ul>
-        <li>list_1</li>
-        <li>list_2</li>
-        <li>list_3</li>
-        <li>list_4</li>
+      <h2>이벤트 이해하기</h2>
+      <p>이벤트란? 웹서비스를 이용했을 경우, 발생되는 다양한 상황이나 처리들을 의미한다.</p>
+      <ul>
+        <li>클릭</li>
+        <li>더블클릭</li>
+        <li>다른버튼 클릭</li>
+        <li>마우스 휠</li>
+        <li>마우스 이동
+            <div class="ball"></div>
+          </li>
+        <li>키보드 키 누르기 <input type="text" name="inText"placeholder="내용을 입력하세요."/></li>
+        <li>브라우저 스크롤 이동</li>
+        <li>브리우저 크기가 변경</li>
       </ul>
+      <p>링크나 버튼 기능을 가진 요소는, 기본 이벤트가 할당되어있다.</p>
 
-      <hr />
-      <h3>부모 선택자</h3>
-      <div id="first">
-        <div class="sub2">
-          <div class="area">
-            <ul>
-              <li>list</li>
-              <li>list</li>
-              <li><a href="#">
-                <strong>list</strong>
-              </a>
-            </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     </main>
   </div>
 <!-- script ================ -->
-  <script src="../../js/base/jquery-3.4.1.js"></script>
-  <script src="../../js/base/jquery-ui.js"></script>
-  <script src="../../js/src//jquery/jq_02.js"></script>
+<script src="../../js/base/jquery-3.4.1.js"></script>
+<script src="../../js/base/jquery-ui.js"></script>
+<script src="../../js/src//jquery/jq_04.js"></script>
+
 </body>
 </html>
