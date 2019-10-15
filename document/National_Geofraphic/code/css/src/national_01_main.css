@@ -41,17 +41,18 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
     background-repeat:no-repeat;
     background-position:50%, 50%;
     background-size: 100%,auto;}
-    .ng_01>dl{width: 100%; height: auto; padding:30px; box-sizing:border-box; text-align: center; word-break: keep-all;}
-    .ng_01>dl>dt{width: 100%; height: auto; margin-bottom:40px; text-transform: uppercase;}
+    .ng_01>dl{width: 100%; height: auto; padding:30px; box-sizing:border-box; text-align: center; word-break: keep-all; font-family: 'Noto Sans KR', sans-serif; }
+    .ng_01>dl>dt{width: 100%; height: auto; margin-bottom:40px; text-transform: uppercase;font-size:1.875rem; font-size:30px;}
     .ng_01>dl>dt:after,
-    .ng_01>dl>dt::after{content:" "; display:block; margin:auto; margin-top:30px; width: 150px;height: 2px; background-color:#ffd51c;}
+    .ng_01>dl>dt::after{content:" "; display:block; margin:auto; margin-top:30px; width: 150px;height: 2px; background-color:#ffd51c; font-size:1.25rem; font-size:20px;}
 
 
 /* .intro_sub_area ========================== */
   .intro_sub_area{width: 100%; height: auto; padding:50px; box-sizing:border-box; background-color: #000;}
-  .intro_sub_area dl{width:100%; height:auto; text-align:center; word-break: keep-all;}
-  .intro_sub_area dl>dt{width:100%; height:auto;margin-bottom:54px; text-transform: uppercase;}
-  .intro_sub_area>div{width: calc(96% / 3); height: 380px; margin:auto; margin-right:calc(4%/3); color:#fff;}
+  .intro_sub_area dl{width:100%; height:auto;  text-align:center; word-break: keep-all;}
+  .intro_sub_area dl>dt{width:100%; height:auto;margin-bottom:54px; text-transform: uppercase;font-size:1.5625rem; font-size:25px;}
+
+  .intro_sub_area>div{width: calc(96% / 3); height: 380px; margin:auto; margin-right:calc(4%/3); color:#fff;font-size:1.125rem; font-size:18px;}
   .sub_image:before,
   .sub_image::before{content:" "; display:block; position: absolute; top:-19px;  left:50%; transform:translateX(-50%); z-index:100; width: 26px; height: 38px; border:3px solid #ffd51c;}
   .sub_image{position: relative; width:100%; height: 156px; margin:auto; margin-bottom:40px;}
@@ -63,7 +64,7 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
 
 /* footBox =============================== */
 #footBox{width: 100%; height: auto; background-color: #000; padding:30px; box-sizing:border-box; border-top:1px solid #999;}
-#footBox>h3{width: 100%;height: auto;  margin-bottom:10px; text-transform:uppercase; color:#999;}
+#footBox>h3{width: 100%;height: auto;  margin-bottom:10px; text-transform:uppercase; color:#999; font-family: 'Noto Sans KR', sans-serif;}
   .contact_area{width: 100%; height: auto;}
     .contact{width:auto; height: auto;}
     .contact>li{float:left; color:#999; margin:auto; margin-right:50px;  margin-bottom:30px;white-space: nowrap;}
