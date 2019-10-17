@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- acodion.html -->
+<html lang="ko-KR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="웹페이지 실습에 따른 목차 구성">
+  <meta name="keyword" content="html, css, js, web, design, portfolio, webportfolio, sohi">
+  <meta name="author" content="sohiLee">
+  <meta name="generator" content="illustrator, photoshop, indesign, sublimetext, vscode">
+
+<!-- <link rel="stylesheet" href="../../font/web_gyeonggi/stylesheet.css"> -->
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <link rel="stylesheet" href="../../css/src/acodion.css">
+<!--[if IE]>
+  <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../../ie/PIE/PIE.js"></script>
+  <script src="../../ie/Respond/dest/respond.min.js"></script>
+<link rel="stylesheet" href="../../css/src/acodion.css">
+<![endif]-->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.png">
+  
+  <title>javascript 이해하기</title>
+</head>
+<body>
+<!-- noscript : javascript를 지원하지 않는 브라우저 설정-->
+  <noscript>
+    <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br />
+    자바스크립트의 기능을 활성화 해주세요.</p>
+    <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화하기</a></p>
+  </noscript>
+  <!-- layout ============== -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="../content.html">js 기초</a></h1>
+      <!-- nav#gnb>h2{내용}+ul>li*8>a[href="#"]{link_$$}+ul>li*5>a[href="#"]{sub_link_$$} -->
+      <nav id="gnb">
+        <h2>내용</h2>
+        <ul>
+          <li>
+            <a href="#">link_01</a>
+            <ul>
+              <li><a href="#">sub_link_01</a></li>
+              <li><a href="#">sub_link_02</a></li>
+              <li><a href="#">sub_link_03</a></li>
+              <li><a href="#">sub_link_04</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">link_02</a>
+            <ul>
+              <li><a href="#">sub_link_01</a></li>
+              <li><a href="#">sub_link_02</a></li>
+              <li><a href="#">sub_link_03</a></li>
+              <li><a href="#">sub_link_04</a></li>
+              <li><a href="#">sub_link_05</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#">link_03</a>
+            <ul>
+              <li><a href="#">sub_link_01</a></li>
+              <li><a href="#">sub_link_02</a></li>
+              <li><a href="#">sub_link_03</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">link_04</a>
+            <ul>
+              <li><a href="#">sub_link_01</a></li>
+              <li><a href="#">sub_link_02</a></li>
+              <li><a href="#">sub_link_03</a></li>
+              <li><a href="#">sub_link_04</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="contentBox">
+<!--      <h2>jQuery 아코디언- 세로형</h2>
+
+      <div class="accordion_menu_v">
+        <dl>
+          <dt>제목영역</dt>
+          <dd>내용 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quis eos aperiam ratione nemo beatae accusantium ipsum. Nostrum iste eaque amet, soluta similique, corrupti dolorum, maiores doloremque laboriosam commodi nihil!</dd>
+          <dt>제목영역</dt>
+          <dd>내용 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quis eos aperiam ratione nemo beatae accusantium ipsum. Nostrum iste eaque amet, soluta similique, corrupti dolorum, maiores doloremque laboriosam commodi nihil!</dd>
+          <dt>제목영역</dt>
+          <dd>내용 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quis eos aperiam ratione nemo beatae accusantium ipsum. Nostrum iste eaque amet, soluta similique, corrupti dolorum, maiores doloremque laboriosam commodi nihil!  ratione nemo beatae accusantium ipsum. Nostrum iste eaque amet ratione nemo beatae accusantium ipsum. Nostrum iste eaque amet</dd>
+          <dt>제목영역</dt>
+          <dd>내용 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quis eos aperiam ratione nemo beatae accusantium ipsum. Nostrum iste eaque amet, soluta similique, corrupti dolorum, maiores doloremque laboriosam commodi nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</dd>
+        </dl>
+      </div>
+    -->
+    </main>
+  </div>
+<!-- script ================ -->
+<script src="../../js/base/jquery-3.4.1.js"></script>
+<script src="../../js/base/jquery-ui.js"></script>
+<!-- <script src="../../js/src/jquery/acodion.js"></script> -->
+<script src="../../js/src/jquery/gnb_01.js"></script>
+</body>
+</html>
