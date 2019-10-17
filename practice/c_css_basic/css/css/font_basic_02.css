@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* font_basic_02.css */
+/**font data summary
+  *웹폰트
+  * @font-face {}   : 서체를 강제로 정의할 때 사용하는 기능 (비디오 요소와 마찬가지로 외부 폰트 문서를 불러와서 설정하는 기능)
+  * @font-face{ font- family : ...} 불러온 폰트파일의 이름을 제정하는 것.
+
+
+*/
+p{font-family:gyeonggi;}
+.conver_01{font-weight: normal;}
+.conver_02{font-weight: bold;}
+.conver_03{font-weight: 300;}
+.conver_04{font-weight: b; color:#fa0;}
+.conver_05{font-weight: normal;}

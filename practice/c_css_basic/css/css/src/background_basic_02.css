@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* background_basic_02.css */
+
+#contentBox{width:800px; height:auto; margin:auto; border:2px solid #333; box-sizing:border-box;}
+#contentBox > div{width:800px; height:500px; background-repeat:no-repeat; background-position:50% 50%;background-size:cover;}
+.box_01{background-image:url(../../../img/cat_h_01.jpg); background-attachment:local;}
+.box_02{background-image:url(../../../img/cat_v_02.jpg); background-attachment:fixed;}
+.box_03{background-image:url(../../../img/macaron_h_01.jpg);background-attachment:scroll;}
+
+#contentBox > div{overflow:hidden; overflow-y:auto; border-bottom:4px solid #fff;}
+#contentBox > div >h3{width: 100%; height: 70px; background-color: rgba(255,100,0,0.3);}
+#contentBox > div >ul{width: 100%; padding-left:1rem; box-sizing:border-box}
+#contentBox > div >ul>li{list-style:decimal; height: 50px; margin-bottom:20px;background-color:rgba(255,255,255,0.3);}
+
+/* background-attachment:배경이미지고정 유무를 판단 */
+#gradientBox{width: 800px; height: auto; margin:auto; margin-top:2rem; border:3px dotted #333;}
+#gradientBox>div{width: 100%; height: 500px; margin-bottom: 1rem;}
+#gradientBox>div:last-of-type{margin-bottom: 0; border-bottom:1px solid #333;}
+.gr_01{background-color:#faf; background-image:linear-gradient(#faf, #0af,#fff);}
+.gr_02{background-color:#0af; background-image:linear-gradient(45deg,#faf, #f90);}
+.gr_03{background-color:#aaf; background-image:linear-gradient(90deg, #0af 30%, #faf 30%, #add 50%);}
+
+.gr_04{background-color:#faa; background-image:linear-gradient(-45deg,#fac 30% ,#86f 30% 80%,#171717 80%);}
+.gr_04:hover{background-image:linear-gradient(-45deg,#171717 30% ,#86a 30% 80%,#fac 80%);}
+
+.gr_05{position:relative; z-index:0; background-image:linear-gradient(-45deg,#fac, #acf);}
+.gr_05:after{content:" "; display:block;position: absolute; z-index:-1; top:0; left:0; width: 100%; height: 100%; opacity:0; background-image:linear-gradient(-45deg,#0ac, #a0f);transition:all 300ms ease;}
+.gr_05:hover:after{opacity:1;}
+
+.gr_06{background-image:radial-gradient(circle, #fa0 50% , #acf 70%);}
+.gr_07{background-image:radial-gradient(ellipse, #fa0 50% , #acf 70%);}
+.gr_08{background-image:radial-gradient(ellipse at 10% 10%,#fa0 50% , #acf 70%);}
+
+
