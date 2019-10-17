@@ -27,8 +27,8 @@
   // $('ul').children('li').eq(0).css({"borderBottom":"2px solid #333"});
   // $('ul').children('li').eq(-1).css({"borderBottom":"2px solid #f05"});
 
-  //$('ul').find('li:eq(-2)').siblings().css({"borderLeft": "3px solid #f06"});
-  //$('dd').parents('.box').css({"backgroundColor": "#ff0"});
+  $('ul').find('li:eq(-2)').siblings().css({"borderLeft": "3px solid #f06"});
+  $('dd').parents('.box').css({"backgroundColor": "#ff0"});
 
   
 // 자식 : children
@@ -42,16 +42,5 @@
 // 형제(바로위 형) : prev
 // 형제(형들) : prevAll
 // 다른형제(나를제외) : siblings
-
-let first = $ ("#first");
-let str = first.find('strong');
-
-first.css({"padding":"0.5rem", "backgroundColor":"#fcc"});
-first.find("strong").css({"color":"#07f"});
-
-//str.parent().css({"padding":"0.3rem","backgroundColor":"#ccf"});
-//str.parents().css({"padding":"0.2rem","border":"1px solid #333"})
-str.parentsUntil(first).css({"padding":"0.2rem","border":"1px dotted #9af"})
-//str.closest("#first").css({'padding':"0.2rem","border":"10px dotted #fa4"})
 
 })(jQuery);
