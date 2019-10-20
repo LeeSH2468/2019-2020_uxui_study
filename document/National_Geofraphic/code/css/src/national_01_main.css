@@ -20,7 +20,7 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
   #gnb>ul>li>a{color:#fff;}
   #gnb>ul>li>a:hover{color:#ffd51c; font-size:1.3125rem; font-size:21px;}
 
-  .m_popup{display:none; position: relative; top:50%; left:50%; margin:250px 0 0 -450px; z-index:1000; width:900px; height:300px; background-color: rgba(0,0,0,0.3);}
+  .m_popup{position: relative; top:50%; left:50%; margin:250px 0 0 -450px; z-index:1000; width:900px; height:300px; background-color: rgba(0,0,0,0.3);}
   .origin_maga{float:left; width: 448px; height: 100%; margin-right:4px; background-color: rgba(0,0,0,0.8);}
   .traver_maga{float:left; width: 448px; height: 100%; background-color: rgba(0,0,0,0.8);}
   .origin_img,
@@ -174,9 +174,6 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
   .view_area>ul>li{float:left; width: 30%; margin:0 10px 10px;}
   .view_area>ul>li:last-child{margin-right: 0;}
  
-
-
-
   .ng_image{width: 80vw; }
 
     .intro_ng_area{position:relative;}
@@ -190,8 +187,5 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
   .sub_image_01{background-image:url(../../img/main_img/info_channel.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
   .sub_image_02{background-image:url(../../img/main_img/info_magazines.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
   .sub_image_03{background-image:url(../../img/main_img/info_apparel.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
-
-
-  
   /* #footBox ============================================ */
   }/* @media screen and (min-width:960px) */

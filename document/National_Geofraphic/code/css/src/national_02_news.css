@@ -3,21 +3,32 @@
 /* #wrap =============================== */
 
 #wrap{width: 100%; min-width: 480px;height: auto; margin:auto;}
-
 /* #headBox =============================== */
 #headBox{position: relative; width: 100%; height: 80px; padding-top:18px; background-color: #000;}
 h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-image:url(../../img/ng_logo_w.png);}
   #gnb{float:right;}
   #gnb>ul{width:auto; height: auto; float:right;}
-  #gnb>ul>li{display:block; float:left; position:relative; width: auto; height: auto; padding-right:60px; color:#fff;text-transform:uppercase;font-size:1.25rem; font-size:20px;}
+  #gnb>ul>li{display:block; float:left; position:relative; width: auto; height: auto; padding-right:60px; color:#fff;text-transform:uppercase;font-size:20px;}
   #gnb>ul>li:after,
   #gnb>ul>li::after{content:" "; display:block; position: absolute; top:0; right:30px; width: 2px; height: 20px; background-color:#ffd51c;}
   #gnb>ul>li:last-child:after,
   #gnb>ul>li:last-child::after{content:" "; display:none;}
   #gnb>ul>li>a{color:#fff;}
-  #gnb>ul>li>a:hover,a:focus{color:#ffd51c; font-size:1.3125rem; font-size:21px;}
+  #gnb>ul>li>a:hover{color:#ffd51c; font-size:1.3125rem; font-size:21px;}
 
-  #gnb>ul>.gnb_news>a{color:#ffd51c; font-style:bold; border-bottom:2px solid #ffd51c; padding-bottom:4px;}
+  .m_popup{position: relative; top:50%; left:50%; margin:250px 0 0 -450px; z-index:1000; width:900px; height:300px; background-color: rgba(0,0,0,0.3);}
+  .origin_maga{float:left; width: 448px; height: 100%; margin-right:4px; background-color: rgba(0,0,0,0.8);}
+  .traver_maga{float:left; width: 448px; height: 100%; background-color: rgba(0,0,0,0.8);}
+  .origin_img,
+  .traver_img{width: 80%; height:60%; margin:auto; margin-top:20px; background-color: #fff;}
+
+  .m_name{position:relative;text-align: center; line-height: 100px; font-size:1.2rem;color:#fff;}
+  .m_name:before,.m_name::before{content:" ";display:block; position: absolute; top:36px; left:50px; width: 4px;height:30px; background-color: #ffd51c;}
+  .m_name:after,.m_name::after{content:" ";display:block; position: absolute; top:36px; left:400px; width: 4px;height:30px; background-color: #ffd51c;}
+
+
+
+  .m_close_btn{position: absolute; top:0; right:0; width: 70px; height: 70px; background-color: #ada;}
 
   /* conBox ==================================== */
   #conBox{width: 100%; height: auto;}
@@ -50,11 +61,9 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
   .next_news_05{background-image:url(../../img/news_img/next_05.jpg); background-repeat:no-repeat; background-size:100% auto;}
 
 
-
-
-  /* footBox =============================== */
+/* footBox =============================== */
 #footBox{width: 100%; height: auto; background-color: #000; padding:30px; box-sizing:border-box; border-top:1px solid #999;}
-#footBox>h3{width: 100%;height: auto;  margin-bottom:10px; text-transform:uppercase; color:#999;}
+#footBox>h3{width: 100%;height: auto;  margin-bottom:10px; text-transform:uppercase; color:#999; font-family: 'Noto Sans KR', sans-serif;}
   .contact_area{width: 100%; height: auto;}
     .contact{width:auto; height: auto;}
     .contact>li{float:left; color:#999; margin:auto; margin-right:50px;  margin-bottom:30px;white-space: nowrap;}
@@ -66,21 +75,19 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
     .clause{width: 100%; height: auto; margin-bottom:20px;}
     .clause>li{float:left; width: auto; height: auto; color:#999; margin-right:20px;}
     .clause>li:last-child{margin-right:0;}
-  .copyright{width: 100%; height: 300px; overflow: hidden;}
+  .copyright{width: 100%; height: auto;}
   .copyright>p{display:block; float:left; width: 100%; height: auto; color:#999;} 
-
 
 
   /* - design 기준: 480px (mobile) */
 @media screen and (max-width:767px) {
-  /* #headBox ======================================== */
-  h1{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
-  #gnb{ width: 45px; height: 45px; margin-right:10px;background-image:url("../../img/main_img/480/list_icon.png");
-    background-repeat:no-repeat; background-position:0,0;}
-  #gnb>ul{display:none;}
+   /* #headBox ======================================== */
+   h1{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
+   #gnb{ width: 45px; height: 45px; margin-right:10px;background-image:url("../../img/main_img/480/list_icon.png");
+     background-repeat:no-repeat; background-position:0,0;}
+   #gnb>ul{display:none;}
   /* #contentBox ========================================== */
   .title_news{height: 130px;}
-
   
   /* #footBox ============================================ */
   }/* @media screen and (max-width:767px)  */
@@ -90,16 +97,17 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
   /* - 디자인 기준 : 768px (tablet) */
   @media screen and (min-width:768px)  and (max-width:959px) {
     /* #headBox ======================================== */
-     #headBox{width: 100%; height: 120px; padding-top:30px;  box-sizing:border-box;}
-     h1{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
-    #gnb{ width: 45px; height: 45px; margin-right:34px;background-image:url(../../img/main_img/480/list_icon.png);
-      background-repeat:no-repeat; background-position:0,0;}
-  
-     #gnb>ul{display:none;}
+   #headBox{width: 100%; height: 120px; padding-top:30px;  box-sizing:border-box;}
+   h1{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
+  #gnb{ width: 45px; height: 45px; margin-right:34px;background-image:url(../../img/main_img/480/list_icon.png);
+    background-repeat:no-repeat; background-position:0,0;}
+
+   #gnb>ul{display:none;}
+    
      /* #contentBox ========================================== */
   .title_news{height: 130px;}
-
-     /* #footBox ============================================ */
+  
+  /* #footBox ============================================ */
   }/* @media screen and 768px ~ 959px */
 
 
@@ -107,13 +115,11 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
 
   /* - design 기준: 960px  (pc) */
   @media screen and (min-width:960px) {
-    /* #headBox ======================================== */
-    #headBox{width: 100%; height: 120px; padding-top:30px; padding-left:60px;box-sizing:border-box;}
-    
-    
-    /* #contentBox ========================================== */
+   /* #headBox ======================================== */
+  #headBox{width: 100%; height: 120px; padding-top:30px; padding-left:60px;box-sizing:border-box;}
+  
+   /* #contentBox ========================================== */
   .title_news{height: 200px;}
-
-
-      /* #footBox ============================================ */
+  
+  /* #footBox ============================================ */
   }/* @media screen and (min-width:960px) */
