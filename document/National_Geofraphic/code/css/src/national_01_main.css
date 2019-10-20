@@ -20,6 +20,20 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
   #gnb>ul>li>a{color:#fff;}
   #gnb>ul>li>a:hover{color:#ffd51c; font-size:1.3125rem; font-size:21px;}
 
+  .m_popup{display:none; position: relative; top:50%; left:50%; margin:250px 0 0 -450px; z-index:1000; width:900px; height:300px; background-color: rgba(0,0,0,0.3);}
+  .origin_maga{float:left; width: 448px; height: 100%; margin-right:4px; background-color: rgba(0,0,0,0.8);}
+  .traver_maga{float:left; width: 448px; height: 100%; background-color: rgba(0,0,0,0.8);}
+  .origin_img,
+  .traver_img{width: 80%; height:60%; margin:auto; margin-top:20px; background-color: #fff;}
+
+  .m_name{position:relative;text-align: center; line-height: 100px; font-size:1.2rem;color:#fff;}
+  .m_name:before,.m_name::before{content:" ";display:block; position: absolute; top:36px; left:50px; width: 4px;height:30px; background-color: #ffd51c;}
+  .m_name:after,.m_name::after{content:" ";display:block; position: absolute; top:36px; left:400px; width: 4px;height:30px; background-color: #ffd51c;}
+
+
+
+  .m_close_btn{position: absolute; top:0; right:0; width: 70px; height: 70px; background-color: #ada;}
+
 
 /* conBox =============================== */
 #conBox{width: 100%; height: auto;}
@@ -41,7 +55,7 @@ h1>a{float:left; width: 175px; height: 50px; background-size: cover; background-
     background-repeat:no-repeat;
     background-position:50%, 50%;
     background-size: 100%,auto;}
-    .ng_01>dl{width: 100%; height: auto; padding:30px; box-sizing:border-box; text-align: center; word-break: keep-all; font-family: 'Noto Sans KR', sans-serif; }
+    .ng_01>dl{width: 100%; height: auto; padding:30px; box-sizing:border-box; text-align: center; word-break: keep-all; font-family: 'Noto Sans KR', 'sans-serif'; }
     .ng_01>dl>dt{width: 100%; height: auto; margin-bottom:40px; text-transform: uppercase;font-size:1.875rem; font-size:30px;}
     .ng_01>dl>dt:after,
     .ng_01>dl>dt::after{content:" "; display:block; margin:auto; margin-top:30px; width: 150px;height: 2px; background-color:#ffd51c; font-size:1.25rem; font-size:20px;}
