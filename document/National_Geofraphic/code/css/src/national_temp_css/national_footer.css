@@ -1,0 +1,35 @@
+/* national_footer.css */
+
+
+#footBox{width: 100%; height: auto; background-color: #000; padding:30px; box-sizing:border-box; border-top:1px solid #999;}
+#footBox>h3{width: 100%;height: auto;  margin-bottom:10px; text-transform:uppercase; color:#999; font-family: 'Noto Sans KR', sans-serif;}
+  .contact_area{width: 100%; height: auto;}
+    .contact{width:auto; height: auto;}
+    .contact>li{float:left; color:#999; margin:auto; margin-right:50px;  margin-bottom:30px;white-space: nowrap;}
+  .snsb{width:190px; height: 50px;margin-bottom:10px;}
+    .snsb>ul>li{float:left; width: 50px; height: 50px; margin-right:20px;  font-size:40px; border-radius:100%; text-align:center;}
+    .snsb>ul>li:last-child{margin-right: 0;}
+
+  .clause_area{width: 100%; height: auto;} 
+    .clause{width: 100%; height: auto; margin-bottom:20px;}
+    .clause>li{float:left; width: auto; height: auto; color:#999; margin-right:20px;}
+    .clause>li:last-child{margin-right:0;}
+  .copyright{width: 100%; height: auto;}
+  .copyright>p{display:block; float:left; width: 100%; height: auto; color:#999;} 
+
+
+
+  /* - design 기준: 480px (mobile) */
+  @media screen and (max-width:767px) {
+  }/* @media screen and (max-width:767px)  */
+
+
+
+  /* - 디자인 기준 : 768px (tablet) */
+  @media screen and (min-width:768px)  and (max-width:959px) {
+  }/* @media screen and 768px ~ 959px */
+
+
+  /* - design 기준: 960px  (pc) */
+  @media screen and (min-width:960px) {
+  }/* @media screen and (min-width:960px) */

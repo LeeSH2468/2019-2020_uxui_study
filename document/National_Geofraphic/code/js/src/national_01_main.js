@@ -1,33 +1,27 @@
-// national_01_main.js
+//national_01_main.js
 (function($){
+  const body   = $('body');
+  const header = $('#headBox');
+  const content = $('#conBox');
+  const footer  = $('#footBox');
 
-  const magaBtn = $('.maga');
-  const mPopup = $('.m_popup');
-  const closePopBtn = mPopup.find('.m_close_btn');
+// ============================
+  // header ==
+  let htmlUrl = "./national_temp_html/";
+  let jsUrl = "../js/src/national_temp_js";
 
-  magaBtn.on('click', function (e) {
-    e.preventDefault();
-    console.log(e);
-    mPopup.fadeIn();
+  header.load(htmlUrl + 'national_header.html',function(){
+    body.append('<script src="'+ jsUrl + 'national_header.js"></script>');
   });
 
-  closePopBtn.css({ 'backgroundColor': '#000' });
 
-  closePopBtn.on('click',function(e){
-    e.preventDefault();
-    console.log(e);
-    mPopup.fadeOut();    
+  //content ==
+  content.load(htmlUrl + 'national_01_content.html',function(){
+    let conJs = jsUrl + 'national_01_main_view.js';
+    body.append(`<script src = "${conJs}"></script>`);
   });
 
-  // background mousemove ==========================
-  const viewBg = $('.view_pic_distant');
-
-  viewBg.on('mousemove', function (e) {
-    console.log(e);
-    let x = event.offsetX;
-    let y = event.offsetY;
-    viewBg.css({ "backgroundPosition": `-${x}% -${y}%` });
-  });
-  
+  //footer ==
+  footer.load(htmlUrl + 'national_footer.html');
 
 })(jQuery);
