@@ -18,7 +18,7 @@
   /* .content_area>dl>dd:nth-of-type(2){background-color: #ad2;} *//* -step1 */
   .content_area>dl>dd:first-of-type{display:block;}
 
-  .album{float:left; width: 32%; height: 100%; margin-right:1%; background-color: #afa;}
+  .album{float:left; width: 32%; height: 100%; margin-right:1%; background-size:cover; background-position:50% 50%; background-repeat:no-repeat ;}
   .album:last-child{margin-right:0;}
   .album>a{display:block; width: 100%; height: 100%;}
   .album h4{font-size: 1.5rem; font-weight: bold;margin-bottom:10rem; text-transform:uppercase;}

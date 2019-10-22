@@ -3,7 +3,7 @@
   // console.log('load');
   const conArea = $('.content_area');
   const conDt = conArea.find('dt');
-  // const conDtBtn = conDd.children('button');
+  const conDtBtn = conDt.children('button');
   const conDd = conArea.find('dd');
 
   conDt.children('button').on('click focus',function(e){
@@ -40,7 +40,10 @@
                       {text:'슈피겐코리아 미국 아마존 독점유통',date:'2019.10.20'},
                       {text:'[youtube]\'취업비자\'기업탐방',date:'2019.10.10'}];
 
-  
+  const blogList = [{ text: '아무리 급해도 놓칠 수 없는...', date: '2019.07.26' },
+                    { text: '업무중 즐기는 문화예술공연', date: '2019.07.26' },
+                    {text:'풀필먼트 서비스 세계의',date:'2019.07.26'},
+                    ];
 
 
    
@@ -55,11 +58,48 @@
        myNth.find('h4').text('media');
        myNth.find('.con').text(mediaList[i].text);
        myNth.find('.date').text(mediaList[i].date);
+       myNth.css({ 'backgroundImage': 'url(../img/media0' + (i + 1) + '.jpg)' });
+
     } 
     // let i = 0 :임의의 값
     // i < ~~ :i가 med의 갯수가 i보다 작을 때
     // (mediaList.length : mediaList의 갯수를 알려줌)
     // i++ 추가해라
+    const blog = conArea.find('.blog');
+    for(let i = 0; i < blogList.length; i++){
+      blog.append(bmText);
+      let myNth = blog.children('.album').eq(i);
+
+      myNth.find('h4').text('blog');
+      myNth.find('.con').text(blogList[i].text);
+      myNth.find('.date').text(blogList[i].date);
+
+      let j = i;
+      if (i < 10){j = '0'+(i+1);}
+      myNth.css({'backgroundImage':'url(../img/blog'+j+'.jpg)'});
+    }
+
+
+
+
+    conDtBtn.on('keyup',function(e){
+            e.preventDefault();
+      console.log(e.keyCode);
+      //왼37,위38     오른39,아래40
+
+    let myThis = $(this).parent('dt');
+    switch(e.keyCode){
+      case 37:      case 38:
+        myThis.prevAll('dt').find('button').focus();
+      break;
+
+      case 39:      case 40:
+        myThis.nextAll('dt').find('button').focus();
+      break; }
+    });
+
+//    if(e.keyCode === 37 || e.keyCode === 38){
+//    } else if (e.keyCode === 39 || e.keyCode === 40){}
 
 
 })(jQuery);
