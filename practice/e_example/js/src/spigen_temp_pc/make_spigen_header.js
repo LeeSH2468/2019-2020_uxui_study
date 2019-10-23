@@ -8,14 +8,12 @@
   const sideGnbArea = $('.side_gnb_area');
 
 
-  let gnbContents = gnb.contents().clone();
-  // console.log(gnbContents);
-  sideGnbArea.append(gnbContents);
+ 
 
-  const navList = [{title: 'about', sub: ['list01', 'list02', 'list03']},
-                   { title: 'careers', sub: ['list01', 'list02', 'list03'] },
-                   { title: 'media', sub: ['list01', 'list02', 'list03'] },
-                   { title: 'IR', sub: ['list01', 'list02', 'list03'] }];
+  const navList = [{title: 'about', sub: ['Who we are', 'What we do', 'Our locations']},
+                   {title: 'careers', sub: ['Careers', 'HR Blog', 'Apply'] },
+                   {title: 'media', sub: ['Media'] },
+                   {title: 'IR', sub: ['Inverstors', 'IR Archive', 'IR Meeting'] }];
                    
                    
 gnb.append('<ul></ul>');
@@ -26,36 +24,23 @@ const navText = '<li><dl><dt><a></a></dt></dl></li>';
 for (let i = 0; i < navList.length; i++){
   navUl.append(navText);
   let navLi = navUl.children('li').eq(i);
-  let navLiLink = navLi.children('dt').children('a');
-  navLiLink.text(navList[i].title);
-
-  let navDl = navLi.children('dl');
-  navDl.append('<dd></dd>');
-  navDl.children('dl').append('a');
-  for (let d = 0; d<navList.length; d++){
-    let navDd = navDl.children('dd').eq(d);
-    let navDdLink = navDd.children('a');
-    navDdLink.text(navList[d].sub);
+  let navLiLink = navLi.find('dt').children('a');
+  navLiLink.text( navList[i].title);
+  
+  let navDl = navLi.find('dl');
+  for (let d = 0; d < navList[i].sub.length; d++){
+    navDl.append('<dd></dd>');
+    let navDd = navDl.find('dd').eq(d);
+    navDd.append('<a></a>');
+    let navDdLink = navDd.find('a');
+    navDdLink.text( navList[i].sub[d]);
+    };
   };
-
-  }
-  // const navLi = 
-
-  // navLi.text(navList[i].title);
-
-
-
-//    let navLi = navUl.children('li');
-//    let alink = navUl.children('li').eq(i);
-//    navLi.text(navList[i].title);
-   
-//    navLi.append('<a></a>');
-//    alink.text(navList[i].title);
-
-
-
   //---------------------------------------------
   //버튼 클릭시 .side_gnb 나타나게 만들기
+   let gnbContents = gnb.contents().clone();
+  // console.log(gnbContents);
+  sideGnbArea.append(gnbContents);
   const openGnbBtn = $('.gnb_btn>button');
   const closeGnbBtn = $('.close_gnb_btn > button');
   const sideGnb = $('.side_gnb');
