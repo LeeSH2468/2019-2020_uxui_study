@@ -6,6 +6,7 @@
   const body = $('body');
   const header = $('#headBox');
   const adver = $('#viewBox');
+  const info = $('#info')
   const content = $('#conBox');
   const footer = $('#footBox');
   // ===========================
@@ -17,10 +18,18 @@
   });
   adver.load(tempUrl + 'spigen_main_adver.html');
   
-  content.load(tempUrl + 'spigen_main_content_01.html',function(){
-    let conJs = jsUrl+'make_spigen_content_01.js';
+  content.load(tempUrl + 'spigen_main_content_01.html', function () {
+    let conJs = jsUrl + 'make_spigen_content_01.js';
     body.append(`<script src="${conJs}"></script>`);
   });
+
+  info.load(tempUrl + 'spigen_main_content_02.html',function(){
+    let conJs2 = jsUrl + 'make_spigen_content_02.js';
+    body.append(`<script src="${conJs2}"></script>`);
+
+  });
+
+
   footer.load(tempUrl + 'spigen_footer.html');
   // wrap.after('<script src="../js/src/spigen_temp_pc/make_spigen_header.js"></script>');
   setTimeout(function () {

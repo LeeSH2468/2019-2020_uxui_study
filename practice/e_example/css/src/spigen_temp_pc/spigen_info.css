@@ -1,0 +1,39 @@
+#info{position:relative;z-index:100; width: 100%; height: 100%; padding-top:100px; box-sizing:border-box; background-image:url(../../../img/blog01.jpg);
+background-repeat:no-repeat; background-size:cover; background-position:50% 50%;}
+#info:before,
+#info::before{content:" ";display:block; z-index:-1; position:absolute; top:0; left:0; width: 100%; height: 100%; background-color: rgba(255,119,0,0.8);}
+
+#info>h3{width: 100%; height: 40px; padding:20px 0; transform:uppercase;  font-size:2.5rem; text-align:center; margin-bottom:20px;}
+#info>p{width: 100%; text-align:center; color:#fff; font-size:1.2rem;margin-bottom:50px;}
+#info>ul{width: 80%; min-width:1300px; height:450px; /* vw : 450/1920*100 */ height:23.4375vw; min-height:300px;margin:auto;}
+
+#info ul>li{position:relative; float: left;width: 31%; height: 100%; margin-right:2%; overflow:hidden;}
+#info ul>li:last-child{margin-right:0;}
+
+#info ul>li>a{width: 100%; height: 100%; display:block;
+background-repeat: no-repeat; background-position: 50% 50%; background-size:cover;}
+#info ul>li:nth-child(1)>a{background-image: url(../../../img/blog01.jpg);}
+#info ul>li:nth-child(2)>a{background-image: url(../../../img/blog02.jpg);}
+#info ul>li:nth-child(3)>a{background-image: url(../../../img/blog03.jpg);}
+
+#info ul>li>a>dl{width: 100%; height: 100%; padding:0 10%; box-sizing:border-box; background-color: rgba(0,0,0,0.5); transform:translateY(75%); transition:all 300ms ease;}
+#info ul>li>a>dl>dt{width: 100%; height: 50px; font-size:1.4rem; font-weight: bold; color:#fff; padding-top:2vh;text-align:center; transition:all 300ms ease;}
+#info ul>li>a>dl>dd{width: 100%; height: auto; font-size:1.2rem; color:#fff;text-align:center; opacity:0; transition:all 300ms ease;}
+
+/* #info ul>li>a:focus dl,
+#info ul>li>a:hover dl{transform:translateY(0);}
+#info ul>li>a:focus dt,
+#info ul>li>a:hover dt{padding-top:15vh; color:#f70;}
+#info ul>li>a:focus dd,
+#info ul>li>a:hover dd{opacity:1;} */
+
+
+#info ul>li>a.action dl{transform:translateY(0);}
+#info ul>li>a.action dt{padding-top:15vh; color:#f30;}
+#info ul>li>a.action dd{opacity:1;}
+
+/* top_move_btn */
+.top_move_btn{display:none; position:fixed; right:50%; bottom:30px; z-index:1000; width: 100px; height: 100px;margin-right:-46vw;}
+.top_move_btn>button{width: 100%; height: 100%; font-size:4rem; color:#fff; background-color: #f70; border-radius:100%;}
+.top_move_btn>button:focus,
+.top_move_btn>button:hover{background-color:#fff; color:#f30}
