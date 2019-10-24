@@ -1,15 +1,58 @@
 
 //spigen_header.js
-
 (function ($) {
   //1.#gnb영역 내부에있는 ul의 영역을 .side_gnb_area에 복사해서 붙여넣기
 
   const gnb = $('#gnb');
   const sideGnbArea = $('.side_gnb_area');
 
+//header 영역에 해당하는 내용 만들기 
+
+const gnbMenu= [{title: 'about',titleLink:"#",
+                 sub: [{subName: 'Who we are', subLink : 'sub_01_link'}, 
+                       {subName: 'What we do', subLink : 'sub_01_link'},
+                       {subName: 'Our locations', subLink : 'sub_01_link'}]},
+                {title: 'careers', titleLink:"#",
+                 sub: [{subName: 'Careers', subLink: 'sub_02_link'}, 
+                       {subName: 'HR Blog', subLink: 'sub_02_link'}, 
+                       {subName: 'Apply', subLink: 'sub_02_link'}] },
+                {title: 'media',titleLink:"#",
+                 sub: [{subName:'Media', subLink:'sub_03_link'}] },
+                {title: 'IR',titleLink:"#",
+                 sub: [{subName:'Inverstors',subLink:'sub_04_link'},
+                       {subName:'IR Archive',subLink:'sub_04_link'},
+                       {subName:'IR Meeting',subLink:'sub_04_link'}]}];
+
+const menuLen = gnbMenu.length
+gnb.append('<ul></ul>'); //gnb영역에 ul 생성
+const gnbUl = gnb.children('ul');
+
+  for (let i = 0; i < menuLen ; i++ ){
+    gnbUl.append('<li><dl><dt><a href="#"></a></dt><dd></dd></dl></li>');
+    gnbLi = gnbUl.children('li').eq(i)
+    gnbLi.find('dt').children('a').text(gnbMenu[i].title);
+    // -----------
+
+    let subLen = gnbMenu[i].sub.length;
+    // console.log(subLen);
+    for(let j=0; j< subLen;j++){
+      let gnbDd = gnbLi.find('dd');
+      gnbDd.append('<a href="#"></a>');
+      let gnbMyLink = gnbDd.children('a').eq(j);
+      let gnbSubLink = gnbDd.children('a');
+      // gnbSubLink.attr('href', gnbMenu[i].sub[j].subLink); //같은거
+      gnbSubLink.attr({'href':gnbMenu[i].sub[j].subLink});
+      gnbMyLink.text(gnbMenu[i].sub[j].subName);
+
+      
+    }
+  }; // for(i<menuLen)
+
+
 
  
-
+/*
+// 숙제 내가한거! ====================================
   const navList = [{title: 'about', sub: ['Who we are', 'What we do', 'Our locations']},
                    {title: 'careers', sub: ['Careers', 'HR Blog', 'Apply'] },
                    {title: 'media', sub: ['Media'] },
@@ -36,10 +79,13 @@ for (let i = 0; i < navList.length; i++){
     navDdLink.text( navList[i].sub[d]);
     };
   };
+
+  //숙제끝   ====================================
+*/
   //---------------------------------------------
   //버튼 클릭시 .side_gnb 나타나게 만들기
-   let gnbContents = gnb.contents().clone();
-  // console.log(gnbContents);
+   let gnbContents = gnb.contents().clone();              //gnb 영역을 복사(위에 gnb가 있어야함)
+
   sideGnbArea.append(gnbContents);
   const openGnbBtn = $('.gnb_btn>button');
   const closeGnbBtn = $('.close_gnb_btn > button');
@@ -68,6 +114,7 @@ for (let i = 0; i < navList.length; i++){
 
     closeGnbBtn.focus();
   });
+
   closeGnbBtn.on('click', function (e) {
     e.preventDefault();
     // sideGnb.hide();
@@ -121,7 +168,6 @@ for (let i = 0; i < navList.length; i++){
   // sideGnbArea.on('keyup', function (e) {
   //   console.log(e.code);
   // });
-
 
 
 })(jQuery);
