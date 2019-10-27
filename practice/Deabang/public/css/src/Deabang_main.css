@@ -3,7 +3,7 @@
   h1{float:left;width: 20%; height: 100%;}
   h1>a{display:block; width: 100%; height: 100%; background-image:url(../../img/logo_b.png); background-repeat:no-repeat; background-size:auto 100%; background-position:50% 50%;}
   
-  #gnb{position: relative; float:left; width: 60%; height: 100%; background-color: #777;}
+  #gnb{position: relative; float:left; width: 60%; height: 100%;}
   #gnb>ul{position: absolute; left:0; right:0; margin:auto; width: 760px; height: 100%;}
   .yellowBox{width: 120px; height: 100%; background-color:transparent;}
   #gnb>ul>li{float:left; width: 120px; height: 100%; margin-right:40px;}
@@ -21,11 +21,45 @@
               transition:width 300ms ease;}
   #gnb dd>a.action:after,
   #gnb dd>a.action::after {width:100%;}
-  .util{float:left; width: 20%; height: 100%; background-color: #aaa;}
-  .wish{float:left;width: 70%; height: 100%; background-color: #daa;}
-  .list{float:left;width: 30%; height: 100%; background-image:url('../../img/icon_b.png'); background-repeat: no-repeat; background-position: 50% 50%;}
+  .util{float:left; width: 20%; height: 100%;}
+  .wish{float:left;width: 70%; height: 100%;padding:20px 40px 20px 40px; box-sizing: border-box;}
+  .wish>a:before,
+  .wish>a::before{content:" "; display:block; float:left; width: 50px; height: 50px; background-image:url(../../img/icon_s.png);background-repeat: no-repeat; background-position: 50% 50%;background-size:auto 100%;}
+  .wish>a{display:block;width: 100%;height: 100%; line-height: 45px;}
+  .list{float:left;width: 30%; height: 100%; background-image:url('../../img/icon_b.png'); padding:20px; box-sizing: border-box;background-repeat: no-repeat; background-position: 50% 50%;background-size:auto 100%;}
+  .list>a{display:block;width: 100%;height: 100%;}
+
 
 #conBox{width: 100%; height: 800px; background-color: #47a;}
+.slide_temp { position: relative; width: 90%; height: 600px; min-width: 1200px; margin: auto; border: 1px solid #333; background-color: #fa0; }
+.view_btn {position: absolute; z-index:100; top: 50%; width: 100%; height: 0; }
+.view_btn > button {width: 100px; height: 54px; background-color: #333; float: left; transform: translateY(-50%); }
+.view_btn > button.next {float: right;}
+.view_btn > button.next p{text-transform: uppercase; float:left;}
+.view_btn > button.prev p{text-transform: uppercase; float:right;}
+
+.view_btn > button:hover, .view_btn > button:focus { background-color: #f06; }
+.view_indicator { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); width: auto; min-width: 135px; height: 30px; background-color: #fff; padding: 5px; border-radius: 30px; }
+.view_indicator > ul { width: 100%; height: 100%; }
+.view_indicator > ul>li { float: left; width: auto; height: 30px; margin-left: 5px; }
+.view_indicator > ul > li:first-child { margin-left: 0; }
+.view_indicator > ul a { display: block; width: 30px; height: 100%; background-color: #ccc; border-radius: 30px; transition: all 300ms ease; }
+
+.view_indicator > ul a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.view_indicator > ul a:hover { background-color: #ff99c2; }
+
+.view_indicator > ul a.action, .view_indicator > ul a:focus { background-color: #f06; width: 90px; }
+
+.view_indicator > ul a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+.slide_form { width: 100%; height: 100%;  overflow: hidden; }
+.slide_form .guide { position:relative; width: 300%; height: 100%; background-color: #afa; }
+.slide_form .guide > div { float: left; width: calc(100% / 3); height: 100%; padding: 4rem; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 50%;background-size:cover; }
+.slide_form .guide > div:nth-of-type(1) { background-image: url("../../img/slide_01.jpg");}
+.slide_form .guide > div:nth-of-type(2) { background-image: url("../../img/slide_02.jpg");}
+.slide_form .guide > div:nth-of-type(3) { background-image: url("../../img/slide_03.jpg");}
+
+
 
 @media screen and (max-width:1024px){
   #headBox{height: 60px;}

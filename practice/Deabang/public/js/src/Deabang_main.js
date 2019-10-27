@@ -10,6 +10,7 @@
   
   viewBox.load('./temp/Deabang_view.html',function(){
     body.append('<script src = "../js/src/Deabang_header.js"></script>');
+    body.append('<script src = "../js/src/Deabang_con.js"></script>');
   });
 
 })(jQuery);
