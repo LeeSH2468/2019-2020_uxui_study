@@ -12,8 +12,6 @@
   const guideBox = viewBox.find('.guide');
   const slideForm = viewBox.find('.slide_form');
 
-  slideForm.css({'overflow':'hidden'});
-  indicator.css({'zIndex':500});
   guideBox.css({'position':'relative','top':0,'left':0});
 
   indiLink.on('click focus',function(evt){
