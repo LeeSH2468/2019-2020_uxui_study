@@ -23,6 +23,15 @@
 wrap.append('<section id="viewBox_02"></section>');
 const vB2 = $('#viewBox_02');
 vB2.load('./temp/slide_02.html',function(){
-  jsLink('slide_02');
+  return jsLink('slide_02');
 }); //위치-html 문서 기준
+
+//=================================================
+//광고영역3 생성
+wrap.append('<section id="viewBox_03"></section>');
+const vB3 = $('#viewBox_03');
+  vB3.load('./temp/slide_03.html', function () {
+    return jsLink('slide_03');}
+);
+
 })(jQuery);

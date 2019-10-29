@@ -10,21 +10,51 @@
   const indiLi = indicator.find('li');
   const indiLink = indiLi.find('a');
   const guideBox = viewBox.find('.guide');
+  const slideEach = guideBox.find('.banner_area02');
   const slideForm = viewBox.find('.slide_form');
+
+  let timed = 500;
+  let myn = 0, maxn = slideEach.length;
+
+  const MoveSlide = function(n){
+    indiLink.removeClass('action');
+    indiLi.eq(n).children('a').addClass('action');
+    
+    guideBox.animate({'marginLeft':(-100 * n)+ '%'},function(){
+      slideEach.removeClass('action');
+      setTimeout(function(){
+        slideEach.eq(n).addClass('action');
+      },timed);
+    });
+  };//MoveSlide
+  MoveSlide(0);
+//  ================
+// 광고움직이기
+  let go;
+  const Goslide = function(){
+    go = setInterval(function(){
+      myn++;
+      if (myn >= maxn) {myn = 0;}
+      MoveSlide(myn);
+    },timed * 2);
+  };//Goslide();
+  const stopSlide = function(){
+    clearInterval(go);
+  };
+  Goslide();
+  viewBox.on({'mouseenter':stopSlide,'mouseleave':Goslide});
+  // ===============================
 
   guideBox.css({'position':'relative','top':0,'left':0});
 
   indiLink.on('click focus',function(evt){
     evt.preventDefault();
-    console.log(evt);
+    stopSlide();
     // let parLi = $(this).parent('li');
     let i = $(this).parent('li').index();
-    console.log(i);
-    
-    indiLink.removeClass('action');
-    $(this).addClass('action');
-    guideBox.stop().animate({'left':-100 * i + '%'});
-    
+    myn = i;
+
+    MoveSlide(i);
   });
   
 })(jQuery);
