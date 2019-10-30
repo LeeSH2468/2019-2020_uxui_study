@@ -35,15 +35,29 @@ const slide03Btn = $('.slide_03_btn');
   console.log(bannerLen);
 
   nextBtn.on('click',function(e){
-    e.preventDefault();
-    myn++;
-    if(myn >= bannerLen-1){myn = 0;}
-    slideGuide.stop().animate({'left':-100 * myn + '%'});
+    e.preventDefault();//선행되는 이벤트 제거
+    myn++;//myn 1씩 증가
+    if (myn >= bannerLen - 1) { //myn가 슬라이드의 개수(bannerLen)-1개보다 크거나 같을 때(5일때)
+      slideGuide.css({'left':'100%'}); //슬라이드를 css left값을 100%로 이동(앞에 복제된 위치)
+      myn = 0;}//myn은 0으로 변경
+    let per = -100 * myn + '%' //per = -100*myn%(옆으로 이동하는 거리)
+    slideGuide.stop().animate({ 'left': per }, 1000);//slideGuide(ul)를 -100 * myn만큼 이동(1000ms동안)
   });
+  
   prevBtn.on('click', function (e) {
     e.preventDefault();
-    myn--;
-    if (myn <= -1) { myn = bannerLen-2; }
-    slideGuide.stop().animate({ 'left': -100 * myn + '%' });
+    myn--;//myn 1씩 감소
+    let per = -100 * myn + '%' //per = -100*myn%(옆으로 이동하는 거리)
+    slideGuide.stop().animate({ 'left': per },1000,function(){ //slideGuide(ul)를 per만큼 이동(1000ms동안)하면서 function수행
+
+      if (myn <= -1) { myn = bannerLen-2; } //if myn이 -1보다 작거나 같으면 / myn = 슬라이드 개수의 -2가 된다.
+      
+        let per = -100 * myn + '%'//per = -100*myn%(옆으로 이동하는 거리)
+        slideGuide.css({ 'left': per }); //슬라이드를 css per만큼 이동
+    });      
+
+
+
+
   });
 })(jQuery);

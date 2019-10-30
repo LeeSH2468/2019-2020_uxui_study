@@ -34,4 +34,13 @@ const vB3 = $('#viewBox_03');
     return jsLink('slide_03');}
 );
 
+//================================================
+//광고영역4 생성
+  wrap.append('<section id="viewBox_04"></section>');
+  const vB4 = $('#viewBox_04');
+  vB4.load('./temp/slide_04.html', function () {
+    return jsLink('slide_04');
+  }
+  );
+
 })(jQuery);
