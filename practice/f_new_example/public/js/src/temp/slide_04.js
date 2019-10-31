@@ -2,27 +2,23 @@
 (function($){
   //이미지경로, 이미지파일명
   const url = "../img/slide_01/"  //html위치 기준
-  const imgList = [{
-                title:'디지몬 어드벤처',content :'찾아라비밀의열쇠',
-                linkTest: '바로가기1', link: 'http://www.naver.com', 
-                bgimg:'mtSlideImage_01.jpg'
-                },
-                {title:'파워디지몬',content :'미로같이얽힌모험들',
-                linkTest: '바로가기2', link: 'http://www.daum.net', 
-                bgimg:'mtSlideImage_02.jpg'
-                },
-                {title:'디지몬 프론티어',content :'현실과또다른세상',
-                linkTest: '바로가기3', link: 'http://google.com', 
-                bgimg:'mtSlideImage_03.jpg'
-                }, 
-                {title:'디지몬 테이머즈',content :'환상의디지털세상',
-                linkTest: '바로가기4', link: 'http://xidoweb.com', 
-                bgimg:'mtSlideImage_04.jpg'
-                },
-                {title:'디지몬 다음뭐지',content :'펼쳐라마음속날개',
-                  linkTest: '바로가기5', link: 'https://github.com/LeeSH2468/git_LSH', 
-                bgimg:'mtSlideImage_05.jpg'
-                }];
+  
+  let imgList;
+
+  $.ajax({
+    async : false,//기본(true)-외부에서 비공개 | 공개 : false
+    type : 'GET', //공개(get) or 비공개 -대문자 권장
+    url: '../data/slide_04.json', //json파일 html기준위치
+    dataType : 'json', //확장자명
+    error:function(){console.log('data error'); }, //에러시 나타내는 방법
+    // success: function (data) { console.log(data); }//확인용
+    success:function(data){
+      imgList = data;
+      return imgList;
+     }
+  });
+
+  console.log(imgList);
 // -----------------------------------------
 //기본선택자 및 내용(기본틀) 생성
 const slide_04 = $("#viewBox_04");

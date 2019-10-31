@@ -99,23 +99,23 @@
 
 })(jQuery);
 
-// setInterval , clearInterval 사용법
-let i = 0, maxi = 4,timed = 1000,go;
-let Goslide = function(){
-    go = setInterval(function(){
-    i++; 
-  if(i >= maxi){ 
-    i = 0;//0을 대입해라
-    }
-    console.log(i);
-  },timed);//Goslide
-};
 
-Goslide();//Goslid 최초수행
-// setTimeout(function(){clearInterval(go);},timed *10);
-$(document).on('mouseenter',function(){ //브라우저에 mouseenter시 멈춤
-  clearInterval(go);});//마우스엔터 수행(멈춤)
-$(document).on('mouseleave',function(){
-  Goslide();});
+// let i = 0, maxi = 4,timed = 1000,go;
+// let Goslide = function(){
+//     go = setInterval(function(){
+//     i++; 
+//   if(i >= maxi){ 
+//     i = 0;//0을 대입해라
+//     }
+//     console.log(i);
+//   },timed);//Goslide
+// };
+
+// Goslide();//Goslid 최초수행
+// // setTimeout(function(){clearInterval(go);},timed *10);
+// $(document).on('mouseenter',function(){ //브라우저에 mouseenter시 멈춤
+//   clearInterval(go);});//마우스엔터 수행(멈춤)
+// $(document).on('mouseleave',function(){
+//   Goslide();});
 
   

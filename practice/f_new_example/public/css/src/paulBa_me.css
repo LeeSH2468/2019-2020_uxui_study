@@ -1,0 +1,26 @@
+/* paulBa_me.css */
+#wrap { width: 100%; height: 100%; }
+
+#viewBox { width: 100%; height: 1500px; }
+
+#viewBox > .slide_temp { width: 300%; height: 100%; }
+
+#viewBox > .slide_temp > .slide_form { position: relative; float: left; width: 33.33333%; height: 800px; background-color: #aaa; }
+
+#viewBox > .slide_temp > .slide_form > .text_area { position: absolute; float: left; left: 100px; width: 70%; height: 300px; margin: auto; top: 0; bottom: 0; }
+
+#viewBox > .slide_temp > .slide_form > .btn_area { position: absolute; float: right; right: 20px; width: 10%; height: 100px; margin: auto; top: 0; bottom: 0; background-color: #fff; }
+
+#viewBox > .slide_temp > .slide_form > .btn_area > .numBox { width: 100%; height: 60%; background-color: #444; }
+
+#viewBox > .slide_temp > .slide_form > .btn_area > .view_btn { width: 100%; height: 40%; background-color: #777; }
+
+#viewBox > .slide_temp > .slide_form > .btn_area > .view_btn > button { width: 40%; height: 100%; background-color: #faa; }
+
+h3 { font-size: 6.2rem; }
+
+p { font-size: 1rem; margin-bottom: 5rem; }
+
+.next { float: right; }
+
+.prev { float: left; margin-left: 20%; }
