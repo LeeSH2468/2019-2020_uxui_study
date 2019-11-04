@@ -10,8 +10,8 @@
   .view_pic_close{position: absolute; top:0;left:0; width: 100%; height:100%; background-image:url(../../../img/main_img/view_close_1920.png);background-repeat:no-repeat;}
   
   .view_area>ul{position: absolute;  width: auto; height:auto; bottom:10%;z-index:500;}
-  .view_area>ul>li{padding:10px 0; box-sizing:border-box; text-transform:uppercase; text-align:center; border:4px solid #ffd51c;}
-  .view_area>ul>li>a{display:block; width:100%; height: 100%; margin:auto; color:#fff; font-size:1.5625rem;font-size:25px;}  
+  .view_area>ul>li{width: 100%; height:50px; box-sizing:border-box; text-transform:uppercase; text-align:center; border:4px solid #ffd51c; background-color: rgba(0,0,0,0.5);}
+  .view_area>ul>li>a{display:block; width:100%; height: 100%; margin:auto; color:#fff; font-size:1.5625rem;font-size:25px; line-height:40px;}  
 
 
    /* - design 기준: 480px (mobile) */
@@ -19,7 +19,7 @@
     .view_area{height: 560px;}
     .view_area>ul{left:20%; right:0;}
     .view_area>ul>li{float:left; width: 80%; margin:auto; margin-bottom:10px;}
-    .view_pic_logo{background-position:50% 25%; background-size:80vw,auto;}
+    .view_pic_logo{background-position:50% 25%; background-size:80vw,auto;background-attachment: local;}
   }/* @media screen and (max-width:767px)  */
 
   /* - 디자인 기준 : 768px (tablet) */

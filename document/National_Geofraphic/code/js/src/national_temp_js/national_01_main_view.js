@@ -11,7 +11,7 @@
     let y = event.pageY;
     console.log(x, y);
     viewDist.css({ "backgroundPosition": `${x/100}% ${y/100}%` });
-    viewLogo.css({ "backgroundPosition": `${50 - x/100}% ${50 - y/100}%` });
+    // viewLogo.css({ "backgroundPosition": `${50 - x/100}% ${50 - y/100}%` });
     viewClose.css({ "backgroundPosition": `${x/100}% -${y/100}%` });
   });
   
