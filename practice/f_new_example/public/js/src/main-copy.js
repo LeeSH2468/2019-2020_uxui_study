@@ -6,7 +6,11 @@
   wrap.append('<section id = "viewBox"></section');
   const viewBox = $('#viewBox');
 
+  const jsLink = (temp) => {
+    return body.append(`<script src="../js/src/temp/${temp}.js"></script>`);
+  }
   viewBox.load('./temp/slide_01-copy.html',function(){
-    return body.append('<script src="../js/src/temp/slide_01-copy.js></script>');
+    jsLink('slide_01-copy');
   });
+
 })(jQuery);

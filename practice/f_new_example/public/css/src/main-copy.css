@@ -1,0 +1,17 @@
+#wrap { width: 100%; height: 100%; }
+
+dl { width: 600px; height: auto; margin: auto; }
+
+dt { position: relative; width: 100%; height: 50px; background-color: #067; }
+
+dt > a { display: block; width: 100%; height: 100%; color: #fff; text-transform: uppercase; font-size: 1.2rem; padding: 0.7rem; box-sizing: border-box; }
+
+dt > a > span { width: 100%; height: 100%; }
+
+dt > a > span > i:before, dt > a > span > i::before { content: " "; display: block; position: absolute; top: 10px; bottom: 0; right: 50px; padding-left: 10px; border-left: 1px solid #fff; width: 0; height: 26px; }
+
+dt > a > span > i { width: 50px; height: 100%; float: right; color: #fff; font-size: 2.5rem; }
+
+.fa-caret-up { display: none; }
+
+dd { display: none; width: 100%; height: auto; background-color: #ace; padding: 0.7rem; box-sizing: border-box; }
