@@ -13,3 +13,140 @@ dt{position:relative; width: 100%; height: 50px; background-color: #067;
 .fa-caret-up{display:none;}
 
 dd{display:none; width: 100%; height: auto; background-color: #ace; padding:0.7rem; box-sizing: border-box;}
+/*
+#miniProduct{$count:3; position:relative; width: 600px; height: auto; margin:auto; padding:20px; margin-bottom:200px;
+  >.product{width: 100% ;height: 100%;background-image:url("../../img/wood.jpg"); overflow:hidden; padding: 20px; box-sizing: border-box; 
+    &:after{content:" "; display:block; border:2px dotted #aaa;}
+    >ul{position: relative;  top:0; left:0;width: 100% * $count; height: 100%; 
+      &:after{content:" "; display: block; width: 0; height: 0; clear: both;}
+    }
+  li{float:left; width: (100% / $count); height: 350px; padding:20px; box-sizing: border-box;
+      >a{display:block; width: 100%; height: 100%;background-repeat:no-repeat; background-position:50% 50%; background-size:auto 80%;}
+      &:nth-child(1)>a{background-image:url("../../img/slide_01.png");}
+      &:nth-child(2)>a{background-image:url("../../img/slide_02.png");}
+      &:nth-child(3)>a{background-image:url("../../img/slide_03.png");}
+    }//li
+  }//product
+
+
+  
+  &>.indicator{position: absolute; bottom:-100px; width: 100%; height: 50px;
+    >ul{width: 150px; height: 100%; margin:auto;}
+  li{float:left; width: 30px; height: 30px; margin-right:30px;background-color: #aaa; border-radius:100%; 
+   &:last-child{margin-right:0;}
+    >a{display:block; width: 100%; height: 100%;
+      >span{display: none;}}//a
+    }//li
+  li.action{background-color: #333;}  
+  }//indicator
+}//miniProduct
+*/
+
+//--------------------------------------
+#wrap_a{width: 100%; height: 100%;margin-bottom:100px;}
+#miniProduct_a{position:relative; width: 450px; height: 250px; margin:100px auto; background-color: #ccc;}
+
+.indicator_a{position: absolute; left:50%; bottom:-100px; transform: translateX(-50%);  width: 150px; height: 40px;
+  li{float: left;width: 40px; height: 40px;  margin-left:15px; border-radius:100%; background-color: #afa;
+    >a{display:block; width: 100%; height: 100%;}
+  &:nth-child(1){margin-left:0;
+  
+  }
+  }//li
+}//.indicator_a
+
+.product_a{width: 100%; height:250px; overflow: hidden; background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url("../../img/wood.jpg");
+  >ul{$count:3;
+    width: 100% * $count; height: 100%; 
+    >li{float:left; width: 100% / $count; height: 100%; box-sizing: border-box; padding:20px; 
+      >a{display:block; width: 100%; height: 100%;}
+
+      $url:'../../img/';
+       &:nth-child(1)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_01.png");}
+       &:nth-child(2)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_02.png");}
+       &:nth-child(3)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_03.png");}
+    }
+  }
+}
+
+.active > a{background-color: #444; border-radius:100%; }
+
+//01,02====================================
+
+#wrap_b{width: 100%; height: 100%;margin-bottom:100px;}
+#miniProduct_b{position:relative; width: 450px; height: 250px; margin:100px auto; background-color: #ccc;}
+
+.btn{position: absolute; right: 0; bottom:-50px;width: 80px; height: 40px; 
+  >button{float:left; background-color: transparent;
+    &:hover>i{color:#26f;}
+    >i{font-size:1.8rem; color:#aaa;}
+    }//button
+  &>.next{float:right;}
+  &>.prev{float:left; margin-left:20px;}
+}//.btn
+
+.product_b{width: 100%; height:250px; overflow: hidden; background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url("../../img/wood.jpg");
+  >ul{$count:3;
+    width: 100% * $count; height: 100%; 
+    >li{float:left; width: 100% / $count; height: 100%; box-sizing: border-box; padding:20px; 
+      >a{display:block; width: 100%; height: 100%;}
+
+      $url:'../../img/';
+       &:nth-child(1)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_01.png");}
+       &:nth-child(2)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_02.png");}
+       &:nth-child(3)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_03.png");}
+    }
+  }
+}
+// 03 ============================================
+#wrap_c{width: 100%; height: 100%;margin-bottom:100px;}
+#miniProduct_c{position:relative; width: 450px; height: 250px; margin:100px auto; background-color: #ccc;}
+
+.btnC{position: absolute; right: 0; bottom:-80px;width:50px; height: 80px; 
+  >button{ position:relative; width: 100%; height: 50%; background-color: transparent;
+    &:hover>i{color:#26f;}
+    >i{font-size:1.8rem; color:#aaa;}
+    }//button
+  &>.next{position: absolute; bottom:0;}
+  &>.prev{position: absolute; top:0;}
+}//.btn
+
+.product_c{width: 100%; height:250px; overflow: hidden; background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url("../../img/wood.jpg");
+  >ul{$count:3;
+    width: 100% ; height: 100%* $count; 
+    >li{width: 100% ; height: 100%/ $count; box-sizing: border-box; padding:20px; 
+      >a{display:block; width: 100%; height: 100%;}
+
+      $url:'../../img/';
+       &:nth-child(1)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_01.png");}
+       &:nth-child(2)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_02.png");}
+       &:nth-child(3)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_03.png");}
+    }
+  }
+}
+//04=======================
+
+#wrap_d{width: 100%; height: 100%;margin-bottom:100px;}
+#miniProduct_d{position:relative; width: 450px; height: 250px; margin:100px auto; background-color: #ccc;}
+
+.btnD{position: absolute; right: 0; bottom:-50px;width: 80px; height: 40px; 
+  >button{float:left; background-color: transparent;
+    &:hover>i{color:#26f;}
+    >i{font-size:1.8rem; color:#aaa;}
+    }//button
+  &>.next{float:right;}
+  &>.prev{float:left; margin-left:20px;}
+}//.btn
+
+.product_d{width: 100%; height:250px; overflow: hidden; background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url("../../img/wood.jpg");
+  >ul{position: relative; width: 100%; height: 100%; 
+    >li{position: absolute;top:0; width: 100%; height: 100%; box-sizing: border-box; padding:20px; 
+      >a{display:block; width: 100%; height: 100%;}
+
+      $url:'../../img/';
+       &:nth-child(1)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_02.png");}
+       &:nth-child(2)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_01.png");}
+       &:nth-child(3)>a{background-repeat: no-repeat;background-size: auto 100%; background-position:50% 50%; background-image:url($url+"slide_03.png");}
+    }
+  }
+}
