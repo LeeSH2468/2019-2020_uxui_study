@@ -1,0 +1,56 @@
+/* slide_tom.scss */
+#wrap { width: 100%; height: 100%; }
+
+#contentBox { width: 60%; height: 500px; margin: auto; }
+
+#miniProduct { position: relative; width: auto; height: 100%; margin: 0 150px; }
+
+.indicator { position: absolute; bottom: 0; left: 0; right: 0; width: 388px; height: auto; margin: auto; background-color: #777; border-radius: 26px; padding: 10px; box-sizing: border-box; }
+
+.indicator > li { float: left; width: 26px; height: 26px; background-color: #ddd; margin-right: 16px; border-radius: 26px; }
+
+.indicator > li:last-child { margin-right: 0; }
+
+.indicator > li > a { display: block; width: 100%; height: 100%; }
+
+.indicator > li > a > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+.product_wrap { width: 100%; height: 400px; margin: auto; overflow: hidden; }
+
+.product_wrap > .product { width: 900%; height: 100%; margin-left: 100%; }
+
+.product_wrap > .product > li { float: left; width: 11.11111%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: auto 100%; }
+
+.product_wrap > .product > li > a { display: block; width: 100%; height: 100%; }
+
+.product_wrap > .product > li > a > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+.product_wrap > .product > li.li_01 { background-image: url("../../../img/slide_02/menu_ (1).png"); }
+
+.product_wrap > .product > li.li_02 { background-image: url("../../../img/slide_02/menu_ (2).png"); }
+
+.product_wrap > .product > li.li_03 { background-image: url("../../../img/slide_02/menu_ (3).png"); }
+
+.product_wrap > .product > li.li_04 { background-image: url("../../../img/slide_02/menu_ (4).png"); }
+
+.product_wrap > .product > li.li_05 { background-image: url("../../../img/slide_02/menu_ (5).png"); }
+
+.product_wrap > .product > li.li_06 { background-image: url("../../../img/slide_02/menu_ (6).png"); }
+
+.product_wrap > .product > li.li_07 { background-image: url("../../../img/slide_02/menu_ (7).png"); }
+
+.product_wrap > .product > li.li_08 { background-image: url("../../../img/slide_02/menu_ (8).png"); }
+
+.product_wrap > .product > li.li_09 { background-image: url("../../../img/slide_02/menu_ (9).png"); }
+
+.view_btn { position: absolute; top: 200px; margin: auto; width: 100%; height: 0; padding: 0 40px; box-sizing: border-box; }
+
+.view_btn > button { float: left; width: 70px; height: 70px; font-size: 4rem; text-align: center; border-radius: 100%; background-color: #aaa; }
+
+.view_btn > button:hover, .view_btn > button :focus { background-color: #da0; }
+
+.view_btn > button > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+.view_btn > .next { float: right; }
+
+.action > a { background-color: #da0; border-radius: 100%; }

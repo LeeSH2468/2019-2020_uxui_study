@@ -26,7 +26,6 @@
   });
 /*
 const ul = $('.new_list');
-ul.wrap('<div id= "news"></div>');
  for(let i  =0;i<5;i++){
    ul.append('<li></li>');
    let li = $('li').eq(i);

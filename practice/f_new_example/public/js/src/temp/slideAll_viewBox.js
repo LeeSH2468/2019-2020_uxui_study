@@ -68,7 +68,7 @@
   //======================
   //인디케이터 선택시
   indiLi.children('a').on('focus',function(e){
-    e.preventDefault;
+    e.preventDefault();
     n = $(this).parent('li').index();
     slideWrap.stop().animate({ 'left': -100 * n + '%' });
     indiLi.eq(n).siblings().removeClass('action');
@@ -77,7 +77,7 @@
 
   //a를 클릭시에는 해당하는 광고 배너로 포커스처리
   $(this).on('click',function(e){
-    e.preventDefault;
+    e.preventDefault();
     slideEach.eq(n+1).find('a').focus();
     });
   });//indiLi.children('a').on('focus')
