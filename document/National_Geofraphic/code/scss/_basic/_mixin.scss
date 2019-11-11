@@ -1,0 +1,55 @@
+//mixin-font, mouse, button
+
+//font
+@mixin h2($c:white){
+  font-size:60px; font-size:3.75rem; font-weight:bold; color:$c; text-transform:uppercase;
+}
+@mixin h3($c:white){
+  font-size:48px; font-size:3rem; font-weight:bold; color:$c; text-transform:uppercase;
+}
+@mixin h4($c:white){
+  font-size:40px; font-size:2.5rem; font-weight:bold; color:$c; 
+}
+@mixin h5($c:white){
+  font-size:30px; font-size:1.875rem; font-weight:bold; color:$c; 
+}
+@mixin h6($c:white){
+  font-size:26px; font-size:1.625rem; font-weight:bold; color:$c; 
+}
+@mixin text_s($c:white){
+  font-size:24px; font-size:1.5rem; font-weight:bold; color:$c; 
+}
+@mixin text_c($c:white){
+  font-size:20px; font-size:1.25rem; font-weight:bold; color:$c; 
+}
+@mixin sub_title($deg:-10deg){ text-transform:uppercase;  @include h3; transform:rotate($deg);
+  &::first-letter{color:$primary}
+}
+
+//mouse_hover
+@mixin mouse_hover($s:20px,){font-size:$s; font-size:1.25rem;}
+
+//button // 사용법 : @include button($b:#000); 
+@mixin btn_hover(){
+  background-color:$primary; color:$black; line-height: 120%; text-align:center;
+}//hover
+
+@mixin btn_active(){
+  text-decoration:underline;
+}//active
+
+//흰배경버튼
+@mixin button_w($bg:$opacity, $c:$white){ 
+ width: 240px; height:40px; background-color:$bg; color:$c; line-height: 120%; text-align:center; border:1px solid $primary;
+ &:hover,&:focus{ @include btn_hover}
+ &:active{@include btn_active}
+ @content;
+
+}//button_w
+
+//검은배경 버튼
+@mixin button_b($bg:$white, $c:$black){ 
+ width: 240px; height:40px; background-color:$white; color:$c; line-height: 120%; text-align:center; border:1px solid $bg;
+ &:hover,&:focus{ @include btn_hover}
+ &:active{@include btn_active}
+ @content;}//button_w
