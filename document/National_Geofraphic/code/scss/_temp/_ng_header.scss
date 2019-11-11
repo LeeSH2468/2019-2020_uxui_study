@@ -1,0 +1,17 @@
+//national_header.scss
+#headBox{width: 100%; height: 80px; background-color: $black; padding-top:20px; box-sizing: border-box;}
+
+h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:40px;
+  >a{display:block; width: 100%;height: 100%; background-image:url(../../../img/ng_logo_w.png);}//a
+}//h1
+#gnb{float:right; width: auto;height: auto; margin-right:20px;
+  >ul{width: auto; height: auto;
+    >li{display:block; float: left; position:relative; width: auto; height: auto; padding-right:60px; @include link;
+    &:after,&::after{content:" "; display:block; position:absolute; top:0; right:30px; width:2px; height:20px; background-color:$primary;}//li after
+    &:last-child:after,&:last-child::after{content:" "; display:none; }//last li after
+    >a{@include link;}
+    }//li
+  }//ul
+}//#gnb
+
+// @include mobile{#headBox{height: 90px;}}

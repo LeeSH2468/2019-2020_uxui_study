@@ -1,9 +1,29 @@
-@charset "UTF-8";
+#wrap { width: 100%; height: 100%; }
 
-@import url("./national_temp_css/natinal_header.css");
-@import url("./national_temp_css/national_01_main_wrap.css");
-@import url("./national_temp_css/national_01_main_view.css");
-@import url("./national_temp_css/national_01_main_intro_ng.css");
-@import url("./national_temp_css/national_01_main_intro_sub.css");
-@import url("./national_temp_css/national_footer.css");
-/* national_01_main.css */
+#conBox { width: 100%; height: 2740px; background-color: #ffd51c; }
+
+#footBox { width: 100%; height: 220px; background-color: #171717; }
+
+#headBox { width: 100%; height: 80px; background-color: #171717; padding-top: 20px; box-sizing: border-box; }
+
+h1 { float: left; width: 175px; height: 50px; background-size: cover; padding-left: 40px; }
+
+h1 > a { display: block; width: 100%; height: 100%; background-image: url(../../../img/ng_logo_w.png); }
+
+#gnb { float: right; width: auto; height: auto; margin-right: 20px; }
+
+#gnb > ul { width: auto; height: auto; }
+
+#gnb > ul > li { display: block; float: left; position: relative; width: auto; height: auto; padding-right: 60px; width: auto; height: auto; display: block; font-size: "20px"; font-size: 1.25rem; text-transform: uppercase; color: #fff; }
+
+#gnb > ul > li:hover, #gnb > ul > li:focus { font-size: 21px; font-size: "20.0625rem"; color: #ffd51c; }
+
+#gnb > ul > li:after, #gnb > ul > li::after { content: " "; display: block; position: absolute; top: 0; right: 30px; width: 2px; height: 20px; background-color: #ffd51c; }
+
+#gnb > ul > li:last-child:after, #gnb > ul > li:last-child::after { content: " "; display: none; }
+
+#gnb > ul > li > a { width: auto; height: auto; display: block; font-size: "20px"; font-size: 1.25rem; text-transform: uppercase; color: #fff; }
+
+#gnb > ul > li > a:hover, #gnb > ul > li > a:focus { font-size: 21px; font-size: "20.0625rem"; color: #ffd51c; }
+
+/* ng_01_main.css */

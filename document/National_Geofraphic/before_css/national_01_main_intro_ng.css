@@ -1,0 +1,34 @@
+/* national_01_main_intro_ng.css */
+
+/* .intro_ng_area =========================== */
+.intro_ng_area{width: 100%;height: auto; padding:52px 0;box-sizing:border-box; background-color: #000; color:#fff;}
+.ng_image{width: 400px; height: 300px; margin:auto;
+background-image:url(../../../img/main_img/info_ng_1920.png);
+background-repeat:no-repeat;
+background-position:50%, 50%;
+background-size: 100%,auto;}
+.ng_01>dl{width: 100%; height: auto; padding:30px; box-sizing:border-box; text-align: center; word-break: keep-all; font-family: 'Noto Sans KR', 'sans-serif'; }
+.ng_01>dl>dt{width: 100%; height: auto; margin-bottom:40px; text-transform: uppercase;font-size:1.875rem; font-size:30px;}
+.ng_01>dl>dt:after,
+.ng_01>dl>dt::after{content:" "; display:block; margin:auto; margin-top:30px; width: 150px;height: 2px; background-color:#ffd51c; font-size:1.25rem; font-size:20px;}
+
+ /* - design 기준: 480px (mobile) */
+ @media screen and (max-width:767px) {
+  .ng_image{width: 80vw; min-width:350px;}
+  hr{display:none;}
+}/* @media screen and (max-width:767px)  */
+
+/* - 디자인 기준 : 768px (tablet) */
+@media screen and (min-width:768px)  and (max-width:959px) {
+  .ng_image{width: 80vw;}
+}/* @media screen and 768px ~ 959px */
+
+/* - design 기준: 960px  (pc) */
+@media screen and (min-width:960px) {
+  .ng_image{width: 80vw; }
+
+    .intro_ng_area{position:relative;}
+    .ng_image{height:30vw; margin:0;}
+
+    .ng_01{position: absolute; top:20%; left:60%; float:right; width: 30%; height:auto; border:4px solid #ffd51c;background-color:rgba(255,255,255,0.5); color:#000; word-break: keep-all;}
+}/* @media screen and (min-width:960px) */

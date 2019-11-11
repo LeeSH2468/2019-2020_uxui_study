@@ -1,9 +1,16 @@
-@charset "UTF-8";
+@import "./_basic/var";
+@import "./_basic/mixin";
+@import "./_basic/etc";
 
-@import url("./national_temp_css/natinal_header.css");
-@import url("./national_temp_css/national_01_main_wrap.css");
-@import url("./national_temp_css/national_01_main_view.css");
-@import url("./national_temp_css/national_01_main_intro_ng.css");
-@import url("./national_temp_css/national_01_main_intro_sub.css");
-@import url("./national_temp_css/national_footer.css");
-/* national_01_main.css */
+
+#wrap{width: 100%; height: 100%;}
+#conBox{width: 100%; height: 2740px;background-color: $primary;}
+#footBox{width: 100%; height: 220px; background-color: $black;}
+
+@import "./_temp/ng_header";
+@import "./_temp/ng_01_view";
+@import "./_temp/ng_01_society";
+@import "./_temp/ng_01_intro";
+@import "./_temp/ng_01_youtube";
+@import "./_temp/ng_footer";
+/* ng_01_main.css */

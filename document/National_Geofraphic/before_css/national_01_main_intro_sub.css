@@ -1,0 +1,44 @@
+/* national_01_main_intro_sub.css */
+
+/* .intro_sub_area ========================== */
+.intro_sub_area{width: 100%; height: auto; padding:50px; box-sizing:border-box; background-color: #000;}
+.intro_sub_area dl{width:100%; height:auto;  text-align:center; word-break: keep-all;}
+.intro_sub_area dl>dt{width:100%; height:auto;margin-bottom:54px; text-transform: uppercase;font-size:1.5625rem; font-size:25px;}
+
+.intro_sub_area>div{width: calc(96% / 3); height: 380px; margin:auto; margin-right:calc(4%/3); color:#fff;font-size:1.125rem; font-size:18px;}
+.sub_image:before,
+.sub_image::before{content:" "; display:block; position: absolute; top:-19px;  left:50%; transform:translateX(-50%); z-index:100; width: 26px; height: 38px; border:3px solid #ffd51c;}
+.sub_image{position: relative; width:100%; height: 156px; margin:auto; margin-bottom:40px;}
+
+
+.intro_sub_area dl>dt:after,
+.intro_sub_area dl>dt::after{content:" "; display:block; margin:auto; margin-top:30px; width: 150px;height: 2px; background-color:#ffd51c;}
+
+/* - design 기준: 480px (mobile) */
+@media screen and (max-width:767px) {
+
+  .intro_sub_area>div{width: 400px; margin:auto;}
+  .sub_image_01{background-image:url(../../../img/main_img/info_channel.png); background-repeat:no-repeat;}
+  .sub_image_02{background-image:url(../../../img/main_img/info_magazines.png); background-repeat:no-repeat;}
+  .sub_image_03{background-image:url(../../../img/main_img/info_apparel.png); background-repeat:no-repeat;}
+  }/* @media screen and (max-width:767px)  */
+
+   /* - 디자인 기준 : 768px (tablet) */
+   @media screen and (min-width:768px)  and (max-width:959px) {
+ 
+    .intro_sub_area{height: 500px;}
+    .intro_sub_area>div{float:left;  margin-bottom:120px;}
+    .sub_image_01{background-image:url(../../../img/main_img/info_channel_v.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
+    .sub_image_02{background-image:url(../../../img/main_img/info_magazines_v.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
+    .sub_image_03{background-image:url(../../../img/main_img/info_apparel_v.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
+    }/* @media screen and 768px ~ 959px */
+
+      /* - design 기준: 960px  (pc) */
+  @media screen and (min-width:960px) {    
+    .intro_sub_area{height: 600px; padding-top:150px;}
+    .intro_sub_area>div{float:left;  margin-bottom:120px;}
+    
+    .sub_image_01{background-image:url(../../../img/main_img/info_channel.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
+    .sub_image_02{background-image:url(../../../img/main_img/info_magazines.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
+    .sub_image_03{background-image:url(../../../img/main_img/info_apparel.png); background-repeat:no-repeat; background-size:100% auto; background-position:50%,50%;}
+    }/* @media screen and (min-width:960px) */

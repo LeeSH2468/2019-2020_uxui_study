@@ -9,7 +9,7 @@ $opacity : rgba(0,0,0,0.5);
 $gradation :rgba($primary, 0), rgba($primary, 1) 30%, rgba($primary, 1) 70%, rgba($primary, 0);
 
 //line
-$y_box:10px solid $ffd51c;
+@mixin title_line($w:1px){height:1px; background-color: $primary; width: $w; }
 
 
 
