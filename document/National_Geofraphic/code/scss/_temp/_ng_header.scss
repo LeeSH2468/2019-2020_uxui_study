@@ -1,9 +1,14 @@
 //national_header.scss
-#headBox{width: 100%; height: 80px; background-color: $black; padding-top:20px; box-sizing: border-box;}
+#headBox{width: 100%; height: 80px; background-color: $black; padding-top:20px; box-sizing: border-box;
+@include mobile{height: 90px;}
+}
 
 h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:40px;
   >a{display:block; width: 100%;height: 100%; background-image:url(../../../img/ng_logo_w.png);}//a
+@include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
+@include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
 }//h1
+
 #gnb{float:right; width: auto;height: auto; margin-right:20px;
   >ul{width: auto; height: auto;
     >li{display:block; float: left; position:relative; width: auto; height: auto; padding-right:60px; @include link;
@@ -11,7 +16,54 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
     &:last-child:after,&:last-child::after{content:" "; display:none; }//last li after
     >a{@include link;}
     }//li
+  @include mobile{display:none;}
+  @include tablet{display:none;}
   }//ul
+  >i{@include h4($primary);
+    @include labtop{display:none;}
+    @include pcfull{display:none;}
+@include mobile{width: 45px; height: 45px; margin-right:10px;}
+@include tablet{width: 45px; height: 45px; margin-right:34px;}
+
+  }
 }//#gnb
 
-// @include mobile{#headBox{height: 90px;}}
+//m_popup
+/* magazinge popup ========================= */
+.m_popup{display:none; position: relative; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: $opacity;
+>.m_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;
+  }//m_close_btn
+}//m_popup
+
+.origin_maga{float:left; width: 448px; height: 100%; margin-right:4px; background-color: $opacity;
+>a{@include aLink}
+}//origin_maga
+.traver_maga{float:right; width: 448px; height: 100%; background-color: $opacity;
+  >a{@include aLink}
+  }//.traver_maga
+
+.m_name{position: absolute; bottom:0; width: 50%; text-align:center; line-height: 100px; @include text_c;
+&:before,&::before{content:" "; display:block; position: absolute; top:36px; left:50px; width: 2px; height: 30px; background-color: $primary;}
+&:after,&::after{content:" "; display:block; position: absolute; top:36px; right:50px; width: 2px; height: 30px; background-color: $primary;}
+}//.m_name
+
+ /* store popup ======================== */
+
+ .s_popup{/*display:none;*/position:absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: $opacity; padding: 0; margin:auto;
+>button{display: none;}
+>div{float:left; width:33%; height:100%; background-color: #fff; margin:0;
+  margin-left: 0.5%;
+  &:first-of-type{margin-left: 0;}}
+/* 
+>.s_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;}}
+.apparel_store,.acce_store{position: relative; float:left; width: 33%; height: 100%; margin-right:4px; background-color: $opacity;
+  >a{@include aLink}}
+.brend_store{float:left; width: 33%; height: 100%; background-color: rgba(0,0,0,0.8);
+>a{@include aLink} */
+}
+
+.s_name{position: absolute; bottom:0; text-align:center; line-height: 100px; @include text_c;
+&:before,&::before{content:" "; display:block; position: absolute; top:36px; left:50px; width: 2px; height: 30px; background-color: $primary;}
+&:after,&::after{content:" "; display:block; position: absolute; top:36px; right:50px; width: 2px; height: 30px; background-color: $primary;}
+}
+

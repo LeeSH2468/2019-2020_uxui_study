@@ -1,0 +1,9 @@
+.view_area{position:relative; width: 100%; height:710px; background-color: #aad;
+>.view_pic_bg{position:absolute; width: 100%; height: 710px; 
+  $u :"../../../img/main_img/view_distant_1920.jpg"; 
+  @include bg_base($url:$u,$s:100% auto)}
+>.view_pic_logo{position:absolute; width:50vw; height:25vw;  
+  $u:"../../img/ng_logo_w.png";
+  @include bg_base($u);}
+>ul{}
+}
