@@ -1,0 +1,44 @@
+.intro_sub_area{width: 100%; background-color: $black;  
+@include mobile{height: 1030px;}
+@include tablet{height: 1630px;}
+@include labtop{height: 1630px;}
+@include pcfull{height: 1820px;}
+
+>.sub_image{position:relative; width: 80%; height:auto; margin:auto; background-color: #afd;
+    @include mobile{width: 100%; height: 30%; margin-bottom:100px;background-color: $opacity; box-sizing:border-box;}
+    @include tablet{width: 100%; height: 370px; margin-bottom:100px;background-color: $opacity; box-sizing:border-box; padding:30px;}
+>div{position:absolute; width: 450px; height: 350px; 
+@include mobile{display:none;}
+@include tablet{display:none;}
+}//div
+&>dl{width: 500px; height: 300px; margin:60px auto;text-align: center;
+    @include mobile{margin-top:0;}
+    >dt{ 
+        @include mobile{@include h5;text-transform:uppercase;}
+        @include tablet{@include h4;}
+        @include labtop{@include sub_title}
+        @include pcfull{@include sub_title}
+        }
+    &>dd{@include text_c; width: 420px; height: 170px; padding:40px; box-sizing: border-box; background-color: $opacity; margin:auto;
+    @include mobile{background-color:transparent;}
+    @include tablet{background-color:transparent;}}
+    &>a{display: block; @include button_b(240px,40px); margin:auto;
+        @include mobile{}
+        @include tablet{}
+    }
+ }//dl
+}//.sub_image
+}//.intro_sub_area
+
+
+@mixin dl_action{.sub_image:nth-of-type(2n+1)>div{left:-10vw; /*opacity:0;*/}
+.sub_image:nth-of-type(2n+1)>div.action{left:0;}
+.sub_image:nth-of-type(2n+1)>dl{float:right; /*opacity:0;*/ transform:translateX(10vw)}
+.sub_image:nth-of-type(2n)>div{right:10vw; /*opacity:0;*/}
+.sub_image:nth-of-type(2n)>div.action{right:0;}
+.sub_image:nth-of-type(2n)>dl{float:left; /*opacity:0;*/transform:translateX(-10vw)}
+.sub_image>div.action{opacity: 1; transition: all 500ms ease;}
+.sub_image>dl.action{transform:translateX(0); opacity:1;transition: all 500ms ease;}}
+@include labtop{@include dl_action}
+@include pcfull{@include dl_action}
+

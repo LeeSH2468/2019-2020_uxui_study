@@ -1,0 +1,20 @@
+.intro_ng_area{width: 100%; height: auto;background-color: $black; padding:70px 0 150px 0; box-sizing: border-box;
+>h3{position:relative; width: auto; height: auto; text-align: center; text-transform: uppercase;
+@include mobile{@include h6; margin-bottom:50px;}
+@include tablet{@include h5; margin-bottom:50px;}
+@include labtop{@include h3; margin-bottom:100px;}
+@include pcfull{@include h3; margin-bottom:100px;}
+&:after,&::after{
+@include mobile{@include y_line($w:70px,$h:1px,$b:-30px)}
+@include tablet{@include y_line($w:100px,$b:-30px)}
+@include labtop{@include y_line($b:-60px)}
+@include pcfull{@include y_line($b:-60px)}
+    }//after
+}//h3
+&>.video_bg{background-color: #fff; margin:auto;
+@include mobile{width: 360px; height: 220px;}
+@include tablet{width: 580px; height: 360px;}
+@include labtop{width: 870px; height: 540px;}
+@include pcfull{width: 1000px; height: 730px;}
+}
+}

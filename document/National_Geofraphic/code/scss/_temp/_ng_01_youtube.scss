@@ -1,0 +1,46 @@
+// hr{width: 100%; height:2px; background-image:radial-gradient(45deg,$gradation);}
+$c:4;
+.youtube_area{width: 100%; height: 900px; padding-top:50px; background-color: $black;
+>h3{@include h3; text-align: center; margin-bottom:70px;}
+>.slide_form{position: relative; width: 80vw; height: 50vw; margin:auto;background-color: #757;
+
+  >.guide{width:100 * $c; height: 100%;
+    >.banner{width: 100 / $c;height: 100%;
+
+      
+      >.y_img_zone{ 
+        @include labtop{float:left; width: 48%; height: 100%;}
+        @include pcfull{float:left; width: 48%; height: 100%;}}
+      >.y_title_area{ 
+        @include mobile{position: absolute; bottom:0; width: 100%; height: 30%; padding:10px; box-sizing: border-box;background-color: $opacity;;}
+        @include tablet{position: absolute; bottom:0; width: 100%; height: 30%; padding:30px; box-sizing: border-box;background-color: $opacity;}
+        @include labtop{float:left; width: 50%; height: 100%;}
+        @include pcfull{float:left; width: 50%; height: 100%;}
+      >.text_zone{
+        @include mobile{width: 100%; height: 70%;}
+        @include tablet{float:left;width: 70%; height: 30%;}
+        @include labtop{width: 100%; height: auto; margin-top:150px;} 
+        @include pcfull{width: 100%; height: auto; margin-top:250px;}
+        >h4{
+          @include mobile{@include h5; text-align: center;}
+          @include tablet{@include h4;}
+          @include labtop{@include h3;}
+          @include pcfull{@include h2;}
+        }
+        >p{@include text_c;
+          @include mobile{display:none;}
+          @include tablet{@include text_l;}}
+      }//text_zone
+      >.y_link{
+        @include mobile{display:none;}
+        @include tablet{float:right; width: 30%; height: 100%; margin-top:30px;}
+        @include labtop{}
+        >a{@include aLink; @include button_b(180px,40px);
+          @include labtop{@include button_b(230px,40px);}
+          @include pcfull{@include button_b(250px,60px); line-height: 350%;}}
+}
+      }
+      }//banner
+    }//guide
+  }//slide_form
+}//.youtube_area
