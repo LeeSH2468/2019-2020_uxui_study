@@ -1,6 +1,7 @@
 // nationl_main.js
 (function($){
-  // background mousemove ==========================
+  // background mousemove ===============
+  console.log($,fn);
   const viewBg = $('.view_pic_distant');
   const body = $('body');
 

@@ -1,4 +1,4 @@
-.intro_sub_area{width: 100%; background-color: $black;  
+.intro_sub_area{width: 100%; background-color: $black; padding-top:200px; box-sizing:border-box; 
 @include mobile{height: 1030px;}
 @include tablet{height: 1630px;}
 @include labtop{height: 1630px;}
@@ -17,11 +17,11 @@
         }
     &>dd{@include text_c; width: 420px; height: 170px; padding:40px; box-sizing: border-box; background-color: $opacity; margin:auto;
     @include mobile{background-color:transparent;}
-    @include tablet{background-color:transparent;}}
+    @include tablet{background-color:transparent;}
     &>a{display: block; @include button_b(240px,40px); @include text_m_bold($black); margin:auto;
         @include mobile{}
         @include tablet{}
-    }
+    }}
  }//dl
 }//.sub_image
 }//.intro_sub_area
@@ -37,6 +37,7 @@
 @mixin be_box($l){content:" "; display:block; position:absolute; top:50%;left:$l; z-index:-1;transform:translateY(-50%);width: 230px; height: 300px; border:26px solid $primary}
 .sub_02:before,.sub_02::before{@include be_box($l:250px);}
 .sub_01:before,.sub_01::before,.sub_03:before,.sub_03::before{@include be_box($l:0px);}
+
 .pic_01{ @include bg_base("../../img/main_img/info_c.png",$s:80% auto);}
 .pic_02{ @include bg_base("../../img/main_img/info_m.jpg",$s:80% auto);}
 .pic_03{ @include bg_base("../../img/main_img/info_a.jpg",$s:80% auto);}

@@ -50,9 +50,9 @@
 
 
 //button // 사용법 : @include button($b:#000); 
-@mixin btn_hover(){
-  background-color:$primary; color:$black; text-align:center;
-  border-color:$primary;
+@mixin btn_hover{
+  background-color:$primary;text-align:center;
+  border-color:$primary; @content;
 }//hover
 
 @mixin btn_active(){
@@ -62,8 +62,8 @@
 //흰배경버튼
 @mixin button_w($w,$h,$bg:$opacity, $c:$white){ 
  width: $w; height:$h; background-color:$bg; color:$c; line-height: 250%; text-align:center; font-weight: 500; border:4px solid $primary;
- &:hover,&:focus{ @include btn_hover}
- &:active{@include btn_active}
+ &>a:hover,&>a:focus{ @include btn_hover}
+ &>a:active{@include btn_active}
  @content;
 
 }//button_w

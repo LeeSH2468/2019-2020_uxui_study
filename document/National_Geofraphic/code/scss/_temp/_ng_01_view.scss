@@ -15,12 +15,14 @@
   @include labtop{width:(290px*3)+(40px*2);bottom:20%;}
   @include pcfull{width:(380px*3)+(70px*2);bottom:20%;}
   >li{text-transform: uppercase; box-sizing: border-box;
-  @include mobile{@include button_w(270px,50px); margin-bottom:30px;}
-  @include tablet{@include button_w(430px,50px); margin-bottom:30px;}
-  @include labtop{@include button_w(290px,50px);float: left; margin-right: 40px;}
-  @include pcfull{@include button_w(380px,50px);float: left; margin-right: 70px; }
+  @include mobile{@include button_w(270px,50px,$black); margin-bottom:30px;}
+  @include tablet{@include button_w(430px,50px,$black); margin-bottom:30px;}
+  @include labtop{@include button_w(290px,50px,$black);float: left; margin-right: 40px;}
+  @include pcfull{@include button_w(380px,50px,$black);float: left; margin-right: 70px; }
   &:last-child{margin-right:0; margin-bottom:0;}
-  >a{@include aLink; @include text_c;}
+  >a{@include aLink; font-size:20px; font-size:1.25rem; text-transform:uppercase; word-break:keep-all;}
+  &a:hover,&a:focus{font-size:50px;}
+  
     }//li
   }//ul
 }//view_area
