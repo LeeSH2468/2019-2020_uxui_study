@@ -12,9 +12,6 @@
     }//after
 }//h3
 &>.video_bg{background-color: #fff; margin:auto;
-@include mobile{width: 360px; height: 220px;}
-@include tablet{width: 580px; height: 360px;}
-@include labtop{width: 870px; height: 540px;}
-@include pcfull{width: 1000px; height: 730px;}
+    width: 70vw; height: 40vw;
 }
 }

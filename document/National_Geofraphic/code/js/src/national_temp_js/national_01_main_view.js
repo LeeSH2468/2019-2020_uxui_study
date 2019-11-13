@@ -1,7 +1,7 @@
 (function($){
   // background mousemove ==========================
   const viewBg = $('.view_area');
-  const viewDist = $('.view_pic_distant');
+  const viewDist = $('.view_pic_bg');
   const viewLogo = $('.view_pic_logo');
   const viewClose = $('.view_pic_close');
   // console.log('view');

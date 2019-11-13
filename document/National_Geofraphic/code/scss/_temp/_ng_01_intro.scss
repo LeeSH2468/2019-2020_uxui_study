@@ -4,13 +4,9 @@
 @include labtop{height: 1630px;}
 @include pcfull{height: 1820px;}
 
->.sub_image{position:relative; width: 80%; height:auto; margin:auto; background-color: #afd;
+>.sub_image{position:relative; width: 80%; height:auto; margin:auto;
     @include mobile{width: 100%; height: 30%; margin-bottom:100px;background-color: $opacity; box-sizing:border-box;}
     @include tablet{width: 100%; height: 370px; margin-bottom:100px;background-color: $opacity; box-sizing:border-box; padding:30px;}
->div{position:absolute; width: 450px; height: 350px; 
-@include mobile{display:none;}
-@include tablet{display:none;}
-}//div
 &>dl{width: 500px; height: 300px; margin:60px auto;text-align: center;
     @include mobile{margin-top:0;}
     >dt{ 
@@ -22,7 +18,7 @@
     &>dd{@include text_c; width: 420px; height: 170px; padding:40px; box-sizing: border-box; background-color: $opacity; margin:auto;
     @include mobile{background-color:transparent;}
     @include tablet{background-color:transparent;}}
-    &>a{display: block; @include button_b(240px,40px); margin:auto;
+    &>a{display: block; @include button_b(240px,40px); @include text_m_bold($black); margin:auto;
         @include mobile{}
         @include tablet{}
     }
@@ -30,15 +26,50 @@
 }//.sub_image
 }//.intro_sub_area
 
+.sub_pic{position:absolute;z-index:100; top:30px; width: auto; height: auto;
+     
+@include mobile{display:none;}
+@include tablet{display:none;}
+&>.pic_zone{width: 460px; height: 350px; z-index:100;
+    padding:40px;box-sizing:border-box;}
+}//div
 
-@mixin dl_action{.sub_image:nth-of-type(2n+1)>div{left:-10vw; /*opacity:0;*/}
-.sub_image:nth-of-type(2n+1)>div.action{left:0;}
+@mixin be_box($l){content:" "; display:block; position:absolute; top:50%;left:$l; z-index:-1;transform:translateY(-50%);width: 230px; height: 300px; border:26px solid $primary}
+.sub_02:before,.sub_02::before{@include be_box($l:250px);}
+.sub_01:before,.sub_01::before,.sub_03:before,.sub_03::before{@include be_box($l:0px);}
+.pic_01{ @include bg_base("../../img/main_img/info_c.png",$s:80% auto);}
+.pic_02{ @include bg_base("../../img/main_img/info_m.jpg",$s:80% auto);}
+.pic_03{ @include bg_base("../../img/main_img/info_a.jpg",$s:80% auto);}
+//=========================
+//action
+@mixin dl_base{
+.sub_image:nth-of-type(2n+1)>div{left:0vw; /*opacity:0;*/}
 .sub_image:nth-of-type(2n+1)>dl{float:right; /*opacity:0;*/ transform:translateX(10vw)}
 .sub_image:nth-of-type(2n)>div{right:10vw; /*opacity:0;*/}
-.sub_image:nth-of-type(2n)>div.action{right:0;}
 .sub_image:nth-of-type(2n)>dl{float:left; /*opacity:0;*/transform:translateX(-10vw)}
+}
+
+
+@mixin dl_action{
+.sub_image:nth-of-type(2n+1)>div.action{left:8vw;}
+.sub_image:nth-of-type(2n)>div.action{right:0;}
 .sub_image>div.action{opacity: 1; transition: all 500ms ease;}
 .sub_image>dl.action{transform:translateX(0); opacity:1;transition: all 500ms ease;}}
-@include labtop{@include dl_action}
-@include pcfull{@include dl_action}
+
+@include labtop{@include dl_base; @include dl_action}
+@include pcfull{@include dl_base; @include dl_action}
+
+//==========
+// @mixin dl_action{.sub_image:nth-of-type(2n+1)>div{left:-10vw; /*opacity:0;*/}
+// .sub_image:nth-of-type(2n+1)>div.action{left:0;}
+// .sub_image:nth-of-type(2n+1)>dl{float:right; /*opacity:0;*/ transform:translateX(10vw)}
+// .sub_image:nth-of-type(2n)>div{right:10vw; /*opacity:0;*/}
+// .sub_image:nth-of-type(2n)>div.action{right:0;}
+// .sub_image:nth-of-type(2n)>dl{float:left; /*opacity:0;*/transform:translateX(-10vw)}
+// .sub_image>div.action{opacity: 1; transition: all 500ms ease;}
+// .sub_image>dl.action{transform:translateX(0); opacity:1;transition: all 500ms ease;}}
+
+// @include labtop{@include dl_action}
+// @include pcfull{@include dl_action}
+
 

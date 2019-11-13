@@ -6,7 +6,7 @@ $black : #171717;
 $white : #fff;
 $gray : #777;
 $opacity : rgba(0,0,0,0.5);
-$gradation :rgba($primary, 0), rgba($primary, 1) 30%, rgba($primary, 1) 70%, rgba($primary, 0);
+$gradation :rgba($primary, 0)20%, rgba($primary, 1) 50%, rgba($primary, 0)80%;
 
 //line
 @mixin title_line($w:1px){height:1px; background-color: $primary; width: $w; }
