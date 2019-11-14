@@ -1,24 +1,25 @@
-.intro_sub_area{width: 100%; background-color: $black; padding-top:200px; box-sizing:border-box; 
-@include mobile{height: 1030px;}
-@include tablet{height: 1630px;}
-@include labtop{height: 1630px;}
-@include pcfull{height: 1820px;}
-
+.intro_sub_area{width: 100%;height: auto; background-color: $black; padding-top:200px; box-sizing:border-box;
 >.sub_image{position:relative; width: 80%; height:auto; margin:auto;
-    @include mobile{width: 100%; height: 30%; margin-bottom:100px;background-color: $opacity; box-sizing:border-box;}
+    @include mobile{width: 100%; height: 340px; margin-bottom:100px;background-color: $opacity; box-sizing:border-box;}
     @include tablet{width: 100%; height: 370px; margin-bottom:100px;background-color: $opacity; box-sizing:border-box; padding:30px;}
-&>dl{width: 500px; height: 300px; margin:60px auto;text-align: center;
-    @include mobile{margin-top:0;}
-    >dt{ 
-        @include mobile{@include h5;text-transform:uppercase;}
-        @include tablet{@include h4;}
+&>dl{width: 500px; height: 300px; margin:auto; margin-bottom:150px; padding:30px; box-sizing: border-box; text-align: center;
+    >dt{ position: relative;
+        @include mobile{@include h5;text-transform:uppercase;
+            &:after,&::after{
+            @include mobile{@include y_line($w:70px,$h:1px,$b:-20px)}}}
+        @include tablet{@include h4;
+             &:after,&::after{
+            @include tablet{@include y_line($w:100px,$b:-20px)}}}
         @include labtop{@include sub_title}
         @include pcfull{@include sub_title}
+
+
+
         }
-    &>dd{@include text_c; width: 420px; height: 170px; padding:40px; box-sizing: border-box; background-color: $opacity; margin:auto;
+    &>dd{@include text_c; width: 420px; height: auto; padding:40px; box-sizing: border-box; background-color: $opacity; margin:auto;
     @include mobile{background-color:transparent;}
     @include tablet{background-color:transparent;}
-    &>a{display: block; @include button_b(240px,40px); @include text_m_bold($black); margin:auto;
+    &>a{display: block; @include button_b(240px,40px); @include text_m_bold($black); margin:20px auto;
         @include mobile{}
         @include tablet{}
     }}

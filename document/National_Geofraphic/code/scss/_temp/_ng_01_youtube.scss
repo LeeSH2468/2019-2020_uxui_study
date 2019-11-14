@@ -5,11 +5,17 @@ hr{width: 100%;  height:2px; margin-top: -2px;
 
 $c:4;
 .youtube_area{width: 100%; height: auto; padding-top:50px;padding-bottom:100px; background-color: $black;
->h3{@include h3; text-align: center; margin-bottom:70px;}
->.slide_form{position: relative; width: 80vw; height: 50vw; margin:auto;background-color: #757;
+>h3{@include h3; position:relative; text-align: center; margin-bottom:70px;
+&:after,&::after{
+@include mobile{@include y_line($w:70px,$h:1px,$b:-30px)}
+@include tablet{@include y_line($w:100px,$b:-30px)}
+@include labtop{@include y_line($b:-60px)}
+@include pcfull{@include y_line($b:-60px)}
+    }}
+>.slide_form{position: relative; width: 66vw; height: 40vw; margin:auto;background-color: #757; overflow: hidden;
 
-  >.guide{width:100 * $c; height: 100%;
-    >.banner{width: 100 / $c;height: 100%;
+  >.guide{width:100% * $c; height: 100%;
+    >.banner{width: 100% / $c;height: 100%;
 
       
       >.y_img_zone{ 
@@ -46,19 +52,19 @@ $c:4;
         }//y_link
       }
       }//banner
-    }//guide
-  >.slide_btn{position:absolute; z-index: 100; top:50%; left:5%; width: 90%; height: 0px; background-color: #ada;
+    }//guide   
+    >.slide_btn{position:absolute; z-index: 100; top:50%; left:5%; width: 90%; height: 0px; background-color: #ada;
   >button{float:left; width: 50px; height: 50px; transform:translateY(-50%);}
   >.next{float:right;}}
-    $c:4;$w:30px;$m:16px;
+  }//slide_form
+
+    $c:4;$w:14px;$m:16px;
   >.indicator{width: ($w + $m) * $c - $m; height:$w;margin:auto;
     >ul{width: 100%;height:100%; margin:10px auto;}
-    li{float:left; width:$w; height:$w/4*3;margin:auto; margin-right:$m; background-color: $white;
+    li{float:left; width:$w; height:$w*1.6;margin:auto; margin-right:$m; background-color: $white;
     &:last-child{margin-right:0;}
   }
     
     li.action{background-color: $primary;}
   }//indicator
-
-  }//slide_form
 }//.youtube_area
