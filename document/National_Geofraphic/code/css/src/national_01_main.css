@@ -10,7 +10,7 @@
 
 h1 { float: left; width: 175px; height: 50px; background-size: cover; padding-left: 40px; }
 
-h1 > a { display: block; width: 100%; height: 100%; background-image: url(../../../img/ng_logo_w.png); }
+h1 > a { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: contain; background-image: url("../../img/ng_logo_w.png"); }
 
 @media screen and (min-width: 320px) and (max-width: 767px) { h1 { position: absolute; left: 50%; transform: translateX(-50%); width: 36px; overflow: hidden; } }
 
@@ -93,7 +93,7 @@ h1 > a { display: block; width: 100%; height: 100%; background-image: url(../../
 
 @media screen and (min-width: 1281px) { .view_area { height: 900px; } }
 
-.view_area > .view_pic_bg { position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; background-image: url("../../../img/main_img/view_distant.jpg"); }
+.view_area > .view_pic_bg { position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; background-image: url("../../img/main_img/view_distant.jpg"); }
 
 .view_area > .view_pic_logo { position: absolute; left: 0; right: 0; margin: auto; width: 15vw; height: 10vw; background-repeat: no-repeat; background-position: 50% 50%; background-size: contain; background-image: url("../../img/ng_logo_w.png"); }
 
@@ -123,9 +123,9 @@ h1 > a { display: block; width: 100%; height: 100%; background-image: url(../../
 
 .view_area > ul > li:last-child { margin-right: 0; margin-bottom: 0; }
 
-.view_area > ul > li > a { width: 100%; height: 100%; display: block; font-size: 20px; font-size: 1.25rem; text-transform: uppercase; word-break: keep-all; }
+.view_area > ul > li > a { width: 100%; height: 100%; display: block; font-size: 20px; font-size: 1.25rem; text-transform: uppercase; color: #fff; word-break: keep-all; }
 
-.view_area > ul > lia:hover, .view_area > ul > lia:focus { font-size: 50px; }
+.view_area > ul > li > a:hover, .view_area > ul > li > a:focus { color: #171717; }
 
 .intro_ng_area { width: 100%; height: auto; background-color: #171717; padding: 70px 0 150px 0; box-sizing: border-box; }
 

@@ -5,7 +5,7 @@
   @include labtop{height:900px;}
   @include pcfull{height:900px;}
 >.view_pic_bg{position:absolute; width: 100%; height: 100%; 
-  $u :"../../../img/main_img/view_distant.jpg"; 
+  $u :"../../img/main_img/view_distant.jpg"; 
   @include bg_base($url:$u,$s:100% auto)
 }
 >.view_pic_logo{position:absolute; left:0; right:0; margin:auto; width:15vw; height:10vw;  
@@ -20,8 +20,8 @@
   @include labtop{@include button_w(290px,50px,$black);float: left; margin-right: 40px;}
   @include pcfull{@include button_w(380px,50px,$black);float: left; margin-right: 70px; }
   &:last-child{margin-right:0; margin-bottom:0;}
-  >a{@include aLink; font-size:20px; font-size:1.25rem; text-transform:uppercase; word-break:keep-all;}
-  &a:hover,&a:focus{font-size:50px;}
+  >a{@include aLink; @include text_c;}
+  >a:hover,>a:focus{color:$black;}
   
     }//li
   }//ul

@@ -4,7 +4,7 @@
 }
 
 h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:40px;
-  >a{display:block; width: 100%;height: 100%; background-image:url(../../../img/ng_logo_w.png);}//a
+  >a{display:block; width: 100%;height: 100%; @include bg_base("../../img/ng_logo_w.png");}//a
 @include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
 @include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
 }//h1
