@@ -56,7 +56,7 @@
     sPopup.stop().fadeOut();
   });
 
-    //intro=====================================
+//intro=====================================
     const win = $(window);
     const introSub = $('.intro_sub_area');
     const subImage = introSub.children('.sub_image');
@@ -83,7 +83,33 @@
         subPic.removeClass('action');
         introDl.removeClass('action');
       }
-    })
+    });
+
+
+//youtube=====================================
+    const youtubeArea = $('.youtube_area');
+    const slideForm = youtubeArea.children('.slide_form');
+    const guide = slideForm.children('.guide');
+    const banner = guide.children('.banner');
+    const yImg = banner.children('.y_img_zone');
+    const y_title = banner.children('y_title_area');
+
+    const slideBtn = slideForm.children('.slide_btn');
+    const indi = youtubeArea.children('.indicator');
+
+// 마지막영역 복제 ===============================
+
+// 인디케이터 영역 ===============================
+    for(let i = 0; i < slideLen -1; i++){
+      indi.append('<li><a href="#"><span></span></a></li>');
+      let indiLi = indi.children('li').eq(i);
+      indiLi.find('span').text(slideEach.eq(i+1).text() );
+      indiLi.find('spna').addClass('hidden');
+    };
+    const indiLi = indi.children('li');
+    indiLi.eq(0).addClass('action');
+
+
   
 
 })(jQuery);
