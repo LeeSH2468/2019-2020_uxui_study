@@ -4,9 +4,12 @@
 }
 
 h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:40px;
-  >a{display:block; width: 100%;height: 100%; @include bg_base("../../img/ng_logo_w.png");}//a
-@include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
-@include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden;}
+  $u:"../../img/ng_logo_w.svg";
+  $u2:"../../img/ng_logo_box.svg";
+  @include bg_base($u);
+  >a{display:block; width: 100%;height: 100%; ;}//a
+@include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);}
+@include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);}
 }//h1
 
 #gnb{float:right; width: auto;height: auto; margin-right:20px;
@@ -30,17 +33,15 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
 
 //m_popup
 /* magazinge popup ========================= */
-.m_popup{display:none; position: relative; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: $opacity;
+.m_popup{display:none; position: absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: #555;
 >.m_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;
-  }//m_close_btn
+  @include bg_base('../../img/close_basic.svg',$s:60% 60%);
+  &:hover,&:focus{@include bg_base('../../img/close_hover.svg',$s:60% 60%)}}//m_close_btn
+>div{float:left; width: 448px; height: 100%; margin-right:4px; background-color: $opacity;
+  &:hover,&:focus{background-color:$primary}
+  &:last-of-type{float:right; margin-right:0;}
+  >a{@include aLink}}  
 }//m_popup
-
-.origin_maga{float:left; width: 448px; height: 100%; margin-right:4px; background-color: $opacity;
->a{@include aLink}
-}//origin_maga
-.traver_maga{float:right; width: 448px; height: 100%; background-color: $opacity;
-  >a{@include aLink}
-  }//.traver_maga
 
 .m_name{position: absolute; bottom:0; width: 50%; text-align:center; line-height: 100px; @include text_c;
 &:before,&::before{content:" "; display:block; position: absolute; top:36px; left:50px; width: 2px; height: 30px; background-color: $primary;}
@@ -49,20 +50,18 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
 
  /* store popup ======================== */
 
- .s_popup{display:none;position:absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: $opacity; padding: 0; margin:auto;
->div{float:left; width:33%; height:100%; background-color: #fff; margin:0;
-  margin-left: 0.5%;
-  &:first-of-type{margin-left: 0;}}
-/* 
->.s_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;}}
-.apparel_store,.acce_store{position: relative; float:left; width: 33%; height: 100%; margin-right:4px; background-color: $opacity;
+ .s_popup{display:none;position:absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: #555; padding: 0; margin:auto;
+>div{position: relative; float:left; width: 33%; height: 100%; margin-right:4px; background-color: $opacity;
+  &:hover,&:focus{background-color:$primary}
+  &:last-of-type{float:right; margin-right: 0;}
   >a{@include aLink}}
-.brend_store{float:left; width: 33%; height: 100%; background-color: rgba(0,0,0,0.8);
->a{@include aLink} */
-}
 
-.s_name{position: absolute; bottom:0; text-align:center; line-height: 100px; @include text_c;
-&:before,&::before{content:" "; display:block; position: absolute; top:36px; left:50px; width: 2px; height: 30px; background-color: $primary;}
-&:after,&::after{content:" "; display:block; position: absolute; top:36px; right:50px; width: 2px; height: 30px; background-color: $primary;}
+>.s_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;
+  @include bg_base('../../img/close_basic.svg',$s:60% 60%);
+  &:hover,&:focus{@include bg_base('../../img/close_hover.svg',$s:60% 60%)}}}
+
+.s_name{position: absolute; bottom:0; left:0; right:0; margin:auto; text-align:center; line-height: 100px; @include text_c;
+&:before,&::before{content:" "; display:block; position: absolute; top:36px; left:8%; width: 2px; height: 30px; background-color: $primary;}
+&:after,&::after{content:" "; display:block; position: absolute; top:36px; right:8%; width: 2px; height: 30px; background-color: $primary;}
 }
 
