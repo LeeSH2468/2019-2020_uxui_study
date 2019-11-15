@@ -13,20 +13,20 @@ $c:4;
 @include pcfull{@include y_line($b:-60px)}
     }}
 >.slide_form{position: relative; width: 66vw; height: 40vw; margin:auto;background-color: #757; overflow: hidden;
-
+  
   >.guide{width:100% * $c; height: 100%;
     >.banner{width: 100% / $c;height: 100%;
 
       
       >.y_img_zone {background-color:#dfd;
-        @include bg_base($url:'../../img/main_img/you_pic_01.png');
+        @include bg_base($url:'../../../img/main_img/you_pic_01.png');
         @include labtop{float:left; width: 48%; height: 100%;}
         @include pcfull{float:left; width: 48%; height: 100%;}}
       >.y_title_area{ 
         @include mobile{position: absolute; bottom:0; width: 100%; height: 30%; padding:10px; box-sizing: border-box;background-color: $opacity;;}
         @include tablet{position: absolute; bottom:0; width: 100%; height: 30%; padding:30px; box-sizing: border-box;background-color: $opacity;}
-        @include labtop{float:left; width: 50%; height: 100%;}
-        @include pcfull{float:left; width: 50%; height: 100%;}
+        @include labtop{float:right; width: 50%; height: 100%;}
+        @include pcfull{float:right; width: 50%; height: 100%;}
       >.text_zone{
         @include mobile{width: 100%; height: 70%;}
         @include tablet{float:left;width: 70%; height: 30%;}
