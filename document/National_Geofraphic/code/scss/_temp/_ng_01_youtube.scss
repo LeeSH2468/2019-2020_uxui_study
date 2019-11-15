@@ -18,7 +18,8 @@ $c:4;
     >.banner{width: 100% / $c;height: 100%;
 
       
-      >.y_img_zone{ 
+      >.y_img_zone {background-color:#dfd;
+        @include bg_base($url:'../../img/main_img/you_pic_01.png');
         @include labtop{float:left; width: 48%; height: 100%;}
         @include pcfull{float:left; width: 48%; height: 100%;}}
       >.y_title_area{ 
@@ -49,8 +50,8 @@ $c:4;
         >a{@include aLink; @include button_b(180px,40px);@include text_m_bold($black);
           @include labtop{@include button_b(230px,40px);}
           @include pcfull{@include button_b(250px,60px); line-height: 350%;}}
-        }//y_link
-      }
+          }//y_link
+       }//.y_title_area
       }//banner
     }//guide   
     >.slide_btn{position:absolute; z-index: 100; top:50%; left:5%; width: 90%; height: 0px; background-color: #ada;
