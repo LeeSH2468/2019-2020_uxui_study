@@ -923,220 +923,232 @@ hr {
         width: 130px;
         height: 2px;
         background-color: #ffd51c; } }
-  .youtube_area > .slide_form {
+  .youtube_area > .slide_frame {
     position: relative;
-    width: 66vw;
-    height: 40vw;
-    margin: auto;
-    background-color: #757;
-    overflow: hidden; }
-    .youtube_area > .slide_form > .guide {
-      width: 400%;
-      height: 100%; }
-      .youtube_area > .slide_form > .guide > .banner {
-        width: 25%;
+    width: auto;
+    height: auto; }
+    .youtube_area > .slide_frame > .indicator {
+      position: absolute;
+      bottom: 70px;
+      left: 100px;
+      right: 0;
+      width: 104px;
+      height: 14px;
+      margin: auto; }
+      .youtube_area > .slide_frame > .indicator > ul {
+        width: 100%;
+        height: 100%;
+        margin: 10px auto; }
+      .youtube_area > .slide_frame > .indicator li {
+        float: left;
+        width: 14px;
+        height: 22.4px;
+        margin: auto;
+        margin-right: 16px;
+        background-color: #fff; }
+        .youtube_area > .slide_frame > .indicator li:last-child {
+          margin-right: 0; }
+      .youtube_area > .slide_frame > .indicator li.action {
+        background-color: #ffd51c; }
+    .youtube_area > .slide_frame > .slide_form {
+      position: relative;
+      width: 66vw;
+      height: 30vw;
+      margin: auto; }
+      .youtube_area > .slide_frame > .slide_form > .guide {
+        width: 400%;
         height: 100%; }
-        @media screen and (min-width: 960px) and (max-width: 1280px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_img_zone {
-            float: left;
-            width: 48%;
-            height: 100%; } }
-        @media screen and (min-width: 1281px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_img_zone {
-            float: left;
-            width: 48%;
-            height: 100%; } }
-        @media screen and (min-width: 320px) and (max-width: 767px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 30%;
-            padding: 10px;
-            box-sizing: border-box;
-            background-color: rgba(0, 0, 0, 0.5); } }
-        @media screen and (min-width: 768px) and (max-width: 959px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 30%;
-            padding: 30px;
-            box-sizing: border-box;
-            background-color: rgba(0, 0, 0, 0.5); } }
-        @media screen and (min-width: 960px) and (max-width: 1280px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area {
-            float: left;
-            width: 50%;
-            height: 100%; } }
-        @media screen and (min-width: 1281px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area {
-            float: left;
-            width: 50%;
-            height: 100%; } }
-        @media screen and (min-width: 320px) and (max-width: 767px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone {
-            width: 100%;
-            height: 70%; } }
-        @media screen and (min-width: 768px) and (max-width: 959px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone {
-            float: left;
-            width: 70%;
-            height: 30%; } }
-        @media screen and (min-width: 960px) and (max-width: 1280px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone {
-            width: 100%;
-            height: auto;
-            margin-top: 150px; } }
-        @media screen and (min-width: 1281px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone {
-            width: 100%;
-            height: auto;
-            margin-top: 250px; } }
-        @media screen and (min-width: 320px) and (max-width: 767px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
-            font-size: 30px;
-            font-size: 1.875rem;
-            font-weight: bold;
-            color: #fff;
-            text-align: center; } }
-        @media screen and (min-width: 768px) and (max-width: 959px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
-            font-size: 40px;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fff;
-            text-transform: uppercase; } }
-        @media screen and (min-width: 960px) and (max-width: 1280px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
-            font-size: 48px;
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #fff; } }
-        @media screen and (min-width: 1281px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
-            font-size: 60px;
-            font-size: 3.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #fff; } }
-        .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
-          font-size: 20px;
-          font-size: 1.25rem;
-          text-transform: uppercase;
-          color: #fff;
-          word-break: keep-all; }
+        .youtube_area > .slide_frame > .slide_form > .guide > .banner {
+          float: left;
+          width: 25%;
+          height: 100%; }
+          .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_img_zone {
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: auto 80%;
+            background-image: url("../../../img/main_img/you_pic_01.png"); }
+            @media screen and (min-width: 960px) and (max-width: 1280px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_img_zone {
+                float: left;
+                width: 48%;
+                height: 100%; } }
+            @media screen and (min-width: 1281px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_img_zone {
+                float: left;
+                width: 48%;
+                height: 100%; } }
           @media screen and (min-width: 320px) and (max-width: 767px) {
-            .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 30%;
+              padding: 10px;
+              box-sizing: border-box;
+              background-color: rgba(0, 0, 0, 0.5); } }
+          @media screen and (min-width: 768px) and (max-width: 959px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 30%;
+              padding: 30px;
+              box-sizing: border-box;
+              background-color: rgba(0, 0, 0, 0.5); } }
+          @media screen and (min-width: 960px) and (max-width: 1280px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
+              float: right;
+              width: 50%;
+              height: 100%; } }
+          @media screen and (min-width: 1281px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
+              float: right;
+              width: 50%;
+              height: 100%; } }
+          @media screen and (min-width: 320px) and (max-width: 767px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
+              width: 100%;
+              height: 70%; } }
+          @media screen and (min-width: 768px) and (max-width: 959px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
+              float: left;
+              width: 70%;
+              height: 30%; } }
+          @media screen and (min-width: 960px) and (max-width: 1280px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
+              width: 100%;
+              height: auto;
+              margin-top: 150px; } }
+          @media screen and (min-width: 1281px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
+              width: 100%;
+              height: auto;
+              margin-top: 250px; } }
+          @media screen and (min-width: 320px) and (max-width: 767px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
+              font-size: 30px;
+              font-size: 1.875rem;
+              font-weight: bold;
+              color: #fff;
+              text-align: center; } }
+          @media screen and (min-width: 768px) and (max-width: 959px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
+              font-size: 40px;
+              font-size: 2.5rem;
+              font-weight: bold;
+              color: #fff;
+              text-transform: uppercase; } }
+          @media screen and (min-width: 960px) and (max-width: 1280px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
+              font-size: 48px;
+              font-size: 3rem;
+              font-weight: bold;
+              text-transform: uppercase;
+              color: #fff; } }
+          @media screen and (min-width: 1281px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
+              font-size: 60px;
+              font-size: 3.75rem;
+              font-weight: bold;
+              text-transform: uppercase;
+              color: #fff; } }
+          .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
+            font-size: 20px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            color: #fff;
+            word-break: keep-all; }
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
+                display: none; } }
+            @media screen and (min-width: 768px) and (max-width: 959px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
+                font-size: 16px;
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: #fff;
+                word-break: keep-all; } }
+            @media screen and (min-width: 1281px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
+                margin-bottom: 20px; } }
+          @media screen and (min-width: 320px) and (max-width: 767px) {
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link {
               display: none; } }
           @media screen and (min-width: 768px) and (max-width: 959px) {
-            .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
-              font-size: 16px;
-              font-size: 1rem;
-              text-transform: uppercase;
-              color: #fff;
-              word-break: keep-all; } }
-          @media screen and (min-width: 1281px) {
-            .youtube_area > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
-              margin-bottom: 20px; } }
-        @media screen and (min-width: 320px) and (max-width: 767px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link {
-            display: none; } }
-        @media screen and (min-width: 768px) and (max-width: 959px) {
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link {
-            float: right;
-            width: 30%;
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link {
+              float: right;
+              width: 30%;
+              height: 100%;
+              margin-top: 30px; } }
+          .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
+            width: 100%;
             height: 100%;
-            margin-top: 30px; } }
-        .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
-          width: 100%;
-          height: 100%;
-          display: block;
-          width: 180px;
-          height: 40px;
-          background-color: #fff;
-          color: #171717;
-          line-height: 250%;
-          text-align: center;
-          border: 1px solid #fff;
-          font-size: 18px;
-          font-size: 1.125rem;
-          text-transform: uppercase;
-          font-weight: bold;
-          color: #171717;
-          word-break: keep-all; }
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:hover, .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:focus {
-            background-color: #ffd51c;
+            display: block;
+            width: 180px;
+            height: 40px;
+            background-color: #fff;
+            color: #171717;
+            line-height: 250%;
             text-align: center;
-            border-color: #ffd51c; }
-          .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
-            text-decoration: underline; }
-          @media screen and (min-width: 960px) and (max-width: 1280px) {
-            .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
-              width: 230px;
-              height: 40px;
-              background-color: #fff;
-              color: #171717;
-              line-height: 250%;
+            border: 1px solid #fff;
+            font-size: 18px;
+            font-size: 1.125rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #171717;
+            word-break: keep-all; }
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:hover, .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:focus {
+              background-color: #ffd51c;
               text-align: center;
-              border: 1px solid #fff; }
-              .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:hover, .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:focus {
-                background-color: #ffd51c;
+              border-color: #ffd51c; }
+            .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
+              text-decoration: underline; }
+            @media screen and (min-width: 960px) and (max-width: 1280px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
+                width: 230px;
+                height: 40px;
+                background-color: #fff;
+                color: #171717;
+                line-height: 250%;
                 text-align: center;
-                border-color: #ffd51c; }
-              .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
-                text-decoration: underline; } }
-          @media screen and (min-width: 1281px) {
-            .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
-              width: 250px;
-              height: 60px;
-              background-color: #fff;
-              color: #171717;
-              line-height: 250%;
-              text-align: center;
-              border: 1px solid #fff;
-              line-height: 350%; }
-              .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:hover, .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:focus {
-                background-color: #ffd51c;
+                border: 1px solid #fff; }
+                .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:hover, .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:focus {
+                  background-color: #ffd51c;
+                  text-align: center;
+                  border-color: #ffd51c; }
+                .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
+                  text-decoration: underline; } }
+            @media screen and (min-width: 1281px) {
+              .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
+                width: 250px;
+                height: 60px;
+                background-color: #fff;
+                color: #171717;
+                line-height: 250%;
                 text-align: center;
-                border-color: #ffd51c; }
-              .youtube_area > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
-                text-decoration: underline; } }
-    .youtube_area > .slide_form > .slide_btn {
-      position: absolute;
-      z-index: 100;
-      top: 50%;
-      left: 5%;
-      width: 90%;
-      height: 0px;
-      background-color: #ada; }
-      .youtube_area > .slide_form > .slide_btn > button {
-        float: left;
-        width: 50px;
-        height: 50px;
-        transform: translateY(-50%); }
-      .youtube_area > .slide_form > .slide_btn > .next {
-        float: right; }
-  .youtube_area > .indicator {
-    width: 104px;
-    height: 14px;
-    margin: auto; }
-    .youtube_area > .indicator > ul {
-      width: 100%;
-      height: 100%;
-      margin: 10px auto; }
-    .youtube_area > .indicator li {
-      float: left;
-      width: 14px;
-      height: 22.4px;
-      margin: auto;
-      margin-right: 16px;
-      background-color: #fff; }
-      .youtube_area > .indicator li:last-child {
-        margin-right: 0; }
-    .youtube_area > .indicator li.action {
-      background-color: #ffd51c; }
+                border: 1px solid #fff;
+                line-height: 350%; }
+                .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:hover, .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:focus {
+                  background-color: #ffd51c;
+                  text-align: center;
+                  border-color: #ffd51c; }
+                .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
+                  text-decoration: underline; } }
+      .youtube_area > .slide_frame > .slide_form > .slide_btn {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        left: 5%;
+        width: 90%;
+        height: 0px;
+        background-color: #ada; }
+        .youtube_area > .slide_frame > .slide_form > .slide_btn > button {
+          float: left;
+          width: 50px;
+          height: 50px;
+          transform: translateY(-50%); }
+        .youtube_area > .slide_frame > .slide_form > .slide_btn > .next {
+          float: right; }
 
 .foot_logo {
   width: 150px;

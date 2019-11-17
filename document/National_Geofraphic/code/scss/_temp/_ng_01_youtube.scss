@@ -12,14 +12,24 @@ $c:4;
 @include labtop{@include y_line($b:-60px)}
 @include pcfull{@include y_line($b:-60px)}
     }}
->.slide_form{position: relative; width: 66vw; height: 40vw; margin:auto;background-color: #757; overflow: hidden;
+&>.slide_frame{position: relative; width: auto;height: auto;
+      $c:4;$w:14px;$m:16px;
+  >.indicator{ position:absolute; bottom:70px;left:100px; right:0;
+    width: ($w + $m) * $c - $m; height:$w;margin:auto;
+    >ul{width: 100%;height:100%; margin:10px auto;}
+    li{float:left; width:$w; height:$w*1.6;margin:auto; margin-right:$m; background-color: $white;
+    &:last-child{margin-right:0;}
+  }
+    li.action{background-color: $primary;}
+  }//indicator
+ >.slide_form{position: relative; width: 66vw; height: 30vw; margin:auto;
   
   >.guide{width:100% * $c; height: 100%;
-    >.banner{width: 100% / $c;height: 100%;
+    >.banner{float:left; width: 100% / $c;height: 100%;
 
       
-      >.y_img_zone {background-color:#dfd;
-        @include bg_base($url:'../../../img/main_img/you_pic_01.png');
+      >.y_img_zone {
+        @include bg_base($url:'../../../img/main_img/you_pic_01.png',$s:auto 80%);
         @include labtop{float:left; width: 48%; height: 100%;}
         @include pcfull{float:left; width: 48%; height: 100%;}}
       >.y_title_area{ 
@@ -59,13 +69,6 @@ $c:4;
   >.next{float:right;}}
   }//slide_form
 
-    $c:4;$w:14px;$m:16px;
-  >.indicator{width: ($w + $m) * $c - $m; height:$w;margin:auto;
-    >ul{width: 100%;height:100%; margin:10px auto;}
-    li{float:left; width:$w; height:$w*1.6;margin:auto; margin-right:$m; background-color: $white;
-    &:last-child{margin-right:0;}
-  }
-    
-    li.action{background-color: $primary;}
-  }//indicator
+
+}
 }//.youtube_area
