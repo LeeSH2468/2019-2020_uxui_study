@@ -4,7 +4,7 @@ hr{width: 100%;  height:2px; margin-top: -2px;
   border:0;}
 
 $c:4;
-.youtube_area{width: 100%; height: auto; padding-top:50px;padding-bottom:100px; background-color: $black;
+.youtube_area{width: 100%; height: auto; padding-top:50px;padding-bottom:100px; background-color: $black; 
 >h3{@include h3; position:relative; text-align: center; margin-bottom:120px;
 &:after,&::after{
 @include mobile{@include y_line($w:70px,$h:1px,$b:-30px)}
@@ -23,8 +23,9 @@ $c:4;
     li.action{background-color: $primary;}
   }//indicator
  >.slide_form{position: relative; width: 66vw; height: 30vw; margin:auto;
+  overflow: hidden;
   
-  >.guide{width:100% * $c; height: 100%;
+  >.guide{position:relative; width:100% * $c; height: 100%;
     >.banner{float:left; width: 100% / $c;height: 100%;
 
       
@@ -64,9 +65,9 @@ $c:4;
        }//.y_title_area
       }//banner
     }//guide   
-    >.slide_btn{position:absolute; z-index: 100; top:50%; left:5%; width: 90%; height: 0px; 
+    >.slide_btn{position:absolute; z-index: 100; top:50%; left:8%; width: 90%; height: 0px; 
       $u:'../../img/main_img/';
-  >button{float:left; width: 100px; height: 100px; transform:translateY(-50%);@include bg_base($url:$u+'arrow_l.png'); }
+  >button{float:left; width: 60px; height: 60px; transform:translateY(-50%);@include bg_base($url:$u+'arrow_l.png'); }
   >.next{float:right;@include bg_base($url:$u+'arrow_r.png')}}
   }//slide_form
 

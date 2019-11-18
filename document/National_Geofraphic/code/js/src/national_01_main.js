@@ -18,7 +18,9 @@
   //content ==
   content.load(htmlUrl + 'national_01_content.html',function(){
     let conJs = jsUrl + 'national_01_main_view.js';
+    let youJs = jsUrl + 'national_01_main_youtube.js';
     body.append(`<script src="${conJs}"></script>`);
+    body.append(`<script src="${youJs}"></scripy>`);
   });
 
   //footer ==
