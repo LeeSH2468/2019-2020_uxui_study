@@ -101,7 +101,7 @@
     let formCon = '<div class="slide_form"><div class="guide"></div></div>';
     
     let indiCon = '<div class="indicator"><ul><li></li></ul></div>';
-    let titleCon = '<div class="banner"><div class="y_img_zone"></div><div class="y_title_area"><div class="text_zone"><h4></h4><p></p></div><div class="y_link"><a>Youtube 바로가기</a></div></div></div>';
+    let titleCon = '<div class="banner"><div class="y_img_zone"></div><div class="y_title_area"><div class="text_zone"><h4></h4><p></p></div><div class="y_link"><a target="_blank">Youtube 바로가기</a></div></div></div>';
     let btnCon = '<div class="slide_btn"><button type="button" class="next"><span class="hidden">다음으로 이동</span></button>    <button type="button" class="prev"><span class="hidden">이전으로 이동</span></button></div>';
 
     // console.log(textlist[0].title);
@@ -123,7 +123,7 @@
       guide.append(titleCon);
       let bannerEq = guide.children('.banner').eq(i);
       let yImg = bannerEq.children('.y_img_zone');
-      let y_title = bannerEq.children('y_title_area');
+      let y_title = bannerEq.children('.y_title_area');
       let slideBtn = slideForm.children('.slide_btn');
 
       let title = y_title.find('h4');

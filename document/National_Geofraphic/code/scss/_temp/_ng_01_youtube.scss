@@ -64,9 +64,10 @@ $c:4;
        }//.y_title_area
       }//banner
     }//guide   
-    >.slide_btn{position:absolute; z-index: 100; top:50%; left:5%; width: 90%; height: 0px; background-color: #ada;
-  >button{float:left; width: 50px; height: 50px; transform:translateY(-50%);}
-  >.next{float:right;}}
+    >.slide_btn{position:absolute; z-index: 100; top:50%; left:5%; width: 90%; height: 0px; 
+      $u:'../../img/main_img/';
+  >button{float:left; width: 100px; height: 100px; transform:translateY(-50%);@include bg_base($url:$u+'arrow_l.png'); }
+  >.next{float:right;@include bg_base($url:$u+'arrow_r.png')}}
   }//slide_form
 
 
