@@ -10,6 +10,7 @@ const introDt = introDl.children('dt');
 const introDd = introDl.children('dd');
 const goLink = introDd.children('a');
 
+// 스크롤 이동시 나오기 ======================
 let introH = introSub.outerHeight();
 console.log(introH);
 let winH = win.outerHeight();
@@ -24,5 +25,48 @@ win.on('scroll', function ($) {
   } else {
     subPic.removeClass('action');
     introDl.removeClass('action');
-  }
+  };
+
+/*
+const mGo= $('.sub_image02').find('a');
+const mPopup = $('.m_popup');
+const mClosePopBtn = mPopup.find('.m_close_btn');
+
+const aGo= $('.sub_image03').find('a');
+const sPopup = $('.s_popup');
+const sClosePopBtn = sPopup.find('.s_close_btn');
+
+mGo.on('click', function (e) {
+  e.preventDefault();
+  sPopup.stop().fadeOut();
+  mPopup.stop().fadeIn();
+  mGo.focus();
+
+});
+mClosePopBtn.on('click', function (e) {
+  e.preventDefault();
+  mPopup.stop().fadeOut();
+});
+
+// ========
+aGo.on('click', function (e) {
+  e.preventDefault();
+  mPopup.stop().fadeOut();
+  sPopup.stop().fadeIn();
+  sClosePopBtn.focus(function () {
+    $(this).on('keyup', function (e) {
+      if (e.keyCode == 27) {
+        sPopup.fadeOut()
+        aGo.focus();
+      }
+    });
+  });
+});
+
+sClosePopBtn.on('click', function (e) {
+  e.preventDefault();
+  sPopup.stop().fadeOut();
+});
+*/
+
 });

@@ -23,14 +23,30 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
   @include mobile{display:none;}
   @include tablet{display:none;}
   }//ul
-  button{
-  >i{@include h4($primary);
-    @include labtop{display:none;}
-    @include pcfull{display:none;}
-@include mobile{width: 45px; height: 45px; margin-right:10px;}
-@include tablet{width: 45px; height: 45px; margin-right:34px;}
-  }}
 }//#gnb
+//button -----------------
+// i{@include h4($primary);
+//     @include labtop{display:none;}
+//     @include pcfull{display:none;}
+// @include mobile{width: 45px; height: 45px; margin-right:10px;}
+// @include tablet{width: 45px; height: 45px; margin-right:34px;}}
+
+input[id=menuicon]{display:none;
++label{display:block; width: 50px; height: 40px; position: relative; cursor:pointer;
+>span{display: block; position:absolute; width: 100%; height: 6px; border-radius: 30px; background-color: $primary; transition:all .35s;
+&:nth-child(1){top:0;}
+&:nth-child(2){top:50%; transform:translateY(-50%)}
+&:nth-child(3){bottom:0;}
+    }//span
+@include labtop{display:none;}
+@include pcfull{display:none;}
+}//label
+&:checked+label span::nth-child(1){top:50%; transform:translateY(-50%) rotate(45deg);}
+&:checked+label span::nth-child(2){opacity: 0;}
+&:checked+label span::nth-child(3){top:50%; transform:translateY(-50%) rotate(-45deg);}
+}//input
+
+
 #gnb.on{position:relative; z-index:1000; float:right;width: 100%; height:800px; margin:0; background-color:#222; padding:20px; box-sizing:border-box;
 >ul{display:block;width: auto; height: 100%; padding-top:120px; box-sizing: border-box;
 >li{display:block; width: 100%; height: auto;margin-top:10px; margin-bottom:10px;text-align:center;
@@ -42,7 +58,7 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
 //m_popup
 /* magazinge popup ========================= */
 .m_popup{display:none; position: absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: #555;
-  @include mobile{width: 100%; height: 100%; top:0; background-color: rgba(0,0,0,0.8);}
+  @include mobile{width: 100%; height: 100%; top:0; background-color: #333;}
 >.m_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;
   @include bg_base('../../img/close_basic.svg',$s:60% 60%);
   &:hover,&:focus{@include bg_base('../../img/close_hover.svg',$s:60% 60%)}}//m_close_btn
@@ -63,16 +79,16 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
 &:after,&::after{content:" "; display:block; position: absolute; top:36px; right:50px; width: 2px; height: 30px; background-color: $primary;}
 }//.m_name
 .maga_m{@include mobile{top:40%; left:50%; transform:translateX(-50%);
-&:before,&::before{left:10px;}
-&:after,&::after{right:10px;}}}//.maga_m
+&:before,&::before{left:-10%;}
+&:after,&::after{right:-10%;}}}//.maga_m
 .maga_t{@include mobile{bottom:8%; left:50%; transform:translateX(-50%); line-height: 20px; 
-&:before,&::before{top:0;left:-10px;}
-&:after,&::after{top:0;right:-10px;}}}//,aga_t
+&:before,&::before{top:0;left:-10%;}
+&:after,&::after{top:0;right:-10%;}}}//,aga_t
 
  /* store popup ======================== */
 
  .s_popup{display:none;position:absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 1000; width: 900px; height: 300px; background-color: #555; padding: 0; margin:auto;
-  @include mobile{width: 100%; height: 100%; top:0; background-color: rgba(0,0,0,0.8);}
+  @include mobile{width: 100%; height: 100%; top:0; background-color: #333;}
 >div{position: relative; float:left; width: 33%; height: 100%; margin-right:4px; background-color: $opacity;
   @include mobile{width: 100%; height: calc(100% / 3);}
   &:hover,&:focus{background-color:$primary}
