@@ -79,9 +79,9 @@
 
 
  //배경이미지
- @mixin bg_base($url,$p:50% 50%,$s:contain,$r:no-repeat){
+ @mixin bg_base($url,$p:50% 50%,$s:contain,$r:no-repeat,$p:50% 50%){
    background-repeat:$r;
-   background-position:50% 50%;
+   background-position:$p;
    background-size:$s;
    background-image:url($url);
  }

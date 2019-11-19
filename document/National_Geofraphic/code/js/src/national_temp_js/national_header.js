@@ -1,5 +1,18 @@
 // national_01_main.js
 (function($){
+  const gnb = $('#gnb');
+  const gnbIcon = gnb.find('i');
+  const gnbUl = gnb.children('ul');
+  const gnbLi = gnbUl.children('li');
+
+
+
+  gnbIcon.on('click',function(e){
+    e.preventDefault();
+    gnb.addClass('on');    
+  });
+
+
   // magazine 팝업창 =============
   const magaBtn = $('.gnb_magazines > a');
   const mPopup = $('.m_popup');
@@ -21,6 +34,7 @@
   const storeBtn = $('.gnb_apparel > a');
   const sPopup = $('.s_popup');
   const sClosePopBtn = sPopup.find('.s_close_btn');
+  
 
   storeBtn.on('click', function (e) {
     e.preventDefault();

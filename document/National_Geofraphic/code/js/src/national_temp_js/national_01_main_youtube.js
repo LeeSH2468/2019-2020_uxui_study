@@ -1,26 +1,35 @@
 //youtube=====================================
 // 배열
-const textlist = [{
+let imgUrl = '../../../img/main_img/';
+const textlist = [
+    {
+      title: '파랑새는 없다!',
+      content: '왜 자연계에서는 파란색을 보기 어려울까?',
+      link: 'https://youtu.be/DWTMD9QKCmk',
+      img: imgUrl + 'you_pic_04.png'
+    },
+  {
+    title: '바다의 푸른바다거북',
+    content: '이곳의 생물 지표종인 푸른바다거북 포획기!',
+    link: 'https://youtu.be/p8PUtE6pVaY',
+    img:imgUrl+'you_pic_03.png'
+  },
+  {
     title: '인류멸망 시나리오',
     content: '절대 피할 수 없는 재앙, 생존 불가의 땅이 되다!',
-    link: 'https://youtu.be/mnojh6VjgpE'
+    link: 'https://youtu.be/mnojh6VjgpE',
+    img:imgUrl+'you_pic_01.png'
   },
   {
-    title: '로드트립 ‘캘리포니아 몬터레이’편',
-    content: '여행의 시작과 끝, 17마일 드라이브',
-    link: 'https://youtu.be/Cn0pDP7DpcY'
-  },
-  {
-    title: '2천km가 넘는 바다의 푸른바다거북',
-    content: '이곳의 생물 지표종인 푸른바다거북을 포획해서 좀 더 자세히 알아봅니다.',
-    link: 'https://youtu.be/p8PUtE6pVaY'
-  },
-  {
-    title: '파랑새는 없다!',
-    content: '왜 자연계에서는 파란색을 보기 어려울까?',
-    link: 'https://youtu.be/DWTMD9QKCmk'
+    title: '호주의 치명적인 독사',
+    content: ' 아름다운 붉은색 배를 가진 공격성이 강한 치명적인 뱀',
+    link: 'https://youtu.be/7iFEnrQ9vsk ',
+    img:imgUrl+'you_pic_02.png'
   }
+
 ];
+
+ 
 let textlen = textlist.length;
 let formCon = '<div class="slide_form"><div class="guide"></div></div>';
 
@@ -48,14 +57,16 @@ for (let i = 0; i < textlen; i++) {
   let yImg = bannerEq.children('.y_img_zone');
   let y_title = bannerEq.children('.y_title_area');
   
+  
   let title = y_title.find('h4');
   let content = y_title.find('p');
   let yLink = y_title.find('a');
   title.text(textlist[i].title);
   content.text(textlist[i].content);
-  yLink.attr({
-    'href': textlist[i].link
-  });
+  yLink.attr({'href': textlist[i].link});
+  yImg.css({backgroundImage:'url('+textlist[i].img+')', backgroundSize:'auto 70%'});
+
+
 }
 // 마지막영역 복제 ===============================
 
