@@ -1,0 +1,53 @@
+.news_top{width: 100%; height: 130px; background-color: #dfd;}
+
+.news_con{ width: 100%; height: auto;
+  >ul{width: auto; height: auto; margin:auto; padding: 50px 30px;box-sizing:border-box;
+    >li{float:left; background-color: #ddd;
+      >a{position:relative; width: 100%; height: 100%; display: block;
+        >.img_area{width: 100%; height: 100%;}
+        >.text_area{position: absolute; bottom:0;width: 100%; box-sizing:border-box;
+          background-color: $opacity;
+          >h3{width: 100%; height: auto; margin-bottom:6px;}
+          >p{width: 100%; height: auto; }
+        }//text.area
+      }//a
+    }//li
+  }//ul
+  >.moreBtn{position:relative; bottom:40px; left:0; right:0; margin:auto;
+    >button{@include button_b(100%,100%);}
+
+  }//.moreBtn
+}//.news_con
+
+@include mobile{
+  li{width: 200px; height: 250px; margin-right:20px; margin-bottom:40px;
+  &:nth-child(2n){float:right; margin-right:0;};
+  .text_area{height: 30%; padding:10px;
+  >h3{@include text_l}
+  >p{@include text_ss}
+    }//text_area
+  }//li
+  .moreBtn{width: 200px; height: 50px;
+  >button{text-transform:uppercase; @include text_m($black);}}
+}//@include mobile
+  
+
+/*
+
+//------------------------------------------------
+
+@include tablet{
+  li{width: 340px; height: 400px; margin-right:28px; margin-bottom:80px;
+    &:nth-child(2n){margin-right:0;};
+    .text_area{height: 40%; padding:10px;
+    >h3{@include text_l}
+    >p{@include text_ss}
+      }//text_area
+    }//li
+    .moreBtn{width: 200px; height: 50px;
+    >button{text-transform:uppercase; @include text_m($black);}}
+}
+
+
+// @include labtop{li{width: 350px; height: 350px; background-color: #999;}}
+// @include pcfull{li{width: 350px; height: 350px; background-color: #fdf;}}*/

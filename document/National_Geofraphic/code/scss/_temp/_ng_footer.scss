@@ -1,3 +1,7 @@
+#footBox{padding:50px; box-sizing:border-box; background-color: $black; border-top:1px solid $gray;
+  @include labtop{height: 200px;}
+  @include pcfull{height: 200px;}}//footBox
+
 .foot_logo{width: 150px; height: 50px;
   @include bg_base("../../img/ng_logo_g.png");
   @include mobile{margin:auto;}

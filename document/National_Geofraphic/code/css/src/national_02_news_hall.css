@@ -1,11 +1,16 @@
 #wrap {
   width: 100%;
-  height: 100%; }
+  height: auto;
+  background-color: #171717; }
 
 #mainBox {
   width: 100%;
-  height: 100%;
-  background-color: #dfa; }
+  height: 100%; }
+
+#footBox {
+  width: 100%;
+  height: 300px;
+  max-height: 300px; }
 
 #headBox {
   width: 100%;
@@ -437,6 +442,131 @@ input[id=menuicon] {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .s_name:after, .s_name::after {
         right: 20%; } }
+
+.news_top {
+  width: 100%;
+  height: 130px;
+  background-color: #dfd; }
+
+.news_con {
+  width: 100%;
+  height: auto; }
+  .news_con > ul {
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 50px 30px;
+    box-sizing: border-box; }
+    .news_con > ul > li {
+      float: left;
+      background-color: #ddd; }
+      .news_con > ul > li > a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block; }
+        .news_con > ul > li > a > .img_area {
+          width: 100%;
+          height: 100%; }
+        .news_con > ul > li > a > .text_area {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          box-sizing: border-box;
+          background-color: rgba(0, 0, 0, 0.5); }
+          .news_con > ul > li > a > .text_area > h3 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 6px; }
+          .news_con > ul > li > a > .text_area > p {
+            width: 100%;
+            height: auto; }
+  .news_con > .moreBtn {
+    position: relative;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .news_con > .moreBtn > button {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      color: #171717;
+      line-height: 250%;
+      text-align: center;
+      border: 1px solid #fff; }
+      .news_con > .moreBtn > button:hover, .news_con > .moreBtn > button:focus {
+        background-color: #ffd51c;
+        text-align: center;
+        border-color: #ffd51c; }
+      .news_con > .moreBtn > button:active {
+        text-decoration: underline; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  li {
+    width: 200px;
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 40px; }
+    li:nth-child(2n) {
+      float: right;
+      margin-right: 0; }
+    li .text_area {
+      height: 30%;
+      padding: 10px; }
+      li .text_area > h3 {
+        font-size: 16px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #fff;
+        word-break: keep-all; }
+      li .text_area > p {
+        font-size: 12px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #fff;
+        word-break: keep-all; }
+  .moreBtn {
+    width: 200px;
+    height: 50px; }
+    .moreBtn > button {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      color: #171717;
+      word-break: keep-all; } }
+
+/*
+
+//------------------------------------------------
+
+@include tablet{
+  li{width: 340px; height: 400px; margin-right:28px; margin-bottom:80px;
+    &:nth-child(2n){margin-right:0;};
+    .text_area{height: 40%; padding:10px;
+    >h3{@include text_l}
+    >p{@include text_ss}
+      }//text_area
+    }//li
+    .moreBtn{width: 200px; height: 50px;
+    >button{text-transform:uppercase; @include text_m($black);}}
+}
+
+
+// @include labtop{li{width: 350px; height: 350px; background-color: #999;}}
+// @include pcfull{li{width: 350px; height: 350px; background-color: #fdf;}}*/
+#footBox {
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #171717;
+  border-top: 1px solid #777; }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    #footBox {
+      height: 200px; } }
+  @media screen and (min-width: 1281px) {
+    #footBox {
+      height: 200px; } }
 
 .foot_logo {
   width: 150px;
