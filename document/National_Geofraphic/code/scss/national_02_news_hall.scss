@@ -1,0 +1,8 @@
+@import "./_basic/var";
+@import "./_basic/mixin";
+@import "./_basic/etc";
+#wrap{width: 100%; height: 100%;}
+#mainBox{width: 100%; height: 100%; background-color: #dfa;}
+
+@import "./_temp/ng_header";
+@import "./_temp/ng_footer";
