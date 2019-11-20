@@ -31,6 +31,12 @@
   @media screen and (min-width: 320px) and (max-width: 767px) {
     #headBox {
       height: 90px; } }
+  @media screen and (min-width: 1281px) {
+    #headBox {
+      position: relative;
+      z-index: 1000;
+      background-color: transparent;
+      padding-top: 50px; } }
 
 h1 {
   float: left;
@@ -130,7 +136,7 @@ input[id=menuicon] {
   input[id=menuicon] + label {
     display: block;
     width: 50px;
-    height: 40px;
+    height: 36px;
     position: relative;
     cursor: pointer; }
     input[id=menuicon] + label > span {
@@ -138,7 +144,6 @@ input[id=menuicon] {
       position: absolute;
       width: 100%;
       height: 6px;
-      border-radius: 30px;
       background-color: #ffd51c;
       transition: all .35s; }
       input[id=menuicon] + label > span:nth-child(1) {
@@ -154,12 +159,12 @@ input[id=menuicon] {
     @media screen and (min-width: 1281px) {
       input[id=menuicon] + label {
         display: none; } }
-  input[id=menuicon]:checked + label span::nth-child(1) {
+  input[id=menuicon]:checked + label span:nth-child(1) {
     top: 50%;
     transform: translateY(-50%) rotate(45deg); }
-  input[id=menuicon]:checked + label span::nth-child(2) {
+  input[id=menuicon]:checked + label span:nth-child(2) {
     opacity: 0; }
-  input[id=menuicon]:checked + label span::nth-child(3) {
+  input[id=menuicon]:checked + label span:nth-child(3) {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg); }
 
@@ -773,7 +778,9 @@ input[id=menuicon] {
     position: relative;
     width: 80%;
     height: auto;
-    margin: auto; }
+    margin: auto;
+    position: relative;
+    z-index: 100; }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .intro_sub_area > .sub_image {
         width: 100%;
@@ -909,6 +916,61 @@ input[id=menuicon] {
             border-color: #ffd51c; }
           .intro_sub_area > .sub_image > dl > dd > a:active {
             text-decoration: underline; }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .intro_sub_area .sub_image01 {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-image: url("../../img/main_img/info_c.png"); }
+    .intro_sub_area .sub_image02 {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-image: url("../../img/main_img/info_m.jpg"); }
+    .intro_sub_area .sub_image03 {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-image: url("../../img/main_img/info_a.jpg"); }
+    .intro_sub_area .sub_image:before, .intro_sub_area .sub_image::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); } }
+  @media screen and (min-width: 768px) and (max-width: 959px) {
+    .intro_sub_area {
+      position: relative;
+      z-index: 100; }
+      .intro_sub_area .sub_image01 {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-image: url("../../img/main_img/info_c.png"); }
+      .intro_sub_area .sub_image02 {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-image: url("../../img/main_img/info_m.jpg"); }
+      .intro_sub_area .sub_image03 {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-image: url("../../img/main_img/info_a.jpg"); }
+      .intro_sub_area .sub_image:before, .intro_sub_area .sub_image::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); } }
 
 .sub_pic {
   position: absolute;

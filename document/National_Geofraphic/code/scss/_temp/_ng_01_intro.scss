@@ -29,8 +29,20 @@
         @include tablet{}
     }}
  }//dl
+ position: relative; z-index: 100;
 }//.sub_image
+@mixin sub_image{
+    .sub_image01{@include bg_base($url:'../../img/main_img/info_c.png',$s:cover);}
+    .sub_image02{@include bg_base($url:'../../img/main_img/info_m.jpg',$s:cover);}
+    .sub_image03{@include bg_base($url:'../../img/main_img/info_a.jpg',$s:cover);}
+}
+@include mobile{@include sub_image; 
+ .sub_image:before, .sub_image::before{content:" "; display:block;  position:absolute; top:0; left:0; z-index:-1;width: 100%; height: 100%; background-color: $opacity;}}
+@include tablet{@include sub_image; position: relative; z-index: 100;
+ .sub_image:before, .sub_image::before{content:" "; display:block; position:absolute; top:0; left:0; z-index:-1; width: 100%; height: 100%; background-color: $opacity;}}
+
 }//.intro_sub_area
+
 
 .sub_pic{position:absolute;z-index:100; top:30px; width:50%; height: 500px;
      
