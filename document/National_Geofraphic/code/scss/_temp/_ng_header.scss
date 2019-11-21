@@ -2,7 +2,7 @@
 $imgUrl:'../../img/';
 #headBox{width: 100%; height: 80px; background-color: $black; padding-top:20px; box-sizing: border-box;
 @include mobile{height: 90px;}
-@include pcfull{position:relative; z-index:1000; background-color:transparent; padding-top:50px}
+@include pcfull{position:relative; z-index:1000;padding-top:50px}
 }
 
 h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:40px;
@@ -14,7 +14,27 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
 @include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);}
 }//h1
 
-#gnb{float:right; width: auto;height: auto; margin-right:20px;
+#gnb{position: absolute;  top:0; right:0; width: auto; height: auto;/*  margin-right:20px; */
+  // nav 버튼
+  .menuiconbtn{position:absolute; display: block; width:50px; height:36px; 
+              top: 20px; right:20px; 
+    >button{width: 100%; height:100%; position: absolute;}
+    .line{position: absolute; right: 0; transform-origin:right;
+      width: 100%; height: 6px; background-color: $primary;
+      transition:all 300ms ease;
+      border-radius:3px; 
+      &.gnb_line_01{top:0; }   
+      &.gnb_line_02{top: 50%; margin-top: -3px;}
+      &.gnb_line_03{bottom:0;}       
+    }
+  }
+  &.on .line {
+    &.gnb_line_01{width:120%; top:0; transform:rotate(-30deg)}   
+      &.gnb_line_02{top: 50%; margin-top: -3px; height: 0;}
+      &.gnb_line_03{width:120%; bottom:0;transform:rotate(30deg)}       
+  }
+
+  // nav 목록
   >ul{width: auto; height: auto;
     >li{float: left; position:relative; width: auto; height: auto; padding-right:60px; @include link;
     &:after,&::after{content:" "; display:block; position:absolute; top:0; right:30px; width:2px; height:20px; background-color:$primary;}//li after
@@ -25,35 +45,32 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
   @include tablet{display:none;}
   }//ul
 }//#gnb
-//button -----------------
-// i{@include h4($primary);
-//     @include labtop{display:none;}
-//     @include pcfull{display:none;}
-// @include mobile{width: 45px; height: 45px; margin-right:10px;}
-// @include tablet{width: 45px; height: 45px; margin-right:34px;}}
 
-input[id=menuicon]{display:none;
-+label{display:block; width: 50px; height: 36px; position: relative; cursor:pointer;
->span{display: block; position:absolute; width: 100%; height: 6px; background-color: $primary; transition:all .35s;
-&:nth-child(1){top:0;}
-&:nth-child(2){top:50%; transform:translateY(-50%)}
-&:nth-child(3){bottom:0;}
-    }//span
-@include labtop{display:none;}
-@include pcfull{display:none;}
-}//label
-&:checked+label span:nth-child(1){top:50%; transform:translateY(-50%) rotate(45deg);}
-&:checked+label span:nth-child(2){opacity: 0;}
-&:checked+label span:nth-child(3){top:50%; transform:translateY(-50%) rotate(-45deg);}
-}//input
+// input[id=menuicon]{display:none;
+// +label{display:block; width: 50px; height: 36px; position: relative; cursor:pointer;
+// >span{display: block; position:absolute; width: 100%; height: 6px; background-color: $primary; transition:all .35s;
+// &:nth-child(1){top:0;}
+// &:nth-child(2){top:50%; transform:translateY(-50%)}
+// &:nth-child(3){bottom:0;}
+//     }//span
+// @include labtop{display:none;}
+// @include pcfull{display:none;}
+// }//label
+// &:checked+label span:nth-child(1){top:50%; transform:translateY(-50%) rotate(45deg);}
+// &:checked+label span:nth-child(2){opacity: 0;}
+// &:checked+label span:nth-child(3){top:50%; transform:translateY(-50%) rotate(-45deg);}
+// }//input
 
 
-#gnb.on{position:relative; z-index:1000; float:right;width: 100%; height:800px; margin:0; background-color:#222; padding:20px; box-sizing:border-box;
->ul{display:block;width: auto; height: 100%; padding-top:120px; box-sizing: border-box;
+#gnb.on{position:fixed; z-index:1200; width: 100%; height:100%; margin:0; background-color:#222;
+        box-sizing:border-box;/* transition:all 1000ms ease; */
+>ul{display:block;width: auto; height: 100%; padding-top:120px; box-sizing: border-box; 
 >li{display:block; width: 100%; height: auto;margin-top:10px; margin-bottom:10px;text-align:center;
 &:after,&::after{display:none}
 >a{padding:20px 0; @include aLink}}}
 >button{float:right;}
+label{float:right;}
+
 }//gnb.on
 
 //m_popup

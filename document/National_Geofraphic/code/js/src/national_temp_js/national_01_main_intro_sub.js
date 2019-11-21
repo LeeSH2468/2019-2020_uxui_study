@@ -28,6 +28,8 @@ win.on('scroll', function ($) {
   };
 
 });
+
+// 버튼 클릭시 팝업창==================
 const mGo = $('.sub_image02').find('a');
 const mPopup = $('.m_popup');
 const mClosePopBtn = mPopup.find('.m_close_btn');

@@ -1,7 +1,7 @@
 .news_top{width: 100%; height: 130px; background-color: #dfd;}
 
-.news_con{ width: 100%; height: auto;
-  >ul{width: auto; height: auto; margin:auto; padding: 50px 30px;box-sizing:border-box;
+.news_con{ width: 100%; height: auto; box-sizing: border-box;
+  >ul{width: 100%; height: auto;
     >li{float:left; background-color: #ddd;
       >a{position:relative; width: 100%; height: 100%; display: block;
         >.img_area{width: 100%; height: 100%;}
@@ -20,8 +20,9 @@
 }//.news_con
 
 @include mobile{
-  li{width: 200px; height: 250px; margin-right:20px; margin-bottom:40px;
-  &:nth-child(2n){float:right; margin-right:0;};
+.news_con{ padding:50px 30px;
+  li{width: 46%; height: 250px; margin-bottom:40px;  margin-right:4%;
+  &:nth-child(2n){margin-right:0px;}
   .text_area{height: 30%; padding:10px;
   >h3{@include text_l}
   >p{@include text_ss}
@@ -29,15 +30,13 @@
   }//li
   .moreBtn{width: 200px; height: 50px;
   >button{text-transform:uppercase; @include text_m($black);}}
+}
 }//@include mobile
-  
-
-/*
-
 //------------------------------------------------
 
 @include tablet{
-  li{width: 340px; height: 400px; margin-right:28px; margin-bottom:80px;
+.news_con{ padding:50px 30px;
+  li{width: 46%; height: 400px; margin-bottom:80px;  margin-right:4%;
     &:nth-child(2n){margin-right:0;};
     .text_area{height: 40%; padding:10px;
     >h3{@include text_l}
@@ -46,8 +45,22 @@
     }//li
     .moreBtn{width: 200px; height: 50px;
     >button{text-transform:uppercase; @include text_m($black);}}
+  }
 }
 
+//labtop ==========================
+@include labtop{
+ .news_con{ padding:300px 50px;
+   li{width: calc(92% / 3); height: 350px; margin-bottom:180px; margin-right:4%;
+   &:nth-child(3n){margin-right:0px;}}
+  }
+}//labtop
 
-// @include labtop{li{width: 350px; height: 350px; background-color: #999;}}
-// @include pcfull{li{width: 350px; height: 350px; background-color: #fdf;}}*/
+
+
+@include pcfull{
+.news_con{ padding:300px 250px;
+  li{width: calc(92% / 3);height: 350px;margin-bottom:180px; margin-right:4%;
+  &:nth-child(3n){margin-right:0px;}}
+  }
+}

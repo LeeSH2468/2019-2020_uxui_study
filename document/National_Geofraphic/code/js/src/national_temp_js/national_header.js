@@ -1,16 +1,5 @@
 // national_01_main.js
 (function($){
-  const gnb = $('#gnb');
-  const gnbIcon = gnb.find('i');
-  const gnbUl = gnb.children('ul');
-  const gnbLi = gnbUl.children('li');
-
-
-
-  gnbIcon.on('click',function(e){
-    e.preventDefault();
-    gnb.addClass('on');    
-  });
 
 
   // magazine 팝업창 =============
@@ -30,6 +19,18 @@
     mPopup.stop().fadeOut();    
   });
 
+  /*
+  //팝업 있을 때 스크롤 정지===========
+  $(window).on('scroll', function () {
+    let magaView = mPopup.css('display') == 'block';
+    if (magaView) {
+      $('body, html').animate({
+        scrollTop: 0
+      });
+    }
+  });
+  */
+
   // store 팝업창 =============
   const storeBtn = $('.gnb_apparel > a');
   const sPopup = $('.s_popup');
@@ -40,6 +41,7 @@
     e.preventDefault();
     mPopup.stop().fadeOut();    
     sPopup.stop().fadeIn();
+
     sClosePopBtn.focus(function () {
       $(this).on('keyup', function (e) {
         if (e.keyCode == 27) {
@@ -50,11 +52,21 @@
     });
   });
 
-  sClosePopBtn.on('click', function (e) {
-    e.preventDefault();
-    sPopup.stop().fadeOut();
+  //팝업 있을 때 스크롤 정지===========
+/*const stopScroll = function(){   
+    $(window).on('scroll', function () {
+      let stoView = sPopup.css('display') == 'block';
+      if (stoView) {  $('body, html').animate({ scrollTop: 0 });
+    }
+    console.log(stoView);
   });
-  
+} // stopScroll()
+*/
+
+sClosePopBtn.on('click', function (e) {
+  e.preventDefault();
+  sPopup.stop().fadeOut();
+});
 
   // sPopup.stop().fadeIn(function () {
   //   $(this).on('keyup', function (e) {
