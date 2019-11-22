@@ -485,7 +485,6 @@ h1 {
             height: auto; }
   .news_con > .moreBtn {
     position: relative;
-    bottom: 40px;
     left: 0;
     right: 0;
     margin: auto; }
@@ -508,12 +507,46 @@ h1 {
   .news_con {
     padding: 50px 30px; }
     .news_con li {
-      width: 46%;
+      width: 48%;
       height: 250px;
-      margin-bottom: 40px;
-      margin-right: 4%; }
+      margin-bottom: 40px; }
       .news_con li:nth-child(2n) {
-        margin-right: 0px; }
+        float: right; }
+      .news_con li .text_area {
+        height: 36%;
+        padding: 10px; }
+        .news_con li .text_area > h3 {
+          font-size: 14px;
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          color: #fff;
+          word-break: keep-all; }
+        .news_con li .text_area > p {
+          font-size: 12px;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          color: #fff;
+          word-break: keep-all; }
+    .news_con .moreBtn {
+      width: 200px;
+      height: 50px; }
+      .news_con .moreBtn > button {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #171717;
+        word-break: keep-all; } }
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .news_con {
+    padding: 50px 30px; }
+    .news_con li {
+      width: 48%;
+      height: 400px;
+      margin-bottom: 80px; }
+      .news_con li:nth-child(2n) {
+        float: right; }
       .news_con li .text_area {
         height: 30%;
         padding: 10px; }
@@ -534,40 +567,40 @@ h1 {
       height: 50px; }
       .news_con .moreBtn > button {
         text-transform: uppercase;
-        font-size: 18px;
-        font-size: 1.125rem;
+        font-size: 16px;
+        font-size: 1rem;
         text-transform: uppercase;
         color: #171717;
         word-break: keep-all; } }
 
-@media screen and (min-width: 768px) and (max-width: 959px) {
+@media screen and (min-width: 960px) and (max-width: 1280px) {
   .news_con {
-    padding: 50px 30px; }
+    padding: 300px 50px 80px; }
     .news_con li {
-      width: 46%;
-      height: 400px;
-      margin-bottom: 80px;
+      width: calc(92% / 3);
+      height: 350px;
+      margin-bottom: 180px;
       margin-right: 4%; }
-      .news_con li:nth-child(2n) {
-        margin-right: 0; }
+      .news_con li:nth-child(3n) {
+        margin-right: 0px; }
       .news_con li .text_area {
-        height: 40%;
-        padding: 10px; }
+        height: 30%;
+        padding: 16px; }
         .news_con li .text_area > h3 {
-          font-size: 16px;
-          font-size: 1rem;
+          font-size: 18px;
+          font-size: 1.125rem;
           text-transform: uppercase;
           color: #fff;
           word-break: keep-all; }
         .news_con li .text_area > p {
-          font-size: 12px;
-          font-size: 0.75rem;
+          font-size: 14px;
+          font-size: 0.875rem;
           text-transform: uppercase;
           color: #fff;
           word-break: keep-all; }
     .news_con .moreBtn {
-      width: 200px;
-      height: 50px; }
+      width: 300px;
+      height: 60px; }
       .news_con .moreBtn > button {
         text-transform: uppercase;
         font-size: 18px;
@@ -576,28 +609,59 @@ h1 {
         color: #171717;
         word-break: keep-all; } }
 
-@media screen and (min-width: 960px) and (max-width: 1280px) {
-  .news_con {
-    padding: 300px 50px; }
-    .news_con li {
-      width: calc(92% / 3);
-      height: 350px;
-      margin-bottom: 180px;
-      margin-right: 4%; }
-      .news_con li:nth-child(3n) {
-        margin-right: 0px; } }
-
 @media screen and (min-width: 1281px) {
   .news_con {
-    padding: 300px 250px; }
+    padding: 300px 250px 80px; }
     .news_con li {
       width: calc(92% / 3);
       height: 350px;
       margin-bottom: 180px;
       margin-right: 4%; }
       .news_con li:nth-child(3n) {
-        margin-right: 0px; } }
+        margin-right: 0px; }
+      .news_con li .text_area {
+        height: 36%;
+        padding: 16px; }
+        .news_con li .text_area > h3 {
+          font-size: 18px;
+          font-size: 1.125rem;
+          text-transform: uppercase;
+          color: #fff;
+          word-break: keep-all; }
+        .news_con li .text_area > p {
+          font-size: 16px;
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: #fff;
+          word-break: keep-all; }
+    .news_con .moreBtn {
+      width: 300px;
+      height: 60px; }
+      .news_con .moreBtn > button {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        color: #171717;
+        word-break: keep-all; } }
 
+/*
+ li.hide();
+ li.length;
+ let n = 3;
+  const view = function(l){
+    for(let i=0; i<l; i++){
+      li.eq(i).show();
+    }
+  }
+view(n);
+btn.on('click', function(){
+  n += 6;
+  view(n);
+}
+
+
+*/
 #footBox {
   padding: 50px;
   box-sizing: border-box;

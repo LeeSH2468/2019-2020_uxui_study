@@ -32,6 +32,9 @@
 @mixin text_l($c:$white){
   font-size:16px; font-size:1rem; text-transform:uppercase;color:$c; word-break:keep-all;
 }
+@mixin text_ls($c:$white){
+  font-size:14px; font-size:0.875rem; text-transform:uppercase;color:$c; word-break:keep-all;
+}
 @mixin text_ss($c:$white){
   font-size:12px; font-size:0.75rem; text-transform:uppercase;color:$c; word-break:keep-all;
 }

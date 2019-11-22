@@ -7,15 +7,17 @@
   const device = ['mobile', 'tablet', 'laptop', 'pc', 'pcfull'];
 
 // ============================
-  // header ==
+  // header == footer ==
   let htmlUrl = "./national_temp_html/";
   let jsUrl = "../js/src/national_temp_js/";
+  let newsUrl = jsUrl + "national_02_news_load.js";
 
   header.load(htmlUrl + 'national_header.html',function(){
     body.append('<script src="'+ jsUrl + 'national_header.js"></script>');
   });
-  //footer ==
   footer.load(htmlUrl + 'national_footer.html');
+
+  body.append(`<script src="${newsUrl}"></scripy>`)
 
   // ====================
 
