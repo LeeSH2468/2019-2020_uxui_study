@@ -22,8 +22,8 @@
     let introJs = jsUrl + 'national_01_main_intro_sub.js';
     let youJs = jsUrl + 'national_01_main_youtube.js';
     body.append(`<script src="${conJs}"></script>`);
-    body.append(`<script src="${introJs}"></scripy>`);
-    body.append(`<script src="${youJs}"></scripy>`);
+    body.append(`<script src="${introJs}"></script>`);
+    body.append(`<script src="${youJs}"></script>`);
   });
   //footer ==
   footer.load(htmlUrl + 'national_footer.html');

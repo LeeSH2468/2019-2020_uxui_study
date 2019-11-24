@@ -24,8 +24,7 @@
   @media screen and (min-width: 1281px) {
     #headBox {
       position: relative;
-      z-index: 1000;
-      padding-top: 50px; } }
+      z-index: 1000; } }
 
 h1 {
   float: left;
@@ -78,6 +77,12 @@ h1 {
     height: 36px;
     top: 20px;
     right: 20px; }
+    @media screen and (min-width: 960px) and (max-width: 1280px) {
+      #gnb .menuiconbtn {
+        display: none; } }
+    @media screen and (min-width: 1281px) {
+      #gnb .menuiconbtn {
+        display: none; } }
     #gnb .menuiconbtn > button {
       width: 100%;
       height: 100%;
@@ -112,7 +117,8 @@ h1 {
     transform: rotate(30deg); }
   #gnb > ul {
     width: auto;
-    height: auto; }
+    height: auto;
+    margin-top: 20px; }
     #gnb > ul > li {
       float: left;
       position: relative;
@@ -134,7 +140,7 @@ h1 {
         content: " ";
         display: block;
         position: absolute;
-        top: 0;
+        top: 5px;
         right: 30px;
         width: 2px;
         height: 20px;
@@ -449,8 +455,80 @@ h1 {
 
 .news_top {
   width: 100%;
-  height: 130px;
-  background-color: #dfd; }
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  background-image: url("../../img/news_img/news_header.jpg"); }
+
+.search_area {
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  height: 160px;
+  padding: 20px; }
+  .search_area > .group {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box; }
+    .search_area > .group > .gbtn_area {
+      height: 100%;
+      margin: auto; }
+      .search_area > .group > .gbtn_area button {
+        width: 100%;
+        height: 100%;
+        background-color: #aa0; }
+      .search_area > .group > .gbtn_area > div {
+        width: 100px;
+        background-color: #dfa; }
+      .search_area > .group > .gbtn_area > .issue {
+        float: left;
+        height: 100%;
+        margin-right: 50px; }
+      .search_area > .group > .gbtn_area > .photo {
+        float: left;
+        height: 100%;
+        margin-right: 50px; }
+      .search_area > .group > .gbtn_area > .tv {
+        float: left;
+        height: 100%; }
+  .search_area > form {
+    width: 50%;
+    height: auto; }
+    .search_area > form > fieldset {
+      float: right;
+      width: 100%;
+      height: 100%;
+      padding: 30px 30px;
+      box-sizing: border-box; }
+      .search_area > form > fieldset > .search_box {
+        width: 100%;
+        height: auto; }
+        .search_area > form > fieldset > .search_box > #search {
+          float: left;
+          width: 85%;
+          height: 40px;
+          border: 0;
+          margin-right: 5%;
+          border-bottom: 2px solid #ffd51c;
+          color: #fff;
+          background-color: transparent; }
+        .search_area > form > fieldset > .search_box > .search_btn {
+          float: left;
+          width: 10%;
+          height: 50px; }
+          .search_area > form > fieldset > .search_box > .search_btn > label {
+            width: 100%;
+            height: 100%;
+            display: block; }
+            .search_area > form > fieldset > .search_box > .search_btn > label > button {
+              width: 100%;
+              height: 100%; }
+              .search_area > form > fieldset > .search_box > .search_btn > label > button > i {
+                width: 100%;
+                height: 100%;
+                color: #ffd51c;
+                font-size: 2rem; }
 
 .news_con {
   width: 100%;
@@ -461,7 +539,9 @@ h1 {
     height: auto; }
     .news_con > ul > li {
       float: left;
-      background-color: #ddd; }
+      background-color: #ddd;
+      border: 0 solid #ffd51c;
+      box-sizing: border-box; }
       .news_con > ul > li > a {
         position: relative;
         width: 100%;
@@ -469,13 +549,17 @@ h1 {
         display: block; }
         .news_con > ul > li > a > .img_area {
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: cover; }
         .news_con > ul > li > a > .text_area {
           position: absolute;
           bottom: 0;
           width: 100%;
           box-sizing: border-box;
-          background-color: rgba(0, 0, 0, 0.5); }
+          background-color: rgba(0, 0, 0, 0.8);
+          transition: all 300ms ease; }
           .news_con > ul > li > a > .text_area > h3 {
             width: 100%;
             height: auto;
@@ -483,6 +567,10 @@ h1 {
           .news_con > ul > li > a > .text_area > p {
             width: 100%;
             height: auto; }
+      .news_con > ul > li:hover .img_area {
+        background-size: auto 108%; }
+      .news_con > ul > li:hover .h3 {
+        color: #ffd51c; }
   .news_con > .moreBtn {
     position: relative;
     left: 0;
@@ -504,6 +592,24 @@ h1 {
         text-decoration: underline; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .news_top {
+    height: 130px;
+    background-image: url("../../img/news_img/news_header_m.jpg"); }
+  .search_area > .group {
+    width: 100%;
+    height: 50%;
+    padding: 20px; }
+    .search_area > .group > .gbtn_area {
+      width: 300px; }
+      .search_area > .group > .gbtn_area > div {
+        width: calc(200px/3); }
+  .search_area > form {
+    width: 100%;
+    height: 50%; }
+    .search_area > form > fieldset > .search_box > #search {
+      width: 85%; }
+    .search_area > form > fieldset > .search_box > .search_btn {
+      width: 10%; }
   .news_con {
     padding: 50px 30px; }
     .news_con li {
@@ -539,6 +645,28 @@ h1 {
         word-break: keep-all; } }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
+  .news_top {
+    height: 130px;
+    background-image: url("../../img/news_img/news_header_m.jpg"); }
+  .search_area > .group {
+    width: 100%;
+    height: 50%;
+    padding: 20px; }
+    .search_area > .group > .gbtn_area {
+      width: 300px; }
+      .search_area > .group > .gbtn_area > div {
+        width: calc(200px/3); }
+  .search_area > form {
+    width: 100%;
+    height: 50%; }
+    .search_area > form > fieldset {
+      padding: 10px 80px; }
+      .search_area > form > fieldset > .search_box {
+        margin: auto; }
+        .search_area > form > fieldset > .search_box > #search {
+          width: 85%; }
+        .search_area > form > fieldset > .search_box > .search_btn {
+          width: 10%; }
   .news_con {
     padding: 50px 30px; }
     .news_con li {
@@ -574,12 +702,31 @@ h1 {
         word-break: keep-all; } }
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {
+  .news_top {
+    height: 600px; }
+  .search_area > .group {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 20px; }
+    .search_area > .group > .gbtn_area {
+      width: 610px; }
+      .search_area > .group > .gbtn_area > div {
+        width: 150px; }
+  .search_area > form {
+    float: left;
+    width: 50%;
+    height: 50%; }
+    .search_area > form > fieldset > .search_box > #search {
+      width: 85%; }
+    .search_area > form > fieldset > .search_box > .search_btn {
+      width: 10%; }
   .news_con {
-    padding: 300px 50px 80px; }
+    padding: 200px 50px 80px; }
     .news_con li {
       width: calc(92% / 3);
       height: 350px;
-      margin-bottom: 180px;
+      margin-bottom: 100px;
       margin-right: 4%; }
       .news_con li:nth-child(3n) {
         margin-right: 0px; }
@@ -610,12 +757,31 @@ h1 {
         word-break: keep-all; } }
 
 @media screen and (min-width: 1281px) {
+  .news_top {
+    height: 600px; }
+  .search_area > .group {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 20px; }
+    .search_area > .group > .gbtn_area {
+      width: 610px; }
+      .search_area > .group > .gbtn_area > div {
+        width: 150px; }
+  .search_area > form {
+    float: left;
+    width: 50%;
+    height: 50%; }
+    .search_area > form > fieldset > .search_box > #search {
+      width: 85%; }
+    .search_area > form > fieldset > .search_box > .search_btn {
+      width: 10%; }
   .news_con {
-    padding: 300px 250px 80px; }
+    padding: 200px 250px 80px; }
     .news_con li {
       width: calc(92% / 3);
       height: 350px;
-      margin-bottom: 180px;
+      margin-bottom: 100px;
       margin-right: 4%; }
       .news_con li:nth-child(3n) {
         margin-right: 0px; }

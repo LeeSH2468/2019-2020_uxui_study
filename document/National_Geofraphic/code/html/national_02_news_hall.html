@@ -10,7 +10,7 @@
  <meta name="keyword" content="html, css, js, web, design, portfolio, webportfolio, sohi">
  <meta name="author" content="sohiLee">
  <meta name="generator" content="illustrator, photoshop, indesign, sublimetext, vscode">
-
+ <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
  <link rel="stylesheet" href="../css/base/reset.css">
  <link rel="stylesheet" href="../css/base/common.css">
  <link rel="stylesheet" href="../css/src/national_02_news_hall.css">
@@ -39,6 +39,37 @@
     <h2 class="news_top">
       <span class="hidden">내셔널 지오그래픽 뉴스 페이지</span>
     </h2>
+    <div class="search_area">
+      <div class="group">
+        <div class="gbtn_area">
+        <div class="photo">
+          <button type="button" class="photo_btn"></button>
+        </div>
+        <div class="issue">
+          <button type="button" class="issue_btn"></button>
+        </div>
+        <div class="tv">
+          <button type="button" class="tv_btn"></button>
+        </div>
+      </div>
+      </div>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>검색창</legend>
+          <div class="search_box">
+            <input type="text"  name="search" id="search" value="" placeholder="Search" />
+            <div class="search_btn">
+              <label for="search">
+              <button type="submit">
+                  <i class="fas fa-search"></i>
+                <span class="hidden">검색하기</span>
+              </button>
+            </label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
     <div class="news_con">
       <h2 class="hidden">뉴스 세부 소개</h2>
       <ul class="clearfix">

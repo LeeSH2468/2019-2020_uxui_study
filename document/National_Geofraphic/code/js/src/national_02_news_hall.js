@@ -17,7 +17,7 @@
   });
   footer.load(htmlUrl + 'national_footer.html');
 
-  body.append(`<script src="${newsUrl}"></scripy>`)
+  body.append(`<script src="${newsUrl}"></script>`)
 
   // ====================
 
