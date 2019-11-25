@@ -21,7 +21,7 @@
   @media screen and (min-width: 320px) and (max-width: 767px) {
     #headBox {
       height: 90px; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     #headBox {
       position: relative;
       z-index: 1000; } }
@@ -51,7 +51,7 @@ h1 {
       background-position: 50% 50%;
       background-size: contain;
       background-image: url("../../img/ng_logo_box.svg"); } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     h1 {
       position: absolute;
       left: 50%;
@@ -77,10 +77,10 @@ h1 {
     height: 36px;
     top: 20px;
     right: 20px; }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       #gnb .menuiconbtn {
         display: none; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       #gnb .menuiconbtn {
         display: none; } }
     #gnb .menuiconbtn > button {
@@ -163,7 +163,7 @@ h1 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       #gnb > ul {
         display: none; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       #gnb > ul {
         display: none; } }
 
@@ -460,13 +460,13 @@ h1 {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .view_area {
       height: 580px; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .view_area {
       height: 760px; } }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .view_area {
       height: 900px; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     .view_area {
       height: 900px; } }
   .view_area > .view_pic_bg {
@@ -515,11 +515,11 @@ h1 {
     transform: translateX(-50%);
     width: auto;
     height: auto; }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .view_area > ul {
         width: 950px;
         bottom: 20%; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .view_area > ul {
         width: 1280px;
         bottom: 20%; } }
@@ -543,7 +543,7 @@ h1 {
             border-color: #ffd51c; }
           .view_area > ul > li > a:active {
             text-decoration: underline; } }
-      @media screen and (min-width: 768px) and (max-width: 959px) {
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
         .view_area > ul > li {
           width: 430px;
           height: 50px;
@@ -560,7 +560,7 @@ h1 {
             border-color: #ffd51c; }
           .view_area > ul > li > a:active {
             text-decoration: underline; } }
-      @media screen and (min-width: 960px) and (max-width: 1280px) {
+      @media screen and (min-width: 1280px) and (max-width: 1919px) {
         .view_area > ul > li {
           width: 290px;
           height: 50px;
@@ -578,7 +578,7 @@ h1 {
             border-color: #ffd51c; }
           .view_area > ul > li > a:active {
             text-decoration: underline; } }
-      @media screen and (min-width: 1281px) {
+      @media screen and (min-width: 1920px) {
         .view_area > ul > li {
           width: 380px;
           height: 50px;
@@ -630,14 +630,14 @@ h1 {
         font-weight: bold;
         color: #fff;
         margin-bottom: 50px; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .intro_ng_area > h3 {
         font-size: 30px;
         font-size: 1.875rem;
         font-weight: bold;
         color: #fff;
         margin-bottom: 50px; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .intro_ng_area > h3 {
         font-size: 48px;
         font-size: 3rem;
@@ -645,7 +645,7 @@ h1 {
         text-transform: uppercase;
         color: #fff;
         margin-bottom: 100px; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .intro_ng_area > h3 {
         font-size: 48px;
         font-size: 3rem;
@@ -665,7 +665,7 @@ h1 {
         width: 70px;
         height: 1px;
         background-color: #ffd51c; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .intro_ng_area > h3:after, .intro_ng_area > h3::after {
         content: " ";
         display: block;
@@ -677,7 +677,7 @@ h1 {
         width: 100px;
         height: 2px;
         background-color: #ffd51c; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .intro_ng_area > h3:after, .intro_ng_area > h3::after {
         content: " ";
         display: block;
@@ -689,7 +689,7 @@ h1 {
         width: 130px;
         height: 2px;
         background-color: #ffd51c; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .intro_ng_area > h3:after, .intro_ng_area > h3::after {
         content: " ";
         display: block;
@@ -720,7 +720,7 @@ h1 {
       background-position: 50% 50%;
       background-size: 3% auto;
       background-image: url("../../img/bg_line.svg"); }
-      @media screen and (min-width: 768px) and (max-width: 959px) {
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
         .intro_ng_area > .video_bg:before, .intro_ng_area > .video_bg::before {
           display: none; } }
     .intro_ng_area > .video_bg:after, .intro_ng_area > .video_bg::after {
@@ -733,7 +733,7 @@ h1 {
       width: 30vw;
       height: 10vw;
       border: 26px solid #ffd51c; }
-      @media screen and (min-width: 768px) and (max-width: 959px) {
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
         .intro_ng_area > .video_bg:after, .intro_ng_area > .video_bg::after {
           display: none; } }
     .intro_ng_area > .video_bg .ng_video {
@@ -762,13 +762,13 @@ h1 {
   padding-top: 300px;
   padding-bottom: 400px;
   box-sizing: border-box; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .intro_sub_area {
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: auto 100%;
       background-image: url("../../img/main_img/intro_bg.png"); } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     .intro_sub_area {
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -788,7 +788,7 @@ h1 {
         margin-bottom: 100px;
         background-color: rgba(0, 0, 0, 0.5);
         box-sizing: border-box; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .intro_sub_area > .sub_image {
         width: 100%;
         height: 370px;
@@ -807,7 +807,7 @@ h1 {
       @media screen and (min-width: 320px) and (max-width: 767px) {
         .intro_sub_area > .sub_image > dl {
           width: 80%; } }
-      @media screen and (min-width: 768px) and (max-width: 959px) {
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
         .intro_sub_area > .sub_image > dl {
           width: 80%; } }
       .intro_sub_area > .sub_image > dl > dt {
@@ -831,14 +831,14 @@ h1 {
       width: 70px;
       height: 1px;
       background-color: #ffd51c; } }
-        @media screen and (min-width: 768px) and (max-width: 959px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
           .intro_sub_area > .sub_image > dl > dt {
             font-size: 40px;
             font-size: 2.5rem;
             font-weight: bold;
             color: #fff;
             text-transform: uppercase; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) and (min-width: 768px) and (max-width: 1279px) {
     .intro_sub_area > .sub_image > dl > dt:after, .intro_sub_area > .sub_image > dl > dt::after {
       content: " ";
       display: block;
@@ -850,7 +850,7 @@ h1 {
       width: 100px;
       height: 2px;
       background-color: #ffd51c; } }
-        @media screen and (min-width: 960px) and (max-width: 1280px) {
+        @media screen and (min-width: 1280px) and (max-width: 1919px) {
           .intro_sub_area > .sub_image > dl > dt {
             text-transform: uppercase;
             font-size: 48px;
@@ -861,7 +861,7 @@ h1 {
             transform: rotate(-10deg); }
             .intro_sub_area > .sub_image > dl > dt::first-letter {
               color: #ffd51c; } }
-        @media screen and (min-width: 1281px) {
+        @media screen and (min-width: 1920px) {
           .intro_sub_area > .sub_image > dl > dt {
             text-transform: uppercase;
             font-size: 48px;
@@ -889,7 +889,7 @@ h1 {
             width: 100%;
             padding: 40px 0;
             background-color: transparent; } }
-        @media screen and (min-width: 768px) and (max-width: 959px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
           .intro_sub_area > .sub_image > dl > dd {
             width: 100%;
             padding: 40px 0;
@@ -942,7 +942,7 @@ h1 {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5); } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .intro_sub_area {
       position: relative;
       z-index: 100; }
@@ -981,7 +981,7 @@ h1 {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .sub_pic {
       display: none; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .sub_pic {
       display: none; } }
   .sub_pic > .pic_zone {
@@ -1031,7 +1031,7 @@ h1 {
   background-size: 80% auto;
   background-image: url("../../img/main_img/info_a.jpg"); }
 
-@media screen and (min-width: 960px) and (max-width: 1280px) {
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
   .sub_image:nth-of-type(2n+1) > div {
     left: 0vw;
     /*opacity:0;*/ }
@@ -1058,7 +1058,7 @@ h1 {
     opacity: 1;
     transition: all 500ms ease; } }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1920px) {
   .sub_image:nth-of-type(2n+1) > div {
     left: 0vw;
     /*opacity:0;*/ }
@@ -1126,7 +1126,7 @@ hr {
         width: 70px;
         height: 1px;
         background-color: #ffd51c; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .youtube_area > h3:after, .youtube_area > h3::after {
         content: " ";
         display: block;
@@ -1138,7 +1138,7 @@ hr {
         width: 100px;
         height: 2px;
         background-color: #ffd51c; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .youtube_area > h3:after, .youtube_area > h3::after {
         content: " ";
         display: block;
@@ -1150,7 +1150,7 @@ hr {
         width: 130px;
         height: 2px;
         background-color: #ffd51c; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .youtube_area > h3:after, .youtube_area > h3::after {
         content: " ";
         display: block;
@@ -1177,7 +1177,7 @@ hr {
       @media screen and (min-width: 320px) and (max-width: 767px) {
         .youtube_area > .slide_frame > .indicator {
           display: none; } }
-      @media screen and (min-width: 768px) and (max-width: 959px) {
+      @media screen and (min-width: 768px) and (max-width: 1279px) {
         .youtube_area > .slide_frame > .indicator {
           display: none; } }
       .youtube_area > .slide_frame > .indicator > ul {
@@ -1214,12 +1214,12 @@ hr {
             background-position: 50% 50%;
             background-size: auto 80%;
             background-image: url("../../../img/main_img/you_pic_01.png"); }
-            @media screen and (min-width: 960px) and (max-width: 1280px) {
+            @media screen and (min-width: 1280px) and (max-width: 1919px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_img_zone {
                 float: left;
                 width: 48%;
                 height: 100%; } }
-            @media screen and (min-width: 1281px) {
+            @media screen and (min-width: 1920px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_img_zone {
                 float: left;
                 width: 48%;
@@ -1233,7 +1233,7 @@ hr {
               padding: 10px;
               box-sizing: border-box;
               background-color: rgba(0, 0, 0, 0.5); } }
-          @media screen and (min-width: 768px) and (max-width: 959px) {
+          @media screen and (min-width: 768px) and (max-width: 1279px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
               position: absolute;
               bottom: 0;
@@ -1242,12 +1242,12 @@ hr {
               padding: 30px;
               box-sizing: border-box;
               background-color: rgba(0, 0, 0, 0.5); } }
-          @media screen and (min-width: 960px) and (max-width: 1280px) {
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
               float: right;
               width: 50%;
               height: 100%; } }
-          @media screen and (min-width: 1281px) {
+          @media screen and (min-width: 1920px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
               float: right;
               width: 50%;
@@ -1256,17 +1256,17 @@ hr {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
               width: 100%;
               height: 70%; } }
-          @media screen and (min-width: 768px) and (max-width: 959px) {
+          @media screen and (min-width: 768px) and (max-width: 1279px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
               float: left;
               width: 70%;
               height: 30%; } }
-          @media screen and (min-width: 960px) and (max-width: 1280px) {
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
               width: 100%;
               height: auto;
               margin-top: 100px; } }
-          @media screen and (min-width: 1281px) {
+          @media screen and (min-width: 1920px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone {
               width: 100%;
               height: auto;
@@ -1278,21 +1278,21 @@ hr {
               font-weight: bold;
               color: #fff;
               text-align: center; } }
-          @media screen and (min-width: 768px) and (max-width: 959px) {
+          @media screen and (min-width: 768px) and (max-width: 1279px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
               font-size: 40px;
               font-size: 2.5rem;
               font-weight: bold;
               color: #fff;
               text-transform: uppercase; } }
-          @media screen and (min-width: 960px) and (max-width: 1280px) {
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
               font-size: 48px;
               font-size: 3rem;
               font-weight: bold;
               text-transform: uppercase;
               color: #fff; } }
-          @media screen and (min-width: 1281px) {
+          @media screen and (min-width: 1920px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > h4 {
               font-size: 60px;
               font-size: 3.75rem;
@@ -1308,20 +1308,20 @@ hr {
             @media screen and (min-width: 320px) and (max-width: 767px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
                 display: none; } }
-            @media screen and (min-width: 768px) and (max-width: 959px) {
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
                 font-size: 16px;
                 font-size: 1rem;
                 text-transform: uppercase;
                 color: #fff;
                 word-break: keep-all; } }
-            @media screen and (min-width: 1281px) {
+            @media screen and (min-width: 1920px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .text_zone > p {
                 margin-bottom: 20px; } }
           @media screen and (min-width: 320px) and (max-width: 767px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link {
               display: none; } }
-          @media screen and (min-width: 768px) and (max-width: 959px) {
+          @media screen and (min-width: 768px) and (max-width: 1279px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link {
               float: right;
               width: 30%;
@@ -1350,7 +1350,7 @@ hr {
               border-color: #ffd51c; }
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
               text-decoration: underline; }
-            @media screen and (min-width: 960px) and (max-width: 1280px) {
+            @media screen and (min-width: 1280px) and (max-width: 1919px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
                 width: 230px;
                 height: 40px;
@@ -1365,7 +1365,7 @@ hr {
                   border-color: #ffd51c; }
                 .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a:active {
                   text-decoration: underline; } }
-            @media screen and (min-width: 1281px) {
+            @media screen and (min-width: 1920px) {
               .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area > .y_link > a {
                 width: 250px;
                 height: 60px;
@@ -1408,10 +1408,10 @@ hr {
   box-sizing: border-box;
   background-color: #171717;
   border-top: 1px solid #777; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     #footBox {
       height: 200px; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     #footBox {
       height: 200px; } }
 
@@ -1425,13 +1425,13 @@ hr {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .foot_logo {
       margin: auto; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .foot_logo {
       margin: auto; } }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .foot_logo {
       float: left; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     .foot_logo {
       float: left; } }
 
@@ -1441,14 +1441,14 @@ hr {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .snsb {
       width: 100%; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .snsb {
       width: 100%; } }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .snsb {
       float: right;
       width: auto; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     .snsb {
       float: right;
       width: auto; } }
@@ -1459,7 +1459,7 @@ hr {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .snsb > ul {
         margin-top: 20px; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .snsb > ul {
         margin-top: 20px; } }
     .snsb > ul > li {
@@ -1482,13 +1482,13 @@ hr {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .foot_info_area > ul {
         width: 300px; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .foot_info_area > ul {
         width: 300px; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .foot_info_area > ul {
         width: 100%; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .foot_info_area > ul {
         width: 100%; } }
     .foot_info_area > ul > li {
@@ -1519,7 +1519,7 @@ hr {
         text-transform: uppercase;
         color: #777;
         word-break: keep-all; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .foot_info_area > .copyright {
         width: 300px;
         text-align: center;
@@ -1528,10 +1528,10 @@ hr {
         text-transform: uppercase;
         color: #777;
         word-break: keep-all; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .foot_info_area > .copyright {
         width: 100%; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .foot_info_area > .copyright {
         width: 100%; } }
 

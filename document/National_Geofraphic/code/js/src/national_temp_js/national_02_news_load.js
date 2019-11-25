@@ -109,6 +109,9 @@ const moreBox = newsCon.children('.moreBtn');
 const moreBtn = moreBox.children('button');
 let n = 6;
 const show = function(l){
+  if (liLen <= n){
+    moreBtn.hide();
+  }
   for(let j=0; j<l; j++){
     newsLi.eq(j).show();
   }

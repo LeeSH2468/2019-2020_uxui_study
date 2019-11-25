@@ -21,7 +21,7 @@
   @media screen and (min-width: 320px) and (max-width: 767px) {
     #headBox {
       height: 90px; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     #headBox {
       position: relative;
       z-index: 1000; } }
@@ -51,7 +51,7 @@ h1 {
       background-position: 50% 50%;
       background-size: contain;
       background-image: url("../../img/ng_logo_box.svg"); } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     h1 {
       position: absolute;
       left: 50%;
@@ -77,10 +77,10 @@ h1 {
     height: 36px;
     top: 20px;
     right: 20px; }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       #gnb .menuiconbtn {
         display: none; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       #gnb .menuiconbtn {
         display: none; } }
     #gnb .menuiconbtn > button {
@@ -163,7 +163,7 @@ h1 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       #gnb > ul {
         display: none; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       #gnb > ul {
         display: none; } }
 
@@ -453,15 +453,13 @@ h1 {
       .s_name:after, .s_name::after {
         right: 20%; } }
 
-.title_area {
+#title_area {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 500px;
   background-color: #171717;
-  padding: 50px 120px;
   box-sizing: border-box; }
-  .title_area:before, .title_area::before {
+  #title_area:before, #title_area::before {
     content: " ";
     display: block;
     position: absolute;
@@ -469,36 +467,178 @@ h1 {
     left: 50%;
     top: 50%;
     width: 70vw;
-    max-width: 350px;
-    height: 45vw;
-    max-height: 300px;
-    transform: translate(-50%, -30%);
+    height: 50vw;
     background-color: #fff; }
-  .title_area > .pic_zone {
-    width: 250px;
+  #title_area > .pic_zone {
     height: auto;
     margin: auto; }
-    .title_area > .pic_zone > .title_pic {
-      width: 200px;
+    #title_area > .pic_zone > .title_pic {
       height: 200px;
-      background-color: #4ff; }
-    .title_area > .pic_zone > h3 {
-      width: 100%;
-      height: auto;
-      margin: 30px 0 20px; }
-    .title_area > .pic_zone > p {
-      width: 100%;
+      background-color: #aaa; }
+    #title_area > .pic_zone > .title_text {
       height: auto; }
+      #title_area > .pic_zone > .title_text > h3 {
+        width: 100%;
+        height: auto;
+        margin: 30px 0 20px;
+        word-break: keep-all; }
+      #title_area > .pic_zone > .title_text > p {
+        width: 100%;
+        height: auto;
+        word-break: keep-all; }
+
+#content_area {
+  position: relative;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #dfd; }
+  #content_area > .btn_zone {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 60px;
+    padding: 20px 5px;
+    box-sizing: border-box;
+    background-color: #ffd51c; }
+    #content_area > .btn_zone:after, #content_area > .btn_zone::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      z-index: -1;
+      width: 60px;
+      height: 80px;
+      background-color: #ffd51c;
+      transform: skewY(-30deg); }
+    #content_area > .btn_zone > button {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+      background-color: #aaa; }
+  #content_area > .con_zone {
+    width: 100%;
+    height: auto;
+    background-color: #aff;
+    margin-bottom: 60px; }
+    #content_area > .con_zone .con_pic {
+      width: 100%;
+      height: 200px;
+      background-color: #777;
+      margin: 30px 0 20px; }
+    #content_area > .con_zone p {
+      padding: 10px 20px;
+      box-sizing: border-box; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #title_area {
+    height: 500px;
+    padding: 10vw 20vw; }
+    #title_area:before, #title_area::before {
+      min-width: 300px;
+      max-width: 350px;
+      min-height: 200px;
+      max-height: 300px;
+      transform: translate(-50%, -20%); }
+    #title_area > .pic_zone {
+      width: 250px; }
+      #title_area > .pic_zone > .title_pic {
+        width: 200px; }
+      #title_area > .pic_zone > .title_text {
+        width: auto; }
+  #content_area {
+    width: 100%;
+    padding: 20px 0; }
+    #content_area > .btn_zone {
+      height: 50px;
+      left: 20px; }
+      #content_area > .btn_zone > button {
+        display: none; } }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #title_area {
+    height: 500px;
+    padding: 50px 120px; }
+    #title_area:before, #title_area::before {
+      max-width: 450px;
+      max-height: 300px;
+      transform: translate(-50%, -20%); }
+    #title_area > .pic_zone {
+      width: 250px; }
+      #title_area > .pic_zone > .title_pic {
+        float: left;
+        width: 200px; }
+      #title_area > .pic_zone > .title_text {
+        float: right;
+        width: 100%; }
+  #content_area {
+    width: 100%;
+    padding: 20px; }
+    #content_area > .btn_zone {
+      height: 50px;
+      left: 20px; }
+      #content_area > .btn_zone > button {
+        display: none; } }
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  #title_area {
+    height: 520px;
+    padding: 100px 120px; }
+    #title_area:before, #title_area::before {
+      max-width: 450px;
+      max-height: 350px;
+      transform: translate(-30%, -60%); }
+    #title_area > .pic_zone {
+      width: 500px; }
+      #title_area > .pic_zone > .title_pic {
+        float: left;
+        width: 50%;
+        margin-right: 10%; }
+      #title_area > .pic_zone > .title_text {
+        float: right;
+        width: 40%; }
+  #content_area {
+    width: 750px;
+    margin: auto;
+    padding: 20px; }
+    #content_area > .btn_zone {
+      height: 200px;
+      left: -100px; } }
+
+@media screen and (min-width: 1920px) {
+  #title_area {
+    height: 520px;
+    padding: 100px 120px; }
+    #title_area:before, #title_area::before {
+      max-width: 500px;
+      max-height: 350px;
+      transform: translate(-30%, -50%); }
+    #title_area > .pic_zone {
+      width: 500px; }
+      #title_area > .pic_zone > .title_pic {
+        float: left;
+        width: 50%;
+        margin-right: 10%; }
+      #title_area > .pic_zone > .title_text {
+        float: right;
+        width: 40%; }
+  #content_area {
+    width: 900px;
+    margin: auto;
+    padding: 20px; }
+    #content_area > .btn_zone {
+      height: 200px;
+      left: -100px; } }
 
 #footBox {
   padding: 50px;
   box-sizing: border-box;
   background-color: #171717;
   border-top: 1px solid #777; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     #footBox {
       height: 200px; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     #footBox {
       height: 200px; } }
 
@@ -512,13 +652,13 @@ h1 {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .foot_logo {
       margin: auto; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .foot_logo {
       margin: auto; } }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .foot_logo {
       float: left; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     .foot_logo {
       float: left; } }
 
@@ -528,14 +668,14 @@ h1 {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .snsb {
       width: 100%; } }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     .snsb {
       width: 100%; } }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .snsb {
       float: right;
       width: auto; } }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1920px) {
     .snsb {
       float: right;
       width: auto; } }
@@ -546,7 +686,7 @@ h1 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .snsb > ul {
         margin-top: 20px; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .snsb > ul {
         margin-top: 20px; } }
     .snsb > ul > li {
@@ -569,13 +709,13 @@ h1 {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .foot_info_area > ul {
         width: 300px; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .foot_info_area > ul {
         width: 300px; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .foot_info_area > ul {
         width: 100%; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .foot_info_area > ul {
         width: 100%; } }
     .foot_info_area > ul > li {
@@ -606,7 +746,7 @@ h1 {
         text-transform: uppercase;
         color: #777;
         word-break: keep-all; } }
-    @media screen and (min-width: 768px) and (max-width: 959px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
       .foot_info_area > .copyright {
         width: 300px;
         text-align: center;
@@ -615,9 +755,9 @@ h1 {
         text-transform: uppercase;
         color: #777;
         word-break: keep-all; } }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
       .foot_info_area > .copyright {
         width: 100%; } }
-    @media screen and (min-width: 1281px) {
+    @media screen and (min-width: 1920px) {
       .foot_info_area > .copyright {
         width: 100%; } }
