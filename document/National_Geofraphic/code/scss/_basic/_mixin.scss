@@ -91,6 +91,11 @@
    background-size:$s;
    background-image:url($url);
  }
+ @mixin bg_base2($p:50% 50%,$s:contain,$r:no-repeat,$p:50% 50%){
+  background-repeat:$r;
+  background-position:$p;
+  background-size:$s
+ }
 
  //반응형======================
  @mixin mobile{
