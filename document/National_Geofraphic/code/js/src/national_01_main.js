@@ -4,7 +4,7 @@
   const header = $('#headBox');
   const content = $('#conBox');
   const footer  = $('#footBox');
-  const mobile=480, tablet=768,laptop=1366, pc=1600;
+  const mobile=767, tablet=1279,laptop=1919, pc=1920;
   const device = ['mobile', 'tablet', 'laptop', 'pc', 'pcfull'];
 // ============================
   // header ==
@@ -66,7 +66,7 @@ let beforeW = $(window).outerWidth(true);//margin값까지 포함.
         $('body').append('<script src="../js/src/national_temp_js/national_header_m_l.js"></script>');
       break;
       case device[1]:
-          $('body').append('<script src="../js/src/national_temp_js/national_header_m_l.js"></script>');
+        $('body').append('<script src="../js/src/national_temp_js/national_header_m_l.js"></script>');
       break;
       case device[2]:
       break;

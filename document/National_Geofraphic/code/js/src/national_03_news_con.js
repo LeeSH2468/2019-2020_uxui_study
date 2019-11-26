@@ -3,7 +3,7 @@
   const header = $('#headBox');
   const content = $('#conBox');
   const footer  = $('#footBox');  
-  const mobile=480, tablet=768,laptop=1366, pc=1600;
+ const mobile=767, tablet=1279,laptop=1919, pc=1920;
   const device = ['mobile', 'tablet', 'laptop', 'pc', 'pcfull'];
 
 // ============================

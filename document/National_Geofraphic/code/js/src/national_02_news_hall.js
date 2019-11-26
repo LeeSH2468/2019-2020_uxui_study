@@ -3,7 +3,7 @@
   const header = $('#headBox');
   const content = $('#conBox');
   const footer  = $('#footBox');  
-  const mobile=480, tablet=768,laptop=1366, pc=1600;
+ const mobile=767, tablet=1279,laptop=1919, pc=1920;
   const device = ['mobile', 'tablet', 'laptop', 'pc', 'pcfull'];
 
 // ============================
@@ -11,13 +11,15 @@
   let htmlUrl = "./national_temp_html/";
   let jsUrl = "../js/src/national_temp_js/";
   let newsUrl = jsUrl + "national_02_news_load.js";
+  let news2Url = jsUrl + "national_02_news_btn.js";
 
   header.load(htmlUrl + 'national_header.html',function(){
     body.append('<script src="'+ jsUrl + 'national_header.js"></script>');
   });
   footer.load(htmlUrl + 'national_footer.html');
 
-  body.append(`<script src="${newsUrl}"></script>`)
+  body.append(`<script src="${newsUrl}"></script>`);
+  body.append(`<script src="${news2Url}"></script>`);
 
   // ====================
 
@@ -29,7 +31,6 @@
   } else {
     nowb = 'other';
   }
-  console.log(nowb);
   //------------------------------
   //사이즈 변경 체크
   $(window).on('resize', function () {

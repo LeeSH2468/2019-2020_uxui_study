@@ -9,8 +9,9 @@ console.log(titleH3)
 
 let imgUrl = '../../../img/news_img/news_01/';
 const contitle = [
-  { title : "맨몸으로 절벽을 오르는 등반가, 알렉스 호놀드의 &lt;프리솔로&gt;",
-    date: "4월 12일(금) 밤 11시 방송"
+  { title : "맨몸으로 절벽을 오르는 등반가, 알렉스 호놀드의 <프리솔로>",
+    date: "4월 12일(금) 밤 11시 방송",
+    tpic: imgUrl + "news_title.jpg"
   }
 ]
 const conlist = [
@@ -30,18 +31,14 @@ const conlist = [
   ]
 
 
-let partPic = '<div class="con_pic"></div>'
-let partP = '<p></p>';
+let part = '<div class="part"><div class="con_pic"></div><p></p></div>';
 
 titleH3.text(contitle[0].title);
 titleDate.text(contitle[0].date);
-// for(let i=0; i<partPic.length;i++){
-//   conZone.append(partPic);
-//   let pic = conZone.find('.con_pic');
-//   pic.css({backgroundImage:'url('+conlist[i].pic+'news_img_0'+(i+1)+'.jpg'+')'});
-// };
-// for(let i=0; i<partP.length;i++){
-//   conZone.append(partP);
-//   let text = conZone.find('p');
-//   text.text(conlist[i].con);
-// }
+titlePic.css({backgroundImage:'url('+contitle[0].tpic+')'});
+  for(let i=0; i<conlist.length;i++){
+    conZone.append(part);
+    let pic = conZone.children('.part').eq(i);
+    pic.find('.con_pic').css({backgroundImage:'url('+conlist[i].pic+'news_img_0'+(i+1)+'.jpg'+')'});
+    pic.find('p').append(conlist[i].con);
+  };

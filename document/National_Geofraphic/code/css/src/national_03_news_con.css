@@ -50,7 +50,8 @@ h1 {
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: contain;
-      background-image: url("../../img/ng_logo_box.svg"); } }
+      background-image: url("../../img/ng_logo_box.svg");
+      padding-left: 0; } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     h1 {
       position: absolute;
@@ -61,7 +62,8 @@ h1 {
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: contain;
-      background-image: url("../../img/ng_logo_box.svg"); } }
+      background-image: url("../../img/ng_logo_box.svg");
+      padding-left: 0; } }
 
 #gnb {
   position: absolute;
@@ -209,7 +211,7 @@ h1 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 1000;
+  z-index: 10000;
   width: 900px;
   height: 300px;
   background-color: #555; }
@@ -336,7 +338,7 @@ h1 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 1000;
+  z-index: 10000;
   width: 900px;
   height: 300px;
   background-color: #555;
@@ -475,6 +477,12 @@ h1 {
     #title_area > .pic_zone > .title_pic {
       height: 200px;
       background-color: #aaa; }
+      #title_area > .pic_zone > .title_pic:after, #title_area > .pic_zone > .title_pic ::after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(transparent 50%, #171717); }
     #title_area > .pic_zone > .title_text {
       height: auto; }
       #title_area > .pic_zone > .title_text > h3 {
@@ -491,7 +499,7 @@ h1 {
   position: relative;
   height: auto;
   box-sizing: border-box;
-  background-color: #dfd; }
+  background-color: #fff; }
   #content_area > .btn_zone {
     position: absolute;
     top: 0;
@@ -519,7 +527,6 @@ h1 {
   #content_area > .con_zone {
     width: 100%;
     height: auto;
-    background-color: #aff;
     margin-bottom: 60px; }
     #content_area > .con_zone .con_pic {
       width: 100%;
@@ -532,6 +539,11 @@ h1 {
     #content_area > .con_zone p {
       padding: 10px 20px;
       box-sizing: border-box; }
+
+#all_area {
+  width: 100%;
+  height: 250px;
+  background-color: #ddd; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #title_area {
@@ -603,7 +615,9 @@ h1 {
   #content_area {
     width: 750px;
     margin: auto;
-    padding: 20px; }
+    padding: 20px;
+    margin-bottom: 200px;
+    box-shadow: 20px 20px 0 #777; }
     #content_area > .btn_zone {
       height: 200px;
       left: -100px; } }
@@ -628,7 +642,9 @@ h1 {
   #content_area {
     width: 900px;
     margin: auto;
-    padding: 20px; }
+    padding: 20px;
+    margin-bottom: 200px;
+    box-shadow: 20px 20px 0 #777; }
     #content_area > .btn_zone {
       height: 200px;
       left: -100px; } }

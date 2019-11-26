@@ -18,6 +18,7 @@
     e.preventDefault();
     mPopup.stop().fadeOut();    
   });
+  
 
   /*
   //팝업 있을 때 스크롤 정지===========
