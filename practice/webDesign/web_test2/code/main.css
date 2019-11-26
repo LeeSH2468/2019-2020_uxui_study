@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body,html{width:100%; height:100%; background-color:#fff; color:#999;}
+*{border:0; padding:0; margin:0; outline:0; list-style:none;}
+a{width:100%; height:100%; display:block; text-decoration:none; color:inherit;}
+.hidden{width:0; height:0; overflow:hidden;}
+
+
+#wrap{width:960px; height:1200px; margin:auto;}
+
+
+
+/* =============================*/
+#headBox{width:100%; height:150px; padding:40px 0; box-sizing:border-box;}
+#headBox h1{float:left; width:150px; height:70px;background-image:url("../img/logo.PNG");background-size:cover; background-repeat:no-repeat;}
+#headBox ul{float:right; width:700px;}
+#headBox ul>li{float:left; width:230px; height:30px;text-align:center;}
+#headBox ul dt{width:230px; height:30px;}
+#headBox ul a:hover{background-color:#4298cc; color:#fff;}
+#headBox dd{display:none; width:100%; height:auto;}
+
+
+
+/* =============================*/
+#viewBox{position:relative; width:100%; height:400px; background-color:#777; overflow: hidden}
+#viewBox>p{position:absolute;top:0; left:0; bottom:0; right:0; z-index:100; margin:auto; width:800px; height:40px;border-radius:50px; background-color:#ddd;color:#893700; text-align:center; font-size:1.5rem; font-weight:bold;}
+#viewBox>ul{position:relative; left:0; z-index:0;width:300%;height:100%;}
+#viewBox>ul>li{float:left;width:960px; height:100%; background-color:aliceblue}
+#viewBox>ul>li:nth-child(1){background-image:url("../img/images_1.jpg")}
+#viewBox>ul>li:nth-child(2){background-image:url("../img/images_2.jpg")}
+#viewBox>ul>li:nth-child(3){background-image:url("../img/images_3.jpg")}
+
+/* =============================*/
+#conBox{width:100%; height:500px; padding:20px; box-sizing:border-box;}
+.info_area{width:100%; height:200px;}
+.info_area>.notice_zone{float:left;width:48%; height:100%;}
+.notice_zone>h3{width:100%; height:50px;text-align:center;}
+.notice_zone>dl{float:left; height:auto;}
+.notice_zone>.noti_con{width:80%;}
+.notice_zone>.noti_date{width:20%;}
+.notice_zone dt{width:100%; height:auto; text-align:center; font-weight:bold;}
+.notice_zone dd{width:100%; height:25px;font-size:14px;}
+.notice_zone dd:nth-child(2n){background-color:#ddd;}
+.info_area>.info_zone{float:right;width:48%; height:100%;}
+.info_zone>h3{width:100%; height:50px;text-align:center;}
+.info_zone>.info_pic{width:100%; height:150px; background-image:url("../img/info.png");background-repeat: no-repeat; background-size:cover;}
+
+.info_zone>.popup{display:none;position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; width:500px; height:400px; background-color:#fff; padding:50px; border:1px solid #aaa;box-sizing:border-box;}
+.popup div{width:100%; height: auto;margin-bottom:20px}
+.popup div:after{content:" ";display:block; clear:both}
+.popup label{float:left;display:block; width:30%; height:auto;}
+.popup input{float:left;width: 150px; height:auto;border:1px solid #aaa}
+.memo_part label{line-height:200px;}
+.memo_part input{width:250px; height:200px;}
+.popup .memo_part{height: 200px;}
+.popup button{width:50px; height:50px; background-color:#777;}
+
+
+.icon_area{width:610px; height:150px; margin:50px auto;}
+.new_zone{float:left;width:150px; height:100%; margin-right:80px;}
+.icon_area div{background-repeat:no-repeat; background-size:auto 100%; background-position:50% 50%;}
+.new_zone>.new_icon{width:100%; height:100px; background-image:url("../img/new.png")}
+.music_zone{float:left;width:150px; height:100%; margin-right:80px;}
+.music_zone>.music_icon{width:100%; height:100px; background-image:url("../img/music.png")}
+.menu_zone{float:left;width:150px; height:100%; }
+.menu_zone>.menu_icon{width:100%; height:100px; background-image:url("../img/menu.png")}
+.icon_area a{width:100%; height:50px; background-color:#aaa; border-radius:20px;line-height: 50px; text-align: center; color:#fff;}
+
+/*================================*/
+#footBox{width:100%; height:150px; background-color:#333; padding:10px 50px; box-sizing:border-box;}
+#footBox>.persnal{float:left;width:50%;height:100%;}
+#footBox>.persnal>li{float:left; width:auto; margin-right:20px;}
+#footBox>.company{float:right;width:50%;height:100%;}
+#footBox>.company>li{width:200px; height:auto; font-size:14px; line-height:20px;}
