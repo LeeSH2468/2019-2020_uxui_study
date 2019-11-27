@@ -2,12 +2,12 @@
     
     //gnb==========================================
     var headBox = $('#headBox');
-    var headDt = headBox.find('dt');
-    var headDd = headDt.find('dd');
-    headDt.on('mouseenter',function(){
+    var headDl = headBox.find('dl');
+    var headDd = headDl.find('dd');
+    headDl.on('mouseenter',function(){
        $(this).find('dd').stop().slideDown(); 
     });    
-    headDt.on('mouseleave',function(){
+    headDl.on('mouseleave',function(){
 //       headDd.hide(); 
        $(this).find('dd').stop().slideUp(); 
     });
@@ -21,8 +21,8 @@
     setInterval(function(){
         j++;
         if(j>2){j=0}
-        slideUl.animate({left:-100+'%'});
-    },500)
+        slideUl.animate({left:-100*j+'%'});
+    },1000)
 //    setInterval(function(e){
 //        slideUl.animaet({'left':-100+'%'},function(){
 //            $(this).find('li').eq(0).appendTo(slideUl);

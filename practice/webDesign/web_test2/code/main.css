@@ -10,13 +10,14 @@ a{width:100%; height:100%; display:block; text-decoration:none; color:inherit;}
 
 
 /* =============================*/
-#headBox{width:100%; height:150px; padding:40px 0; box-sizing:border-box;}
+#headBox{position:relative; z-index:1000;width:100%; height:150px; padding:30px 0; box-sizing:border-box;}
 #headBox h1{float:left; width:150px; height:70px;background-image:url("../img/logo.PNG");background-size:cover; background-repeat:no-repeat;}
 #headBox ul{float:right; width:700px;}
-#headBox ul>li{float:left; width:230px; height:30px;text-align:center;}
+#headBox ul>li{float:left; width:230px; height:auto;text-align:center;}
 #headBox ul dt{width:230px; height:30px;}
 #headBox ul a:hover{background-color:#4298cc; color:#fff;}
-#headBox dd{display:none; width:100%; height:auto;}
+#headBox dl dd{width:230px; height:120px; background-color:aqua}
+#headBox dl dd a {width:100%; height:30px;}
 
 
 
@@ -44,7 +45,7 @@ a{width:100%; height:100%; display:block; text-decoration:none; color:inherit;}
 .info_zone>h3{width:100%; height:50px;text-align:center;}
 .info_zone>.info_pic{width:100%; height:150px; background-image:url("../img/info.png");background-repeat: no-repeat; background-size:cover;}
 
-.info_zone>.popup{display:none;position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; width:500px; height:400px; background-color:#fff; padding:50px; border:1px solid #aaa;box-sizing:border-box;}
+.info_zone>.popup{display:none;position:fixed; z-index:1000; top:0; bottom:0; left:0; right:0; margin:auto; width:500px; height:400px; background-color:#fff; padding:50px; border:1px solid #aaa;box-sizing:border-box;}
 .popup div{width:100%; height: auto;margin-bottom:20px}
 .popup div:after{content:" ";display:block; clear:both}
 .popup label{float:left;display:block; width:30%; height:auto;}
@@ -52,7 +53,7 @@ a{width:100%; height:100%; display:block; text-decoration:none; color:inherit;}
 .memo_part label{line-height:200px;}
 .memo_part input{width:250px; height:200px;}
 .popup .memo_part{height: 200px;}
-.popup button{width:50px; height:50px; background-color:#777;}
+.popup button{width:50px; height:30px; background-color:#777;}
 
 
 .icon_area{width:610px; height:150px; margin:50px auto;}
