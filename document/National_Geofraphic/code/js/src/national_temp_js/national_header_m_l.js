@@ -5,14 +5,31 @@
   gnbInput.on('click', function (e) {
     // e.preventDefault();
     gnb.toggleClass('on');
-  });
-  
-  gnbAdd.on('scroll touchmove mousewheel',function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  });
 
+    if( gnb.hasClass('on') ){
+      // $('html, body').on('scroll touchmove mousewheel', function (e) {
+      //   console.log('?')
+      
+      // });
+       $('html, body').on('scroll touchmove mousewheel', function (e) {
+          // e.preventDefault();
+          // e.stopPropagation();
+          $('html, body').animate({scrollTop: 0});
+          // return false;
+        });
+
+    }else{
+        $('html, body').animate({scrollTop:false});
+
+    }
+ 
+  // gnbAdd.on('scroll touchmove mousewheel',function(e){
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   return false;
+  // });
+ });
+  
   // $(window).on('scroll', function () {
   //   let gnbView = gnb.css('display') == 'block';
   //   if (gnbView) {
