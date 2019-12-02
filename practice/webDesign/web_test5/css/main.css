@@ -1,0 +1,36 @@
+*{margin:0; padding:0; outline:0; border:0; list-style:none;}
+.hidden{width:0; height:0; overflow: 0; display:none;}
+a{width:100%; height:100%; display:block; color:#222328; text-decoration:none;}
+
+
+
+#wrap{width:1000px; height:650px; background-color:#fff; color:#222328;}
+/*======================================================*/
+#headBox{float:left;width:20%; height:100%; background-color:#faa;}
+h1{width:150px; height:100px; margin:25px;  background-color:#aaa;}
+.gnb{width:100%; height:auto; min-height:200px;background-color:#ddd; text-align:center;}
+.gnb>li{position:relative; width:100%; height:50px; padding:10px;box-sizing:border-box; background-color:#777;}
+.gnb>li:hover{background-color:#afa;}
+.gnb>li:hover>a{color:#066;}
+.gnb>li>ul{position: absolute; top:0; right:-100%; width:100%; height:auto;}
+.gnb>li>ul>li{display:none;width:100%; height:auto; background-color:#993;}
+
+
+/*======================================================*/
+#mainBox{float:right;width:80%; height:100%; background-color:#aaa;}
+#viewBox{width:100%; height:350px; background-color:#555; overflow: hidden;}
+#viewBox>.guide{position:relative; width:400%; height:100%;}
+#viewBox>.guide>li{float:left;width:800px; height:100%;}
+/*======================================================*/
+#conBox{width:100%; height:200px;}
+#conBox>.noti_area{float:left; width:40%; height:100%; background-color:#ffa}
+#conBox>.gall_area{float:left; width:30%; height:100%; background-color:#afa}
+#conBox>.banner_area{float:left; width:30%; height:100%; background-color:#ffa}
+
+
+/*======================================================*/
+#footBox{width:100%; height:100px;background-color:#777;}
+#footBox>h2{float:left; width:20%; height:100%; background-color:#434;}
+#footBox>.conpany{float:left; width:80%; height:100%;}
+.foot_menu{width:100%; height:50%; background-color:#aaf}
+.copycright{width:100%; height:50%; background-color:#aaa}
