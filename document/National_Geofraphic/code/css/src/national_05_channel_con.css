@@ -14,15 +14,15 @@
 
 #headBox {
   width: 100%;
-  box-sizing: border-box;
-  padding: 0 350px; }
+  box-sizing: border-box; }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     #headBox {
       padding: 0 10px; } }
   @media screen and (min-width: 1920px) {
     #headBox {
       position: relative;
-      z-index: 1000; } }
+      z-index: 1000;
+      padding: 0 300px; } }
 
 h1 {
   float: left;
@@ -70,8 +70,10 @@ h1 {
   top: 0;
   right: 0;
   width: auto;
-  height: auto;
-  /*  margin-right:20px; */ }
+  height: auto; }
+  @media screen and (min-width: 1920px) {
+    #gnb {
+      right: 150px; } }
   #gnb .menuiconbtn {
     position: absolute;
     display: block;

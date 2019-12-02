@@ -1,8 +1,8 @@
 //national_header.scss
 $imgUrl:'../../img/';
-#headBox{width: 100%; box-sizing: border-box; padding:0 350px;
+#headBox{width: 100%; box-sizing: border-box;
 @include mobile{padding:0 10px;}
-@include pcfull{position:relative; z-index:1000;}
+@include pcfull{position:relative; z-index:1000;  padding:0 300px;}
 }
 
 h1{float:left; width: 175px; height: 50px; background-size:cover;margin:14px 0 0 40px;
@@ -14,8 +14,9 @@ h1{float:left; width: 175px; height: 50px; background-size:cover;margin:14px 0 0
 @include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0; margin:10px 0 0;}
 }//h1
 
-#gnb{position: absolute;  top:0; right:0; width: auto; height: auto;/*  margin-right:20px; */
-  // nav 버튼
+#gnb{position: absolute;  top:0; right:0; width: auto; height: auto;
+  @include pcfull{right:150px;}
+
   .menuiconbtn{position:absolute; display: block; width:50px; height:36px;@include labtop{display:none;}
   @include pcfull{display:none;}
               top: 20px; right:20px; 
