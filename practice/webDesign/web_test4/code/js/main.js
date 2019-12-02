@@ -4,23 +4,24 @@
     var gnbSub = gnbTitle.children('ul');
     
     gnbTitle.on('mouseenter',function(){
-        $(this).children(gnbSub).stop().slideDown();
+        $(this).children('ul').stop().slideDown();
     });
     gnbTitle.on('mouseleave',function(){
-        $(this).children(gnbSub).stop().slideUp();
+        $(this).children('ul').stop().slideUp();
     });
     
     //==================================================
     var viewBox = $('#viewBox');
     var guide = viewBox.children('.guide');
-    var slide = guide.children('li');
+    var slide = guide.children('div');
     
     guide.css({position:'relative',zIndex:'0'})
     setInterval(function(){
-       guide.animate({left:(-100*3)+'%'},function(){
-            $(this).find('li').eq(0).appendTo(guide);
+       guide.animate({left:-100+'%'},function(){
+            $(this).find('div').eq(0).appendTo(guide);
             $(this).css({left:0});
-           console.log('a');
+           
+           //console.log('a');
        });
 
     },1000);

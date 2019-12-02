@@ -24,7 +24,7 @@
  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
  <link rel="apple-touch-icon" href="favicon.png">
  
- <title>문서제목</title>
+ <title>문서제목</title> 
 </head>
 <body>
 <!-- noscript : javascript를 지원하지 않는 브라우저 설정-->
@@ -62,8 +62,8 @@
                     <span class="hidden">비밀번호를 입력하세요.</span>
                   </label>
                 </dt>
-                <dd><input type="password" name="userPw" id="userPw" value=""
-                    placeholder="비밀번호(영문 숫자 특수문자 2가지 이상 6~15자 이내" required="" />
+                <dd><input type="password" name="userPw" id="userPw" value="" maxlength="15"
+                    placeholder="비밀번호(영문 숫자 특수문자 2가지 이상 6~15자 이내)" required="" />
                 </dd>
               </dl>
               <span class="narr">비밀번호를 입력하세요.</span>
@@ -76,10 +76,10 @@
                     <span class="hidden">비밀번호를 다시 입력하세요.</span>
                   </label>
                 </dt>
-                <dd><input type="password" name="userPwre" id="userPwre" value="" placeholder="비밀번호 확인" required="" />
+                <dd><input type="password" name="userPwre" id="userPwre" value="" maxlength="15" placeholder="비밀번호 확인" required="" />
                 </dd>
               </dl>
-              <span class="narr">비밀번호를 입력하세요.</span>
+              <span class="narr">비밀번호가 일치하지 않습니다.</span>
             </li>
             <li>
               <dl>
