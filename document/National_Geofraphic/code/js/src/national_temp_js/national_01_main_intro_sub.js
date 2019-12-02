@@ -40,21 +40,26 @@ const sClosePopBtn = sPopup.find('.s_close_btn');
 
 mGo.on('click', function (e) {
   e.preventDefault();
+  
   sPopup.stop().fadeOut();
-  mPopup.stop().fadeIn();
+  mPopup.stop().fadeIn(function(){
+    mPopup.css({position:'fixed'});
+  });
   mGo.focus();
-
-});
-mClosePopBtn.on('click', function (e) {
+  mClosePopBtn.on('click', function (e) {
   e.preventDefault();
   mPopup.stop().fadeOut();
+});
+
 });
 
 // ========
 aGo.on('click', function (e) {
   e.preventDefault();
   mPopup.stop().fadeOut();
-  sPopup.stop().fadeIn();
+  sPopup.stop().fadeIn(function(){
+    sPopup.css({position:'fixed'});
+  });
   sClosePopBtn.focus(function () {
     $(this).on('keyup', function (e) {
       if (e.keyCode == 27) {

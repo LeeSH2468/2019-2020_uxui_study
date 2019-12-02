@@ -1,17 +1,17 @@
 //national_header.scss
 $imgUrl:'../../img/';
-#headBox{width: 100%; height: 80px; background-color: $black; padding-top:20px; box-sizing: border-box;
-@include mobile{height: 90px;}
+#headBox{width: 100%; box-sizing: border-box; padding:0 350px;
+@include mobile{padding:0 10px;}
 @include pcfull{position:relative; z-index:1000;}
 }
 
-h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:40px;
+h1{float:left; width: 175px; height: 50px; background-size:cover;margin:14px 0 0 40px;
   $u:"../../img/ng_logo_w.svg";
   $u2:"../../img/ng_logo_box.svg";
   @include bg_base($u);
-  >a{display:block; width: 100%;height: 100%; ;}//a
-@include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0;}
-@include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0;}
+  >a{display:block; width: 100%;height: 100%;}//a
+@include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0; margin:10px 0 0;}
+@include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0; margin:10px 0 0;}
 }//h1
 
 #gnb{position: absolute;  top:0; right:0; width: auto; height: auto;/*  margin-right:20px; */
@@ -46,22 +46,6 @@ h1{float:left; width: 175px; height: 50px; background-size:cover; padding-left:4
   @include tablet{display:none;}
   }//ul
 }//#gnb
-
-// input[id=menuicon]{display:none;
-// +label{display:block; width: 50px; height: 36px; position: relative; cursor:pointer;
-// >span{display: block; position:absolute; width: 100%; height: 6px; background-color: $primary; transition:all .35s;
-// &:nth-child(1){top:0;}
-// &:nth-child(2){top:50%; transform:translateY(-50%)}
-// &:nth-child(3){bottom:0;}
-//     }//span
-// @include labtop{display:none;}
-// @include pcfull{display:none;}
-// }//label
-// &:checked+label span:nth-child(1){top:50%; transform:translateY(-50%) rotate(45deg);}
-// &:checked+label span:nth-child(2){opacity: 0;}
-// &:checked+label span:nth-child(3){top:50%; transform:translateY(-50%) rotate(-45deg);}
-// }//input
-
 
 #gnb.on{position:fixed; z-index:1200; width: 100%; height:100%; margin:0; background-color:#222;
         box-sizing:border-box;/* transition:all 1000ms ease; */

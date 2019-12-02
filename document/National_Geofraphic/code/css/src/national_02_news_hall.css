@@ -1,11 +1,17 @@
 #wrap {
   width: 100%;
-  height: auto;
-  background-color: #171717; }
+  height: auto; }
+
+#headBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
 
 #mainBox {
   width: 100%;
-  height: 100%; }
+  height: auto;
+  background-color: #171717; }
 
 #footBox {
   width: 100%;
@@ -14,13 +20,11 @@
 
 #headBox {
   width: 100%;
-  height: 80px;
-  background-color: #171717;
-  padding-top: 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0 350px; }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     #headBox {
-      height: 90px; } }
+      padding: 0 10px; } }
   @media screen and (min-width: 1920px) {
     #headBox {
       position: relative;
@@ -31,7 +35,7 @@ h1 {
   width: 175px;
   height: 50px;
   background-size: cover;
-  padding-left: 40px;
+  margin: 14px 0 0 40px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -51,7 +55,8 @@ h1 {
       background-position: 50% 50%;
       background-size: contain;
       background-image: url("../../img/ng_logo_box.svg");
-      padding-left: 0; } }
+      padding-left: 0;
+      margin: 10px 0 0; } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     h1 {
       position: absolute;
@@ -63,7 +68,8 @@ h1 {
       background-position: 50% 50%;
       background-size: contain;
       background-image: url("../../img/ng_logo_box.svg");
-      padding-left: 0; } }
+      padding-left: 0;
+      margin: 10px 0 0; } }
 
 #gnb {
   position: absolute;
@@ -242,7 +248,7 @@ h1 {
     width: 448px;
     height: 100%;
     margin-right: 4px;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(17, 17, 17, 0.5); }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .m_popup > div {
         width: 100%;
@@ -356,7 +362,7 @@ h1 {
     width: 33%;
     height: 100%;
     margin-right: 4px;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(17, 17, 17, 0.5); }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .s_popup > div {
         width: 100%;
@@ -459,8 +465,14 @@ h1 {
   width: 100%;
   background-repeat: no-repeat;
   background-position: 0% 0%;
-  background-size: cover;
+  background-size: 100% auto;
   background-image: url("../../img/news_img/news_header.jpg"); }
+  .news_top:after, .news_top::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.5); }
 
 .search_area {
   width: 100%;
@@ -508,8 +520,9 @@ h1 {
       padding: 30px 30px;
       box-sizing: border-box; }
       .search_area > form > fieldset > .search_box {
-        width: 100%;
-        height: auto; }
+        width: 70%;
+        height: 100px;
+        margin: auto; }
         .search_area > form > fieldset > .search_box > #search {
           float: left;
           width: 85%;
@@ -565,7 +578,7 @@ h1 {
           bottom: 0;
           width: 100%;
           box-sizing: border-box;
-          background-color: rgba(0, 0, 0, 0.8);
+          background-color: rgba(17, 17, 17, 0.8);
           transition: all 300ms ease; }
           .news_con > ul > li > a > .text_area > h3 {
             width: 100%;
@@ -600,7 +613,7 @@ h1 {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .news_top {
-    height: 130px;
+    height: 250px;
     background-image: url("../../img/news_img/news_header_m.jpg"); }
   .search_area {
     padding: 0 20px; }
@@ -661,7 +674,7 @@ h1 {
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .news_top {
-    height: 130px;
+    height: 250px;
     background-image: url("../../img/news_img/news_header_m.jpg"); }
   .search_area {
     padding: 0 20px; }
@@ -726,14 +739,13 @@ h1 {
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .news_top {
-    height: 600px; }
+    height: 500px; }
   .search_area {
     padding: 20px; }
     .search_area > .group {
-      float: left;
-      width: 50%;
-      height: 100%;
-      padding: 20px; }
+      width: 100%;
+      height: 50%;
+      padding: 10px; }
       .search_area > .group > .gbtn_area {
         width: 710px; }
         .search_area > .group > .gbtn_area > div {
@@ -747,11 +759,11 @@ h1 {
         .search_area > .group > .gbtn_area > .tv {
           background-image: url("../../img/news_img/btn_tv_b.svg"); }
     .search_area > form {
-      float: left;
-      width: 50%;
+      width: 100%;
       height: 50%; }
       .search_area > form > fieldset > .search_box > #search {
-        width: 85%; }
+        width: 700px;
+        margin: auto; }
       .search_area > form > fieldset > .search_box > .search_btn {
         width: 10%; }
   .news_con {

@@ -1,6 +1,12 @@
 #wrap {
   width: 100%;
-  height: 100%; }
+  height: auto; }
+
+#headBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
 
 #conBox {
   width: 100%;
@@ -9,18 +15,16 @@
 
 #footBox {
   width: 100%;
-  height: 100%;
+  height: 300px;
   max-height: 300px; }
 
 #headBox {
   width: 100%;
-  height: 80px;
-  background-color: #171717;
-  padding-top: 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0 350px; }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     #headBox {
-      height: 90px; } }
+      padding: 0 10px; } }
   @media screen and (min-width: 1920px) {
     #headBox {
       position: relative;
@@ -31,7 +35,7 @@ h1 {
   width: 175px;
   height: 50px;
   background-size: cover;
-  padding-left: 40px;
+  margin: 14px 0 0 40px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -51,7 +55,8 @@ h1 {
       background-position: 50% 50%;
       background-size: contain;
       background-image: url("../../img/ng_logo_box.svg");
-      padding-left: 0; } }
+      padding-left: 0;
+      margin: 10px 0 0; } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     h1 {
       position: absolute;
@@ -63,7 +68,8 @@ h1 {
       background-position: 50% 50%;
       background-size: contain;
       background-image: url("../../img/ng_logo_box.svg");
-      padding-left: 0; } }
+      padding-left: 0;
+      margin: 10px 0 0; } }
 
 #gnb {
   position: absolute;
@@ -242,7 +248,7 @@ h1 {
     width: 448px;
     height: 100%;
     margin-right: 4px;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(17, 17, 17, 0.5); }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .m_popup > div {
         width: 100%;
@@ -356,7 +362,7 @@ h1 {
     width: 33%;
     height: 100%;
     margin-right: 4px;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(17, 17, 17, 0.5); }
     @media screen and (min-width: 320px) and (max-width: 767px) {
       .s_popup > div {
         width: 100%;
@@ -479,15 +485,6 @@ h1 {
     background-position: 50% 50%;
     background-size: cover;
     background-image: url("../../img/main_img/view_distant.jpg"); }
-    .view_area > .view_pic_bg:before, .view_area > .view_pic_bg::before {
-      content: " ";
-      display: block;
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      width: 100%;
-      height: 100px;
-      background-image: linear-gradient(#171717, rgba(17, 17, 17, 0)); }
     .view_area > .view_pic_bg:after, .view_area > .view_pic_bg::after {
       content: " ";
       display: block;
@@ -532,7 +529,7 @@ h1 {
         .view_area > ul > li {
           width: 270px;
           height: 50px;
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(17, 17, 17, 0.5);
           color: #fff;
           line-height: 250%;
           text-align: center;
@@ -549,7 +546,7 @@ h1 {
         .view_area > ul > li {
           width: 430px;
           height: 50px;
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(17, 17, 17, 0.5);
           color: #fff;
           line-height: 250%;
           text-align: center;
@@ -566,7 +563,7 @@ h1 {
         .view_area > ul > li {
           width: 290px;
           height: 50px;
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(17, 17, 17, 0.5);
           color: #fff;
           line-height: 250%;
           text-align: center;
@@ -584,7 +581,7 @@ h1 {
         .view_area > ul > li {
           width: 380px;
           height: 50px;
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(17, 17, 17, 0.5);
           color: #fff;
           line-height: 250%;
           text-align: center;
@@ -788,14 +785,14 @@ h1 {
         width: 100%;
         height: 340px;
         margin-bottom: 100px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(17, 17, 17, 0.5);
         box-sizing: border-box; } }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
       .intro_sub_area > .sub_image {
         width: 100%;
         height: 370px;
         margin-bottom: 100px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(17, 17, 17, 0.5);
         box-sizing: border-box;
         padding: 30px; } }
     .intro_sub_area > .sub_image > dl {
@@ -884,7 +881,7 @@ h1 {
         height: 350px;
         padding: 50px;
         box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(17, 17, 17, 0.5);
         margin: auto; }
         @media screen and (min-width: 320px) and (max-width: 767px) {
           .intro_sub_area > .sub_image > dl > dd {
@@ -943,7 +940,7 @@ h1 {
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); } }
+      background-color: rgba(17, 17, 17, 0.5); } }
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     .intro_sub_area {
       position: relative;
@@ -972,7 +969,7 @@ h1 {
         z-index: -1;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); } }
+        background-color: rgba(17, 17, 17, 0.5); } }
 
 .sub_pic {
   position: absolute;
@@ -1234,7 +1231,7 @@ hr {
               height: 30%;
               padding: 10px;
               box-sizing: border-box;
-              background-color: rgba(0, 0, 0, 0.5); } }
+              background-color: rgba(17, 17, 17, 0.5); } }
           @media screen and (min-width: 768px) and (max-width: 1279px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
               position: absolute;
@@ -1243,7 +1240,7 @@ hr {
               height: 30%;
               padding: 30px;
               box-sizing: border-box;
-              background-color: rgba(0, 0, 0, 0.5); } }
+              background-color: rgba(17, 17, 17, 0.5); } }
           @media screen and (min-width: 1280px) and (max-width: 1919px) {
             .youtube_area > .slide_frame > .slide_form > .guide > .banner > .y_title_area {
               float: right;
