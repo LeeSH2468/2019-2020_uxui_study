@@ -9,10 +9,10 @@
     });
     
     
-    $('.gnb').find('dt').on('focus',function(){
+    $('.gnb').find('dt > a').on('focus',function(){
         $('.gnb').find('dd').stop().slideDown();
     });
-    $('.gnb').find('dl').on('blur',function(){
+    $('.gnb').find('dl').find('a').eq(-1).on('blur',function(){
         $('.gnb').find('dd').stop().slideUp();
     });
 

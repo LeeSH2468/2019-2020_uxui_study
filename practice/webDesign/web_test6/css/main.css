@@ -10,7 +10,7 @@ a{display:block;width:100%; height:100%; text-decoration:none;color:#fff;}
 html,body{width:100%; min-width:1200px; height:100%; background-color:#ffffff;}
 #wrap{width:1200px; height:700px; margin:auto; }
 /* =================================================*/
-#headBox{width:100%; height:100px; background-color:#aaa}
+#headBox{position:relative; z-index:1000;width:100%; height:100px; background-color:#aaa}
 #headBox>h1{float:left; width:200px; height:100%; padding:20px; box-sizing:border-box; background-color:#777;}
 #headBox>.gnb{float:right; width:1000px; height:100%; padding:20px 0 0 150px; box-sizing:border-box;}
 .gnb>dl{float:left; width:200px; height:100%; text-align:center; }
@@ -24,7 +24,7 @@ html,body{width:100%; min-width:1200px; height:100%; background-color:#ffffff;}
 
 /* =================================================*/
 #conBox{width: 100%; height:500px; padding:0 50px; box-sizing:border-box;}
-#conBox>.slide_area{position:relative; width:100%; height:300px; background-color:#ffa; overflow:hidden;}
+#conBox>.slide_area{position:relative; width:100%; height:300px;overflow:hidden;}
 .btn_zone{position:absolute; bottom:0; left:0; right:0; margin:auto; z-index:100; width:120px; height:50px;}
 .btn_zone>button{float:left; width:50px; height:100%; margin-right:10px;}
 .slide_area>ul{width:300%; height:0;}
