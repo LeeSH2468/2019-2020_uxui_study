@@ -1,4 +1,4 @@
-.intro_sub_area{width: 100%;height: auto; background-color: $black; padding-top:300px;padding-bottom:400px; box-sizing:border-box;
+#intro_sub_area{width: 100%;height: auto; background-color: $black; padding-top:300px;padding-bottom:400px; box-sizing:border-box;
     @include labtop{ @include bg_base($url:'../../img/main_img/intro_bg.png',$s:auto 100%);}
     @include pcfull{ @include bg_base($url:'../../img/main_img/intro_bg.png',$s:auto 100%);}
    

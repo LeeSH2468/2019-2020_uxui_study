@@ -39,7 +39,7 @@ let btnCon = '<div class="slide_btn"><button type="button" class="next"><span cl
 
 // console.log(textlist[0].title);
 
-const youtubeArea = $('.youtube_area');
+const youtubeArea = $('#youtube_area');
 const slidFrame = youtubeArea.children('.slide_frame');
 
 slidFrame.append(indiCon);

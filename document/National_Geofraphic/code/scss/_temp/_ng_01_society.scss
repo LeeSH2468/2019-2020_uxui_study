@@ -1,4 +1,4 @@
-.intro_ng_area{width: 100%; height: auto;background-color: $black; padding:70px 0 150px 0; box-sizing: border-box;
+#intro_ng_area{width: 100%; height: auto;background-color: $black; padding:70px 0 150px 0; box-sizing: border-box;
     
 >h3{position:relative; width: auto; height: auto; text-align: center; text-transform: uppercase;
 @include mobile{@include h6; margin-bottom:50px;}
