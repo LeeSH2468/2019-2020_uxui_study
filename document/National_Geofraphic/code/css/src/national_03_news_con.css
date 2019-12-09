@@ -19,6 +19,8 @@
   max-height: 300px; }
 
 #headBox {
+  position: relative;
+  z-index: 1000;
   width: 100%;
   box-sizing: border-box; }
   @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -26,8 +28,6 @@
       padding: 0 10px; } }
   @media screen and (min-width: 1920px) {
     #headBox {
-      position: relative;
-      z-index: 1000;
       padding: 0 300px; } }
 
 h1 {

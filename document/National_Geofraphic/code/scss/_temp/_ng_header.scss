@@ -1,8 +1,8 @@
 //national_header.scss
 $imgUrl:'../../img/';
-#headBox{width: 100%; box-sizing: border-box;
+#headBox{position:relative; z-index:1000;  width: 100%; box-sizing: border-box;
 @include mobile{padding:0 10px;}
-@include pcfull{position:relative; z-index:1000;  padding:0 300px;}
+@include pcfull{padding:0 300px;}
 }
 
 h1{float:left; width: 175px; height: 50px; background-size:cover;margin:14px 0 0 40px;

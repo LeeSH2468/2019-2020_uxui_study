@@ -19,6 +19,8 @@
   max-height: 300px; }
 
 #headBox {
+  position: relative;
+  z-index: 1000;
   width: 100%;
   box-sizing: border-box; }
   @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -26,8 +28,6 @@
       padding: 0 10px; } }
   @media screen and (min-width: 1920px) {
     #headBox {
-      position: relative;
-      z-index: 1000;
       padding: 0 300px; } }
 
 h1 {
@@ -567,6 +567,7 @@ h1 {
     box-sizing: border-box; }
     .search_area > .group > dl {
       width: 40%;
+      min-width: 200px;
       height: 60px;
       margin: auto;
       font-size: 24px;
@@ -602,7 +603,12 @@ h1 {
         .search_area > .group > dl > dd li {
           width: 100%;
           height: 100%;
-          background-color: #ddd; }
+          background-color: rgba(17, 17, 17, 0.8);
+          font-size: 16px;
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: #fff;
+          word-break: keep-all; }
           .search_area > .group > dl > dd li > a {
             width: 100%;
             height: 100%;
@@ -620,6 +626,7 @@ h1 {
       width: 100%;
       height: 100%;
       padding: 30px;
+      padding-top: 50px;
       box-sizing: border-box; }
       .search_area > form > fieldset > .search_box {
         width: 70%;

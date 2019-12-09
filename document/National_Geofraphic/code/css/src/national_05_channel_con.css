@@ -13,6 +13,8 @@
   max-height: 300px; }
 
 #headBox {
+  position: relative;
+  z-index: 1000;
   width: 100%;
   box-sizing: border-box; }
   @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -20,8 +22,6 @@
       padding: 0 10px; } }
   @media screen and (min-width: 1920px) {
     #headBox {
-      position: relative;
-      z-index: 1000;
       padding: 0 300px; } }
 
 h1 {
@@ -458,9 +458,24 @@ h1 {
         right: 20%; } }
 
 .title_area {
+  position: relative;
+  z-index: 10;
   width: 100%;
   height: 700px;
-  background-color: #777; }
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("../../../img/channel_img/ch_big01.jpg"); }
+  .title_area:after, .title_area::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.5); }
   .title_area > .text_zone {
     width: 60%;
     height: auto;
