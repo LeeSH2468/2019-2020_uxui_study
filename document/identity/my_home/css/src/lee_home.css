@@ -1,10 +1,10 @@
 #wrap {
   width: 100%;
   height: 100%;
-  min-width: 1920px;
   font-family: sans-serif; }
 
 #headBox {
+  display: none;
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -49,34 +49,200 @@
 
 #viewBox {
   width: 100%;
-  height: 120%;
-  padding-top: 180px;
-  box-sizing: border-box;
-  background-color: #aaa;
-  text-align: center;
-  font-size: 5rem; }
-  #viewBox h2 {
-    width: auto;
-    height: auto; }
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
+  box-sizing: border-box; }
 
-#portBox {
+#workBox {
   width: 100%;
   height: 100%;
-  padding-top: 180px;
+  padding: 50px;
+  padding-top: 100px;
   box-sizing: border-box;
+  background-color: #aaa; }
+  #workBox > h2 {
+    text-align: center;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #171717;
+    text-transform: uppercase; }
+  #workBox > .tablat {
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding: 400px 10px 50px 0;
+    box-sizing: border-box; }
+    #workBox > .tablat > .t_img {
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      padding-bottom: 40px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #777; }
+      #workBox > .tablat > .t_img > .t_screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #fff; }
+  #workBox > .com {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding-top: 100px;
+    box-sizing: border-box; }
+    #workBox > .com > .c_img {
+      position: relative;
+      width: 100%;
+      height: 80%;
+      padding: 12px;
+      padding-bottom: 40px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: #777; }
+      #workBox > .com > .c_img:after, #workBox > .com > .c_img::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        width: 100px;
+        height: 0;
+        transform: translateX(-50%);
+        border: 100px solid #777;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent; }
+      #workBox > .com > .c_img .c_screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #fff; }
+  #workBox > .mobail {
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding: 400px 250px 50px 10px;
+    box-sizing: border-box; }
+    #workBox > .mobail > .m_img {
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      padding-bottom: 40px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: #777; }
+      #workBox > .mobail > .m_img > .m_screen {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #fff; }
+
+#skillBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
   box-sizing: border-box;
-  background-image: url("../../img/resume.svg");
-  background-position: 50% 120%;
-  background-size: contain;
-  background-repeat: no-repeat; }
-  #portBox h2 {
+  background-color: #fff; }
+  #skillBox > h2 {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #171717;
+    text-transform: uppercase; }
+  #skillBox > .text_area {
+    width: 100%;
+    height: 90%; }
+    #skillBox > .text_area > p {
+      width: auto;
+      height: auto;
+      text-align: center;
+      font-size: 26px;
+      font-size: 1.625rem;
+      font-weight: bold;
+      color: #171717; }
+    #skillBox > .text_area > ul {
+      width: 960px;
+      height: auto;
+      margin: auto;
+      margin-top: 150px; }
+      #skillBox > .text_area > ul > li {
+        float: left;
+        width: 300px;
+        height: 100px;
+        margin-right: 30px; }
+        #skillBox > .text_area > ul > li:nth-child(3n) {
+          margin-right: 0; }
+        #skillBox > .text_area > ul > li > p {
+          float: left;
+          font-size: 18px;
+          font-size: 1.125rem;
+          font-weight: bold;
+          color: #171717;
+          word-break: keep-all; }
+        #skillBox > .text_area > ul > li > progress {
+          float: right;
+          border: 0;
+          width: 200px; }
+
+#aboutBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-color: #ddd; }
+  #aboutBox > h2 {
     width: auto;
     height: auto;
-    font-size: 2rem;
     text-align: center;
-    text-transform: uppercase; }
-
-#conBox {
-  width: 100%;
-  height: 100%;
-  background-color: #ddd; }
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #171717;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  #aboutBox > .text_area {
+    width: auto;
+    min-width: 960px;
+    height: 85%;
+    margin: auto; }
+    #aboutBox > .text_area > .title_zone {
+      width: 960px;
+      height: 10%;
+      margin: auto; }
+      #aboutBox > .text_area > .title_zone > li {
+        float: left;
+        width: 320px;
+        height: 40px;
+        border: 1px solid #AD191E;
+        box-sizing: border-box; }
+        #aboutBox > .text_area > .title_zone > li > button {
+          width: 100%;
+          height: 100%;
+          font-size: 18px;
+          font-size: 1.125rem;
+          color: #AD191E;
+          word-break: keep-all;
+          text-transform: uppercase; }
+    #aboutBox > .text_area > .con_zone {
+      position: relative;
+      width: 100%;
+      height: 90%; }
+      #aboutBox > .text_area > .con_zone li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 70% auto; }
+      #aboutBox > .text_area > .con_zone .history {
+        background-image: url("../../img/profile-history.svg"); }
