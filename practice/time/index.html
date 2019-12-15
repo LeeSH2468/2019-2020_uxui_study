@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #wrap{position:relative; width: 80%; height: 50px; margin: auto; background-color: #ccc;}
+  .menu{float:left; width:70px; height:100%; background-color: #fa0; margin-left:15%;}
+  .menu:nth-child(1){margin-left:0;}
+  .menu:hover{background-color: #f73;}
+  .line{position:absolute; top:0; left:-20%; width:70px; height:5px; background-color: #555;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+
+    <div class="menu">메뉴1</div>
+    <div class="menu">메뉴2</div>
+    <div class="menu">메뉴3</div>
+    
+    <div class="line"></div>
+
+ 
+  </div>
+    <p>날짜 만들기 : <span></span></p>
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script>
+    (function($){
+      //메뉴바 만들기 =============
+      const menu = $('.menu');
+      const menuOf = [];
+      const wrapOf = $('#wrap').offset().left;
+
+      for(let i=0; i<menu.length; i++){
+        menuOf[i] = menu.eq(i).offset().left;
+      }
+      menu.on('mouseenter', function(){
+        let i = $(this).index();
+        let myOf = (menuOf[i] - wrapOf)+ 'px';
+        $('.line').stop().animate({left:myOf});
+      });
+      $('#wrap').on('mouseleave',function(){
+        $('.line').stop().animate({left:'-20%'});
+      });
+    })(jQuery);
+    </script>
+    <script>
+      // 날짜만들기 ===============
+      let date = new Date();
+      const myM = ['일월 ','이월 ','삼월 ','사월 ','오월 ','유월 ','칠월 ','팔월','구월','시월','십일월','십이월 '];
+      const myW = ['일요일 ','월요일 ','화요일 ','수요일 ','목요일  ','금요일 ','토요일']
+      const txt=document.querySelector('p>span');
+      
+      
+      setInterval(function(){
+      date = new Date();
+      let nowY = date.getFullYear();//현재 년도
+      let nowM = date.getMonth();//0은 1월 (0~11)
+      let nowD = date.getDate();// 1일부터 31일까지 날짜
+      let nowW = date.getDay();// 0은 일요일(0~6)
+      let nowT = date.getHours();
+      let nowMin = date.getMinutes();
+      let nowS = date.getSeconds();
+      let nowMil = date.getMilliseconds();
+      txt.innerText = nowY + '년 '+ myM[nowM]+nowD+'일 '+myW[nowW] + nowT + '시' + nowMin + '분' + nowS + 'chu'+ parseInt(nowMil/100);
+    },100);
+    </script>
+</body>
+</html>

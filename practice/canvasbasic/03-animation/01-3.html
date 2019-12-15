@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>requestAnimationFrame</h1>
+    <canvas class="canvas" width="500" height="300"></canvas>
+
+    <script>
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      let xPos = 0;
+      let rafId;
+      let playState=true;
+
+      function render(){
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillRect(xPos, 100, 50, 50);
+        xPos++;
+
+        rafId = requestAnimationFrame(render);
+        if (xPos > 200){
+          cancelAnimationFrame(rafId);
+        }
+      }
+
+      canvas.addEventListener('click', () =>{
+        if (playState){
+          cancelAnimationFrame(rafId);
+          // playState  = false;
+        }else{
+          rafId = requestAnimationFrame(render);
+        }
+        playState = !palyState;
+      });
+      render();
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

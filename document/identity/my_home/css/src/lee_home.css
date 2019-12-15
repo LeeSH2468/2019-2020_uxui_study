@@ -4,17 +4,24 @@
   font-family: sans-serif; }
 
 #headBox {
-  display: none;
   position: fixed;
   z-index: 100;
-  width: 100%;
-  height: 160px;
-  padding-top: 20px;
-  box-sizing: border-box; }
+  right: -310px;
+  top: 50%;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #AD191E;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%); }
   #headBox h1 {
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 100px;
+    height: 100px;
     margin: auto;
+    transform: translateY(-50%);
     transition: transform 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55); }
     #headBox h1 a {
       display: block;
@@ -26,33 +33,37 @@
       background-size: cover; }
   #headBox #gnb {
     width: 100%;
-    height: 50px;
-    margin-top: 50px; }
+    height: auto;
+    margin-top: 0px;
+    margin-left: -30px; }
     #headBox #gnb > ul {
-      width: 790px;
-      height: 100%;
-      margin: auto; }
+      width: auto;
+      height: auto; }
       #headBox #gnb > ul > li {
-        float: left;
-        width: 100px;
+        width: auto;
         height: auto;
-        margin-right: 130px; }
-        #headBox #gnb > ul > li:last-child {
-          margin-right: 0; }
+        margin-bottom: 60px; }
+        #headBox #gnb > ul > li:nth-child(2) {
+          margin-left: -50px; }
+        #headBox #gnb > ul > li:nth-child(3) {
+          margin-left: -60px; }
+        #headBox #gnb > ul > li:nth-child(4) {
+          margin-left: -26px; }
         #headBox #gnb > ul > li > a {
           display: block;
           width: 100%;
           height: 100%;
           font-size: 1.3rem;
           text-transform: uppercase;
-          color: #faf; }
+          color: #AD191E; }
 
 #viewBox {
   width: 100%;
   height: 100%;
   padding: 50px;
   padding-top: 100px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-image: url("../../img/view_box.svg"); }
 
 #workBox {
   width: 100%;
@@ -68,77 +79,78 @@
     font-weight: bold;
     color: #171717;
     text-transform: uppercase; }
-  #workBox > .tablat {
-    float: left;
-    width: 25%;
-    height: 100%;
-    padding: 400px 10px 50px 0;
-    box-sizing: border-box; }
-    #workBox > .tablat > .t_img {
-      width: 100%;
-      height: 100%;
-      padding: 12px;
-      padding-bottom: 40px;
-      box-sizing: border-box;
-      border-radius: 10px;
-      background-color: #777; }
-      #workBox > .tablat > .t_img > .t_screen {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        background-color: #fff; }
-  #workBox > .com {
+  #workBox > .view_area {
     float: left;
     width: 50%;
     height: 100%;
-    padding-top: 100px;
+    padding: 100px;
     box-sizing: border-box; }
-    #workBox > .com > .c_img {
+    #workBox > .view_area ul {
       position: relative;
-      width: 100%;
-      height: 80%;
-      padding: 12px;
-      padding-bottom: 40px;
-      border-radius: 10px;
-      box-sizing: border-box;
-      background-color: #777; }
-      #workBox > .com > .c_img:after, #workBox > .com > .c_img::after {
-        content: " ";
-        display: block;
+      width: auto;
+      height: 100%; }
+      #workBox > .view_area ul li {
         position: absolute;
-        bottom: -80px;
-        left: 50%;
-        width: 100px;
-        height: 0;
-        transform: translateX(-50%);
-        border: 100px solid #777;
-        border-top-color: transparent;
-        border-left-color: transparent;
-        border-right-color: transparent; }
-      #workBox > .com > .c_img .c_screen {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        background-color: #fff; }
-  #workBox > .mobail {
+        width: 450px;
+        height: 350px;
+        background-color: #add;
+        transform: perspective(200px); }
+        #workBox > .view_area ul li:nth-child(1) {
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background-color: #fdd; }
+        #workBox > .view_area ul li:nth-child(2) {
+          top: 150px;
+          left: 150px;
+          z-index: 2;
+          background-color: #aff; }
+        #workBox > .view_area ul li:nth-child(3) {
+          top: 300px;
+          left: 250px;
+          z-index: 3;
+          background-color: #f5a; }
+  #workBox > .text_area {
     float: left;
-    width: 25%;
+    width: 40%;
     height: 100%;
-    padding: 400px 250px 50px 10px;
+    padding: 100px;
+    padding-top: 300px;
     box-sizing: border-box; }
-    #workBox > .mobail > .m_img {
+    #workBox > .text_area h3 {
+      font-size: 30px;
+      font-size: 1.875rem;
+      font-weight: bold;
+      color: #171717;
+      margin-bottom: 20px; }
+    #workBox > .text_area p {
+      font-size: 18px;
+      font-size: 1.125rem;
+      color: #171717;
+      word-break: keep-all;
+      margin-bottom: 50px; }
+    #workBox > .text_area .btn_zone {
       width: 100%;
-      height: 100%;
-      padding: 12px;
-      padding-bottom: 40px;
-      border-radius: 10px;
-      box-sizing: border-box;
-      background-color: #777; }
-      #workBox > .mobail > .m_img > .m_screen {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        background-color: #fff; }
+      height: auto; }
+      #workBox > .text_area .btn_zone li {
+        float: left;
+        width: 200px;
+        height: 50px;
+        border: 1px solid #AD191E;
+        box-sizing: border-box; }
+        #workBox > .text_area .btn_zone li.work_btn {
+          margin-left: 20px; }
+        #workBox > .text_area .btn_zone li > a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 18px;
+          font-size: 1.125rem;
+          font-weight: bold;
+          color: #AD191E;
+          word-break: keep-all;
+          text-align: center;
+          line-height: 46px; }
 
 #skillBox {
   width: 100%;
@@ -231,6 +243,10 @@
           color: #AD191E;
           word-break: keep-all;
           text-transform: uppercase; }
+      #aboutBox > .text_area > .title_zone > .action {
+        background-color: #AD191E; }
+        #aboutBox > .text_area > .title_zone > .action > button {
+          color: #fff; }
     #aboutBox > .text_area > .con_zone {
       position: relative;
       width: 100%;
@@ -244,5 +260,9 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: 70% auto; }
+      #aboutBox > .text_area > .con_zone .profile {
+        background-image: url("../../img/profile_profile.svg"); }
       #aboutBox > .text_area > .con_zone .history {
         background-image: url("../../img/profile-history.svg"); }
+      #aboutBox > .text_area > .con_zone .personal {
+        background-image: url("../../img/profile_personal.svg"); }

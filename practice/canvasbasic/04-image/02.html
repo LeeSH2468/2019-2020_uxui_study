@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      canvas {
+        background: #eee;
+      }
+      .btn{width: 20px; height: 20px; border: 2px solid #333; border-radius: 50%; background-size: cover;
+      }
+      .btn[data-color='red'] {background-color: red;}
+      .btn[data-color='green'] {background-color:green ;}
+      .btn[data-color='blue'] {background-color:blue ;}
+      .btn[data-color='black'] {background-color:black ;}
+      .btn[data-color='image'] {background: white;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Image</h1>
+    <div class="btns">
+      <button class="btn" data-color="red"> </button>
+      <button class="btn" data-color="green"> </button>
+      <button class="btn" data-color="blue"> </button>
+      <button class="btn" data-color="black"> </button>
+      <button class="btn" data-color="image"> </button>
+    </div>
+    <canvas class="canvas" width="600" height="400">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
+    <button class="gen-btn">이미지생성</button>
+
+    <script>
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      const rect = canvas.getBoundingClientRect();
+      const mousePos = {x:0, y:0};
+      const btnsElem = document.querySelector('.btns');
+      const genBtn = document.querySelector('.gen-btn');
+
+      let drawingMode = false; //true 일 때만 그리기
+      let colorValue = 'black';
+
+      const imgElem = new Image();
+      imgElem.src = '../images/ilbuni2.png';
+      imgElem.addEventListener('load',() => {
+          canvas.addEventListener('mousemove',moveHandler);
+          canvas.addEventListener('mousedown',downHandler);
+          canvas.addEventListener('mouseup',upHandler);
+          btnsElem.addEventListener('click',selectColor);
+          genBtn.addEventListener('click',createImage);
+      });
+
+      function downHandler(){
+        drawingMode = true;
+      }
+      function upHandler(){
+        drawingMode = false;
+      }
+
+      function moveHandler(e){
+        if(!drawingMode) return;
+        // console.log(e.clientX - rect.left, e.clientY - rect.top); //캔버스 시작점을 0,0으로 인식(윈도우에서 레이어만큼빼기)
+        //console.log(e.layerX,e.layerY);//캔버스를 0.0으로 인식
+        mousePos.x = e.layerX;
+        mousePos.y = e.layerY;
+
+        if(colorValue === 'image'){
+          draw2();
+        }else{
+        draw();
+        }
+      }
+      
+      function draw(){
+        context.fillStyle = colorValue;
+        context.beginPath();
+        context.arc(mousePos.x, mousePos.y, 5, 0, Math.PI*2); //5 = 브러시 크기(반지름값)
+        context.fill();
+        context.closePath();
+      }
+      function draw2(){
+        //이미지로 그리기
+        context.drawImage(imgElem, mousePos.x, mousePos.y,40,55);
+      }
+
+      function createImage(){
+        const url = canvas.toDataURL('image/png');
+        console.log(url);
+        const img = new Image();
+        img.src = url;
+        document.body.appendChild(img);
+      }
+
+      function selectColor(e){
+        colorValue = e.target.getAttribute('data-color');
+        
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

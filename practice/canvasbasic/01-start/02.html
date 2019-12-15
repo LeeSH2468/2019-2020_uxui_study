@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin: 0;
+      }
+      .canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>캔버스 사이즈 설정</h1>
+    <canvas class="canvas canvas1" width="500" height="300"></canvas>
+    <canvas class="canvas canvas2" width="1000" height="600"></canvas>
+
+    <script>
+    const canvas1 = document.querySelector('.canvas1');
+    const canvas2 = document.querySelector('.canvas2');
+
+    const context1 = canvas1.getContext('2d');
+    context1.arc(100, 100, 50, 0, Math.PI*2, true);
+    context1.fill();
+
+    const context2 = canvas2.getContext('2d');
+    context2.arc(100, 100, 50, 0, Math.PI*2, true);
+    context2.fill();
+    </script>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

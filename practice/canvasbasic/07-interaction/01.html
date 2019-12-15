@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Interaction</h1>
+    <canvas class="canvas" width="600" height="400">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
+
+    <script src="./Box.js"></script>
+    <script src="./Panel.js"></script>
+    <script>
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      const boxArray= [];
+      let mousePos = {x:0, y:0};
+      let panel;
+      let oX;//중앙좌표
+      let oY;
+      let selectedBox; //클릭된 Box
+      let step;// 단계에 따라 render에서 그려주는 내용이 달라짐
+
+      function toRadian(d){
+      return d * Math.PI/180;
+    }
+    
+
+      function init(){
+        step =1;
+        oX = canvas.width/2;
+        oY = canvas.height/2;
+        let x, y, speed;
+        for (let i=0; i < 10; i++){
+          x = Math.random() * 600 * 0.8;
+          y = Math.random() * 400 * 0.8;
+          speed = Math.random() * 3 + 1;
+
+         boxArray.push(new Box(x, y,100, 100,i,speed));    
+      }
+
+      panel = new Panel();
+      render();
+    }
+
+
+    //main loop
+    function render() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      let box;
+      for (let i=0; i < boxArray.length; i++){
+        box = boxArray[i];
+        box.draw();
+      }
+      switch (step){
+        case 1:
+          //기본 대기상태
+          for (let i=0; i < boxArray.length; i++){
+        box = boxArray[i];
+          box.y -= box.speed;
+        if(box.y <= -box.height){
+          box.y = canvas.height;
+        }
+      }
+          break;
+        case 2:
+          //패널 등장 애니메이션
+          // panel.scaleValue += 0.01;
+          panel.scaleValue = panel.scaleValue + (1 - panel.scaleValue)*0.05;
+          panel.rotateValue = 720 * panel.scaleValue;
+
+          if (panel.scaleValue > 1){
+            panel.scaleValue = 1;
+            panel.rotateValue = 720;
+            step=3;
+          }
+          panel.draw();
+          break;
+        case 3:
+          //패널 열린상태
+          panel.draw();
+          break;
+      }
+      requestAnimationFrame(render);
+    }
+    canvas.addEventListener('click', (e) => {
+      mousePos.x = e.layerX;
+      mousePos.y = e.layerY;
+
+      for (let i = 0; i < boxArray.length; i++){
+        box = boxArray[i];
+        if(
+          mousePos.x >= box.x &&
+          mousePos.x <= box.x +box.width &&
+          mousePos.y >= box.y &&
+          mousePos.y >= box.y +box.height
+        ){
+          selectedBox = box;
+        }
+      }
+      if(step === 1 && selectedBox){
+        step=2;
+      console.log(selectedBox.index);
+      panel.draw();
+      }else if(step ===2){
+        step= 1;
+        selectedBox = null;
+        panel.scaleValue = 0.01;
+        panel.rotateValue = 0;
+
+      }
+    });
+      
+    init();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Transform</h1>
+    <canvas class="canvas" width="500" height="300"></canvas>
+
+    <script>
+    const canvas = document.querySelector('.canvas');
+    const context = canvas.getContext('2d');
+    let angle = 0;
+
+    function toRadian(d){
+      return d * Math.PI/180;
+    }
+
+    function render(){
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      // context.font = 'bold 30px sanserif'
+
+      // context.fillRect(10, 10, 200, 200);
+      // context.save();
+      // context.fillStyle = 'red';
+      // context.fillRect(30, 30, 120, 120);
+      // context.save();
+      // context.fillStyle = 'skyblue';
+      // context.fillRect(50, 50, 60, 60);
+      // context.restore();
+      // context.fillText('배고파',200, 50);
+      // context.restore();
+      // context.fillText('머먹찌',200,150);
+
+      context.save();
+      context.resetTransform(); //transform 전에 무조건 호출(초기화)
+      // context.setTransform(1,0,0,1,0,0); //같은의미
+      context.translate(250, 150);
+      context.rotate(toRadian(angle++));
+      context.strokeRect(-50,-50, 100, 100);
+      context.restore();
+
+      // context.beginPath();
+      // context.arc(200,150,10,0,Math.PI*2);
+      // context.fill();
+      // context.closePath();
+      requestAnimationFrame(render);
+    }
+
+    render();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>requestAnimationFrame</h1>
+    <canvas class="canvas" width="500" height="300"></canvas>
+
+    <script>
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      let xPos = 0;
+
+      function render(){
+        // console.time();
+        //사이에 있는 명령어가 실행되는 시간을 체크
+        // console.timeEnd();
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        // canvas.width = canvas.width; // 크기가 바뀌면 새로고침.(같은기능 조금느림)
+        context.fillRect(xPos, 100, 50, 50);
+        xPos += 1;
+
+        requestAnimationFrame(render);
+      }
+      render();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
