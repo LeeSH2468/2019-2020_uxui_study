@@ -1,51 +1,113 @@
 (function($){
-
-  //header =============================
+  //scroll =============================
   const logo = $('h1');
   const gnb = $('#gnb');
-  const li_01 = gnb.find('li').eq(0).children('a');
-  const li_02 = gnb.find('li').eq(1).children('a');
-  const li_03 = gnb.find('li').eq(2).children('a');
-  const li_04 = gnb.find('li').eq(3).children('a');
+  const myScroll = $('.scroll');
+  const myScrollArr = [];
+  for(let j = 0; j < myScroll.length; j++){
+    myScrollArr[j] = myScroll.eq(j).offset().top;
+  }
   
+  let k = 0;
+  let tf = true;
+  const gnbLi = gnb.find('li');
+  const gnbLink = gnbLi.find('a');
+  const logoAng = [
+    {'transform':'translateY(-50%) rotate(-20deg)'},
+    {'transform':'translateY(-50%)  rotate(-50deg)'},
+    {'transform':'translateY(-50%) rotate(-100deg)'},
+    {'transform':'translateY(-50%) rotate(-130deg)'},
+  ];
+  $('html,body').animate({ scrollTop:myScrollArr[k] });
   
-  li_01.on('click mouseenter',function(e){
-    logo.css({'transform':'rotate(-20deg)'});
+  gnbLink.on('click', function(){
+    if(tf){ tf=false;
+      k = $(this).parents('li').index();
+      logo.css(logoAng[k]);
+      $('html,body').animate({ scrollTop:myScrollArr[k] }, 500, function(){
+        tf = true;
+      });
+    }
   });
-  li_02.on('click mouseenter',function(e){
-    logo.css({'transform':'rotate(-40deg)'});
+  
+  $(document).on('mousewheel DOMMouseScroll', function(e){
+    if(tf){ tf=false;
+      let evt = e.originalEvent.wheelDelta;
+      if(!evt){ evt = e.originalEvent.detail * -40; }
+      // console.log(evt);
+      if(evt < 0 && k < myScroll.length-1) {
+        k++;
+      }else if(evt >= 0 && k > 0){  
+        k--; 
+      }
+      
+      console.log({ scrollTop:myScrollArr[k]})
+      
+      logo.css(logoAng[k]);
+        $('html,body').animate({ scrollTop:myScrollArr[k] }, 500, function(){
+          tf = true;
+        });
+    }
+    // console.log(k);
   });
-  li_03.on('click mouseenter',function(e){
-    logo.css({'transform':'rotate(-80deg)'});
-  });
-  li_04.on('click mouseenter',function(e){
-    logo.css({'transform':'rotate(-100deg)'});
-  });
+// ----------------------------------------------------------------------
+   //skillBox ============================
+   const skillBox = $('#skillBox');
+   const skillUl = skillBox.find('ul');
+   const gageNum = [
+     {skillName:'Photoshop',per:'90%'},
+     {skillName:'Illustration',per:'50%'},
+     {skillName:'InDesign',per:'60%'},
+     {skillName:'Ms office',per:'60%'},
+     {skillName:'3D Max',per:'90%'},
+     {skillName:'Html',per:'85%'},
+     {skillName:'Css',per:'75%'},
+     {skillName:'jQuery',per:'40%'},
+     {skillName:'Git Hub',per:'40%'}
+   ];
+   let skillCon = '<li><p></p><div><div class="gage"></div></div></li>';
+   let skillArea, skillTitle , skillBar;
 
+   for(let i = 0;i < gageNum.length ;i++){
+    skillUl.append(skillCon);
+    skillArea = skillBox.find('li').eq(i);
+    skillTitle = skillArea.children('p');
+    skillBar = skillArea.find('.gage');
+ 
+     skillTitle.text(gageNum[i].skillName);
+  // skillBar.delay(2000).animate({width:gageNum[i].per});
+ };
+
+ $(window).on('scroll', function(){
+  if($(window).scrollTop() +50 >= myScrollArr[2]){
+    for(let i = 0;i < gageNum.length ;i++){
+      skillBox.find('li').eq(i).find('.gage').delay(300).animate({width:gageNum[i].per});
+    }
+  } //console.log($(window).scrollTop());
+});
 
 
   //aboutBox ============================
   const aboutBox = $('#aboutBox');
   const titleZone = aboutBox.find('.title_zone');
   const titleLi = titleZone.children('li');
+  const titleLiBtn = titleLi.children('button');
   const conZone = aboutBox.find('.con_zone');
   const conLi = conZone.children('li');
-
-console.log(conLi);
-  titleLi.on('click',function(e){
-    e.preventDefault();
+  conLi.hide();
+  const ConZoneFn = function(i){
+    titleLi.removeClass('action');
+    titleLi.eq(i).addClass('action');
     conLi.hide();
-    $(this).siblings().removeClass('action');
-    $(this).addClass('action');
-    let cClass = $(this).text();
-    let hClass = $(this).hasClass('cClass');
+    conLi.eq(i).show();
+  }
+  ConZoneFn(0);
 
-    console.log(cClass);
-    console.log(hClass);
-      conLi.hasClass('cClass').show();
-      conLi.hasClass('cClass').siblings().hide();
+// console.log(conLi);
+titleLiBtn.on('click',function(e){
+    e.preventDefault();
+    let i = $(this).parents('li').index();
+    ConZoneFn(i);
   });
-
-
 
 })(jQuery);
