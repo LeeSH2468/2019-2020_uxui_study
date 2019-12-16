@@ -75,9 +75,9 @@ banner.eq(-1).clone(true).prependTo(guide);
 banner = guide.children('.banner');
 
 let bannerLen = banner.length;
-console.log(bannerLen);
 guide.css({width:100 * bannerLen +'%',marginLeft:'-100%'});
 banner.css({width:100 / bannerLen + '%'});
+console.log();
 
 
 // 인디케이터 영역 ===============================
@@ -89,7 +89,20 @@ for (let i = 0; i < bannerLen - 1  ; i++) {
   indiLi.find('spna').addClass('hidden');
 };
 const indiLi = indi.children('li');
+const indiLink = indiLi.children('a');
+
 indiLi.eq(0).addClass('action');
+for(let i = 0; i<bannerLen;i++){
+  indiLi.eq(i).children('a').on('click',function(e){
+    e.preventDefault();
+    indiLi.removeClass('action');
+    indiLi.eq(i).addClass('action');
+    guide.stop().animate({'marginLeft':-100 * i + '%'});
+  
+  });
+};
+
+
 // 좌우버튼 클릭시 이동 ==========================
 let n = 0;
 const slideBtn = slideForm.children('.slide_btn').find('button');
@@ -113,5 +126,23 @@ slideBtn.on('click', function (e) {
   }); //guide.stop().animate
   indiLi.eq(n).siblings().removeClass('action');
   indiLi.eq(n).addClass('action');
+});
 
-})
+let i = 0;
+//자동으로 이동
+// setInterval(function(){
+//   i++;
+//   if (i >= bannerLen-1){
+//     i=0;
+//   guide.css({'left':'100%'*i});
+  
+//   }
+//   indiLi.removeClass('action');
+//   indiLi.eq(i).addClass('action');
+//   guide.stop().animate({'left':-100 * i + '%'},function(){
+//     if(i <= -1){
+//       i = bannerLen -2;
+//       guide.css({'left':-100 * i + '%'});
+//     }
+//   });
+// },3000);

@@ -1194,6 +1194,10 @@ hr {
         background-color: #fff; }
         #youtube_area > .slide_frame > .indicator li:last-child {
           margin-right: 0; }
+        #youtube_area > .slide_frame > .indicator li > a {
+          display: block;
+          width: 100%;
+          height: 100%; }
       #youtube_area > .slide_frame > .indicator li.action {
         background-color: #ffd51c; }
     #youtube_area > .slide_frame > .slide_form {
