@@ -1,0 +1,21 @@
+@import "./_basic/var";
+@import "./_basic/mixin";
+
+#wrap{position:fixed; left:50%; width: 1280px; height: auto; margin:auto;transform:translateX(-50%); font-family: sans-serif; font-weight: bold;}
+#headBox{width: 100%; height: 90px;  background-color: #fff;}
+#contentBox{width: 100%; height: auto;}
+#viewBox{width: 100%; height: 100%; background-color: #aaf;}
+#openBox{width: 100%; height: 100%; background-color: #aaa;}
+#histoBox{width: 100%; height: 100%; background-color: #afa;}
+#center{width: 100%; height: 100%; background-color: #ffa;}
+#withBox{width: 100%; height: 100%; background-color: #aff;}
+#footBox{width: 100%; height: 90px; background-color: #aaa;}
+.aa{width: 100%; height: 100%; background-color: #ddd;}
+
+@import "./_temp/nh_header.scss";
+@import "./_temp/nh_viewBox.scss";
+@import "./_temp/nh_openBox.scss";
+@import "./_temp/nh_histoBox.scss";
+@import "./_temp/nh_center.scss";
+@import "./_temp/nh_withBox.scss";
+@import "./_temp/nh_footBox.scss";
