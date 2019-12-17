@@ -258,3 +258,8 @@
         background-image: url("../../img/profile-history.svg"); }
       #aboutBox > .text_area > .con_zone .personal {
         background-image: url("../../img/profile_personal.svg"); }
+
+#footBox {
+  width: 100%;
+  height: auto;
+  background-color: #fff; }

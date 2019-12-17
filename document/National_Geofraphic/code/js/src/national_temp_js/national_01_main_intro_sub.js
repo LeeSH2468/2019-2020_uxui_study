@@ -1,6 +1,6 @@
 //intro=====================================
 const win = $(window);
-const introSub = $('.intro_sub_area');
+const introSub = $('#intro_sub_area');
 const subImage = introSub.children('.sub_image');
 const subPic = subImage.children('.sub_pic');
 const picZone = subPic.children('.pic_zone');

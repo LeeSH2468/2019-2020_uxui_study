@@ -129,20 +129,7 @@ slideBtn.on('click', function (e) {
 });
 
 let i = 0;
-//자동으로 이동
+
 // setInterval(function(){
-//   i++;
-//   if (i >= bannerLen-1){
-//     i=0;
-//   guide.css({'left':'100%'*i});
-  
-//   }
-//   indiLi.removeClass('action');
-//   indiLi.eq(i).addClass('action');
-//   guide.stop().animate({'left':-100 * i + '%'},function(){
-//     if(i <= -1){
-//       i = bannerLen -2;
-//       guide.css({'left':-100 * i + '%'});
-//     }
-//   });
-// },3000);
+//   slideBtn.eq(0).toggle();
+// },200);

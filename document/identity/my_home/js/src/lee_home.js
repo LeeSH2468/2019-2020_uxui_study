@@ -35,13 +35,13 @@
       let evt = e.originalEvent.wheelDelta;
       if(!evt){ evt = e.originalEvent.detail * -40; }
       // console.log(evt);
-      if(evt < 0 && k < myScroll.length-1) {
+      if(evt < 0 && k < myScroll.length) {
         k++;
       }else if(evt >= 0 && k > 0){  
         k--; 
       }
       
-      console.log({ scrollTop:myScrollArr[k]})
+      // console.log({ scrollTop:myScrollArr[k]})
       
       logo.css(logoAng[k]);
         $('html,body').animate({ scrollTop:myScrollArr[k] }, 500, function(){
