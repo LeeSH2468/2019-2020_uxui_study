@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    canvas {background: #aad; }
+  </style>
+</head>
+<body>
+  <canvas class="canvas" width="600" height="400"></canvas>
+  <script>
+  function toRadian(d){
+        return Math.PI/180 * d;
+      };
+
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      
+      context.fillRect(10, 10,1,1);
+
+      
+
+      let xPos = 0;
+      let rafId;
+      let playState=true;
+
+      function render(){
+        context.beginPath();
+      context.arc(200, 200, 50, 0, toRadian(70), false); //x축, y축, 반지름, 시작각도, 끝각도(라디안값(360도 x)), 방향(시계반시계);
+        context.fillArc(xPos, 100, 50, 50);
+      context.stroke();
+        xPos++;
+
+        rafId = requestAnimationFrame(render);
+        if (xPos > 200){
+          cancelAnimationFrame(rafId);
+        }
+      }
+
+      canvas.addEventListener('click', () =>{
+        if (playState){
+          cancelAnimationFrame(rafId);
+          // playState  = false;
+        }else{
+          rafId = requestAnimationFrame(render);
+        }
+        playState = !palyState;
+      });
+      render();
+  </script>
+</body>
+</html>

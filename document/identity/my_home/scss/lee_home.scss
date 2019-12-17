@@ -55,7 +55,7 @@
         &:nth-child(3n){margin-right:0;}
       >p{float:left; @include text_m_bold;}
       >div{position: relative; float:right; margin-top:6px; width: 200px; height: 16px; border:1px solid $primary; border-radius: 16px; overflow: hidden;
-        >div{position: absolute;top:0; left:0; width: 0; height: 100%; background-color: rgba($primary,0.5)}
+        >div{position: absolute;top:0; left:0; width: 0; height: 100%; background-image: linear-gradient();}
        }
       }//li
     }//ul

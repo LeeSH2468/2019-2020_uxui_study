@@ -56,14 +56,14 @@
    const skillUl = skillBox.find('ul');
    const gageNum = [
      {skillName:'Photoshop',per:'90%'},
-     {skillName:'Illustration',per:'50%'},
+     {skillName:'Illustration',per:'90%'},
      {skillName:'InDesign',per:'60%'},
-     {skillName:'Ms office',per:'60%'},
-     {skillName:'3D Max',per:'90%'},
+     {skillName:'Ms office',per:'65%'},
+     {skillName:'3D Max',per:'75%'},
+     {skillName:'Git Hub',per:'40%'},
      {skillName:'Html',per:'85%'},
-     {skillName:'Css',per:'75%'},
-     {skillName:'jQuery',per:'40%'},
-     {skillName:'Git Hub',per:'40%'}
+     {skillName:'Css',per:'80%'},
+     {skillName:'jQuery',per:'60%'}
    ];
    let skillCon = '<li><p></p><div><div class="gage"></div></div></li>';
    let skillArea, skillTitle , skillBar;
