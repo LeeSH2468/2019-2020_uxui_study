@@ -1,0 +1,11 @@
+.slide_area{width: 800px; height: auto; padding-top:150px; box-sizing:border-box;
+  .guide{width: 200%; height: 100%;
+    .text_area{width: auto; height: auto;
+      h3{@include sub_title;margin-bottom:30px;
+      >em{@include title; font-style:normal; text-transform:uppercase}
+    }//h3
+    p{@include text_con; letter-spacing: -10;}
+
+    }//li.text_area
+  }//ul.guide
+}//slide_area

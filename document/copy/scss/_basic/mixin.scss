@@ -1,11 +1,17 @@
-@mixin h2($c:$black){text-align: center;
+@mixin h2($c:$black){
   font-size:40px; font-size:2.5rem; font-weight:bold; color:$c; text-transform:uppercase
 } 
 @mixin h3($c:$black){
   font-size:30px; font-size:1.875rem; font-weight:bold; color:$c; 
 }
-@mixin h4($c:$black){text-align: center;
+@mixin h4($c:$black){
   font-size:26px; font-size:1.625rem; font-weight:bold; color:$c;
+}
+@mixin title($c:$black){
+  font-size:80px; font-size:5rem; font-weight:bold; color:$c;
+}
+@mixin sub_title($c:$black){
+  font-size:50px; font-size:3.125rem; font-weight:bold; color:$c;
 }
 
 
@@ -18,9 +24,6 @@
 }
 @mixin text_m($c:$black){
   font-size:18px; font-size:1.125rem; color:$c; word-break:keep-all;
-}
-@mixin sub_title($deg:-10deg){ text-transform:uppercase;  @include h3; transform:rotate($deg);
-  &::first-letter{color:$primary}
 }
 
 @mixin main_bg{width: 100%; height:100%; padding:50px; padding-top:100px; box-sizing:border-box;}
