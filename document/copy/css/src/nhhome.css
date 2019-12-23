@@ -1,3 +1,6 @@
+html, body {
+  background-color: #fafafa; }
+
 #wrap {
   width: 100%;
   height: 100%;
@@ -31,7 +34,10 @@
     float: left;
     width: 20%;
     height: 100%;
-    background-color: #aad; }
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+    background-image: url("../../img/logoGnb.png"); }
     #headBox h1 > a {
       display: block;
       width: 100%;
@@ -224,8 +230,7 @@
 
 #center {
   width: 100%;
-  height: 100%;
-  background-color: #ffa; }
+  height: 100%; }
   #center h2 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -305,8 +310,7 @@
 
 #withBox {
   width: 100%;
-  height: 100%;
-  background-color: #fafafa; }
+  height: 100%; }
   #withBox h2 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -323,7 +327,7 @@
     text-align: center;
     text-transform: uppercase; }
   #withBox ul {
-    width: 1020px;
+    width: 1200px;
     height: 360px;
     margin: auto;
     margin-top: 100px; }
@@ -331,12 +335,67 @@
       float: left;
       width: 180px;
       height: 180px;
-      margin-right: 30px;
-      margin-bottom: 30px;
+      margin-right: 50px;
+      margin-bottom: 80px;
       background-color: #fff;
       border-radius: 100%; }
       #withBox ul > li:nth-child(5n) {
         margin-right: 0; }
+      #withBox ul > li:nth-child(1) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/01ci_toss.png"); }
+      #withBox ul > li:nth-child(2) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/02ci_kakao.png"); }
+      #withBox ul > li:nth-child(3) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/03ci_sk.png"); }
+      #withBox ul > li:nth-child(4) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/04ci_banksalad.png"); }
+      #withBox ul > li:nth-child(5) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/05ci_8per.png"); }
+      #withBox ul > li:nth-child(6) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/06ci_pop.png"); }
+      #withBox ul > li:nth-child(7) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/07ci_nice.png"); }
+      #withBox ul > li:nth-child(8) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/08ci_home.png"); }
+      #withBox ul > li:nth-child(9) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/09ci_info.png"); }
+      #withBox ul > li:nth-child(10) {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto;
+        background-image: url("../../img/10ci_kicc.png"); }
+      #withBox ul > li:hover {
+        width: 230px;
+        height: 230px;
+        margin-right: 0;
+        margin-bottom: 30px; }
 
 #footBox {
   width: 100%;
@@ -345,21 +404,81 @@
     float: left;
     width: 20%;
     height: 100%;
-    background-color: #afa; }
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+    background-image: url("../../img/logoFooter.png"); }
   #footBox .text_area {
     float: left;
     width: 80%;
     height: auto; }
-    #footBox .text_area address {
-      font-style: normal;
-      font-size: 15px;
-      font-size: 0.9375rem;
-      color: #171717;
-      word-break: keep-all; }
-    #footBox .text_area p {
-      font-size: 15px;
-      font-size: 0.9375rem;
+    #footBox .text_area .address_zone {
+      float: left;
+      width: auto;
+      height: auto;
+      margin-left: 20px; }
+      #footBox .text_area .address_zone address {
+        font-style: normal;
+        font-size: 15px;
+        font-size: 0.9375rem;
+        color: #171717;
+        word-break: keep-all;
+        margin: 16px 0 5px 0; }
+      #footBox .text_area .address_zone p {
+        font-size: 12px;
+        font-size: 0.75rem;
+        color: #777;
+        word-break: keep-all; }
+  #footBox .family_zone {
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 30px;
+    margin: 20px;
+    border: 1px solid #aaa;
+    border-radius: 14px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    color: #777;
+    word-break: keep-all;
+    text-transform: uppercase; }
+    #footBox .family_zone > dt {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      line-height: 28px;
+      padding-left: 14px; }
+      #footBox .family_zone > dt > a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+        #footBox .family_zone > dt > a span {
+          float: left; }
+        #footBox .family_zone > dt > a i {
+          float: right;
+          margin-right: 10px;
+          line-height: 30px; }
+    #footBox .family_zone > dd {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 10px 0 10px 14px;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      border-radius: 20px;
+      background-color: #fff;
+      letter-spacing: -1px;
+      font-size: 12px;
+      font-size: 0.75rem;
       color: #777;
       word-break: keep-all; }
-  #footBox .family_area {
-    float: left; }
+      #footBox .family_zone > dd a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 4px; }
+        #footBox .family_zone > dd a:hover {
+          color: #171717; }

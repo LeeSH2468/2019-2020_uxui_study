@@ -1,9 +1,23 @@
 #footBox{width: 100%; height: 90px;
-  h2{float:left; width: 20%; height: 100%; background-color: #afa;}
+  h2{float:left; width: 20%; height: 100%; @include bg_base("../../img/logoFooter.png", $s:auto);}
   .text_area{float:left; width: 80%; height: auto;
-  address{font-style: normal; @include text_l}
-  p{@include text_l(#777)}
+    .address_zone{float:left; width: auto; height: auto; margin-left:20px;
+      address{font-style: normal; @include text_l; margin:16px 0 5px 0;}
+      p{@include text_s(#777); }
+    }
+
 }
-.family_area{float:left;}
+.family_zone{position:relative; float:right; width: 200px; height: 30px; margin:20px; border:1px solid #aaa; border-radius: 14px; @include text_l(#777); text-transform: uppercase;
+>dt{ width: 100%; height: 100%; box-sizing: border-box; line-height: 28px; padding-left:14px;
+  >a{display:block; width: 100%; height: 100%;
+  span{float:left;}
+  i{float:right; margin-right:10px; line-height: 30px;}
+  }
+}
+>dd{display:none; position:absolute; bottom:100%; left:0; width: 100%; height: auto; padding:10px 0 10px 14px; box-sizing: border-box; border:1px solid #aaa; border-radius: 20px;  background-color: #fff; letter-spacing: -1px; @include text_s(#777); 
+a{display:block; width: 100%; height: 100%; margin-bottom:4px;
+&:hover{color:$black;}}
+  }//dd
+}//dl
 
 }
