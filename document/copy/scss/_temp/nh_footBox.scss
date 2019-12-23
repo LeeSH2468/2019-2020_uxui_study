@@ -1,0 +1,9 @@
+#footBox{width: 100%; height: 90px;
+  h2{float:left; width: 20%; height: 100%; background-color: #afa;}
+  .text_area{float:left; width: 80%; height: auto;
+  address{font-style: normal; @include text_l}
+  p{@include text_l(#777)}
+}
+.family_area{float:left;}
+
+}

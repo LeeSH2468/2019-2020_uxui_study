@@ -1,0 +1,24 @@
+#center{width: 100%; height: 100%; background-color: #ffa;
+  h2{@include h2; text-align: center; padding-top:50px;}
+  p{@include text_con; text-align: center; text-transform: uppercase;}
+  $w:300px; $m:20px;
+  .center_area{width:($w * 3) + ($m * 2); height: 60%; margin:auto; margin-top:100px;
+  ul{width: 100%; height: 10%; margin-bottom:40px;
+    li{position:relative; float:left; width: $w; height: 100%; margin-right:$m; text-align: center; line-height: 250%; text-transform: uppercase;
+      &:after,&::after{content:" "; position: absolute; top:25%; right:0; display:block; width: 1px; height: 50%; background-color: #e8e8e8;}
+      &:last-child{margin-right:0;
+        &:after,&::after{width: 0;}
+        }
+      }//li
+    }//ul
+  .c_slide{width: 100%; height: 90%;
+    .btn_zone{position:relative;top:50%; width: 100%; height: 0; transform: translateY(-50%);
+    >button{position: absolute; top:0; bottom:0; width: 50px; height: 50px; margin:auto; background-color: #aaa;
+      &.prev{left:-20px;}
+      &.next{right:-20px; background-color: #777;}}
+    
+    }
+    .pic_zone{width: 90%; height: 90%; margin:auto; border:1px solid #e8e8e8; box-sizing: border-box; border-radius:20px; background-color: #fff;}
+    }//c_slide
+  }//.center_area
+}//#center

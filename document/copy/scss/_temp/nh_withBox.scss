@@ -1,0 +1,10 @@
+#withBox{width: 100%; height: 100%; background-color: #fafafa;
+  h2{@include h2; text-align: center; padding-top:50px;}
+  p{@include text_con; text-align: center; text-transform: uppercase;}
+  $w:180px; $h:180px; $m:30px;
+ul{width:($w * 5)+($m * 4); height: $h * 2; margin:auto; margin-top:100px;
+  >li{float:left; width: $w; height: $h; margin-right:$m; margin-bottom: $m; background-color: #fff; border-radius: 100%;
+  &:nth-child(5n){margin-right:0}
+    }//li
+  }//ul
+}//withBox
