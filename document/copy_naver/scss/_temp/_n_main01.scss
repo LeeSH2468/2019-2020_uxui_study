@@ -1,0 +1,7 @@
+.main01{float:left; width: 740px; height: auto; @include inter_bottom;  @include inter_right;
+ >.adver01_area{width: 100%; height: 120px;@include inter_bottom;background-color: #dda;}
+  >.news_area{width: 100%; height: auto;
+    >.news_top{width: 100%; height: 46px;@include inter_bottom; background-color: #daa;}
+    >.news_stand{width: 100%; height: 244px; background-color: #ada;}
+ }
+}//main01
