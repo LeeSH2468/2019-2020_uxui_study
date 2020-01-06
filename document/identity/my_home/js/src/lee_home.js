@@ -51,6 +51,29 @@
     // console.log(k);
   });
 // ----------------------------------------------------------------------
+   //workBox ============================
+   const workBox = $('#workBox');
+   const btnZone = workBox.find('.btn_zone');
+   const wBtn = btnZone.find('.work_btn');
+   const wLink = wBtn.children('a');
+   const popArea = $('.pop_area');
+   const popup = popArea.children('.w_popup');
+ 
+   wLink.on('click',function(e){
+     e.preventDefault();
+     popArea.fadeIn();
+
+   });
+
+   popup.on('click',function(){
+    $(this).css({backgroundSize:'cover'})
+   });
+
+
+
+
+
+// ----------------------------------------------------------------------
    //skillBox ============================
    const skillBox = $('#skillBox');
    const skillUl = skillBox.find('ul');
