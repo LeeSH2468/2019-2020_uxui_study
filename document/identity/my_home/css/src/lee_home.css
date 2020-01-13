@@ -131,6 +131,33 @@
           word-break: keep-all;
           text-align: center;
           line-height: 46px; }
+  #workBox .pop_area {
+    display: none;
+    overflow: auto;
+    position: relative;
+    z-index: 500;
+    background-color: #aad; }
+    #workBox .pop_area .w_popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: auto;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      background-image: url("../../img/ng_work.svg"); }
+      #workBox .pop_area .w_popup:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); }
 
 #skillBox {
   width: 100%;
