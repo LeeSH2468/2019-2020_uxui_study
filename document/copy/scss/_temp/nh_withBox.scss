@@ -1,4 +1,4 @@
-#withBox{width: 100%; height: 100%;
+#withBox{width: 100%; height: 100%; padding-top:90px; box-sizing: border-box;
   h2{@include h2; text-align: center; padding-top:50px;}
   p{@include text_con; text-align: center; text-transform: uppercase;}
   $w:180px; $h:180px; $m:50px;

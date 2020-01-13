@@ -6,7 +6,6 @@ html, body {
   height: 100%;
   min-width: 960px;
   margin: auto;
-  padding: 0 10%;
   box-sizing: border-box;
   font-family: sans-serif;
   font-weight: bold; }
@@ -14,9 +13,7 @@ html, body {
 #contentBox {
   width: 100%;
   min-width: 960px;
-  height: 100%;
-  padding-top: 90px;
-  box-sizing: border-box; }
+  height: auto; }
 
 #headBox {
   position: fixed;
@@ -65,41 +62,51 @@ html, body {
 #viewBox {
   width: 100%;
   height: 100%;
-  background-color: #aaf; }
+  padding: 90px 10% 0;
+  box-sizing: border-box;
+  background-color: #0f2871; }
   #viewBox .slide_area {
-    width: 800px;
+    width: 100%;
     height: auto;
-    padding-top: 150px;
+    padding-top: 300px;
+    overflow: hidden;
     box-sizing: border-box; }
     #viewBox .slide_area .guide {
       width: 200%;
       height: 100%; }
       #viewBox .slide_area .guide .text_area {
-        width: auto;
-        height: auto; }
-        #viewBox .slide_area .guide .text_area h3 {
+        float: left;
+        width: 50%;
+        height: 100%; }
+        #viewBox .slide_area .guide .text_area h3 > p:nth-child(1) {
           font-size: 50px;
           font-size: 3.125rem;
           font-weight: bold;
-          color: #171717;
-          margin-bottom: 30px; }
-          #viewBox .slide_area .guide .text_area h3 > em {
-            font-size: 80px;
-            font-size: 5rem;
-            font-weight: bold;
-            color: #171717;
-            font-style: normal;
-            text-transform: uppercase; }
-        #viewBox .slide_area .guide .text_area p {
-          font-size: 20px;
-          font-size: 1.25rem;
-          color: #171717;
+          color: #fff; }
+        #viewBox .slide_area .guide .text_area h3 > p:nth-child(2) {
+          font-size: 80px;
+          font-size: 5rem;
+          font-weight: bold;
+          color: #fff;
+          font-style: normal;
+          text-transform: uppercase; }
+        #viewBox .slide_area .guide .text_area > p {
+          height: auto;
+          font-size: 22px;
+          font-size: 1.375rem;
+          color: #fff;
           word-break: keep-all;
-          letter-spacing: -10; }
+          letter-spacing: -10;
+          margin-top: 50px; }
+          #viewBox .slide_area .guide .text_area > p > span {
+            display: block;
+            width: 100%; }
 
 #openBox {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding-top: 90px;
+  box-sizing: border-box; }
   #openBox h2 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -235,9 +242,13 @@ html, body {
         #openBox ul > li > a > p {
           font-size: 26px;
           font-size: 1.625rem;
+          text-transform: uppercase;
           font-weight: bold;
           color: #171717;
-          margin-top: 70px; }
+          position: absolute;
+          bottom: 60px;
+          left: 0;
+          right: 0; }
         #openBox ul > li > a .detail {
           display: none;
           position: absolute;
@@ -252,8 +263,8 @@ html, body {
           border: 1px solid #127bb8;
           border-radius: 20px; }
           #openBox ul > li > a .detail p {
-            font-size: 20px;
-            font-size: 1.25rem;
+            font-size: 22px;
+            font-size: 1.375rem;
             color: #127bb8;
             word-break: keep-all;
             margin-bottom: 50px; }
@@ -288,6 +299,8 @@ html, body {
 #histoBox {
   width: 100%;
   height: 100%;
+  padding-top: 90px;
+  box-sizing: border-box;
   background-color: #fafafa; }
   #histoBox h2 {
     font-size: 40px;
@@ -367,7 +380,9 @@ html, body {
 
 #center {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding-top: 90px;
+  box-sizing: border-box; }
   #center h2 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -388,11 +403,11 @@ html, body {
     height: 60%;
     margin: auto;
     margin-top: 100px; }
-    #center .center_area ul {
+    #center .center_area > ul {
       width: 100%;
-      height: 10%;
+      height: 50px;
       margin-bottom: 40px; }
-      #center .center_area ul li {
+      #center .center_area > ul > li {
         position: relative;
         float: left;
         width: 300px;
@@ -401,19 +416,53 @@ html, body {
         text-align: center;
         line-height: 250%;
         text-transform: uppercase; }
-        #center .center_area ul li:after, #center .center_area ul li::after {
+        #center .center_area > ul > li:after, #center .center_area > ul > li::after {
           content: " ";
           position: absolute;
-          top: 25%;
+          top: 0;
           right: 0;
           display: block;
-          width: 1px;
-          height: 50%;
+          width: 2px;
+          height: 100%;
           background-color: #e8e8e8; }
-        #center .center_area ul li:last-child {
+        #center .center_area > ul > li:last-child {
           margin-right: 0; }
-          #center .center_area ul li:last-child:after, #center .center_area ul li:last-child::after {
+          #center .center_area > ul > li:last-child:after, #center .center_area > ul > li:last-child::after {
             width: 0; }
+        #center .center_area > ul > li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          line-height: 50px; }
+          #center .center_area > ul > li a > i {
+            display: block;
+            float: left;
+            width: 60px;
+            height: 66px;
+            margin-left: 50px;
+            margin-right: 10px; }
+          #center .center_area > ul > li a > p {
+            float: left;
+            font-size: 18px;
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #171717;
+            word-break: keep-all; }
+        #center .center_area > ul > li:nth-child(1) > a > i {
+          background-repeat: no-repeat;
+          background-position: -28px -333px;
+          background-size: auto;
+          background-image: url("../../img/ico_main.png"); }
+        #center .center_area > ul > li:nth-child(2) > a > i {
+          background-repeat: no-repeat;
+          background-position: -264px -253px;
+          background-size: auto;
+          background-image: url("../../img/ico_main.png"); }
+        #center .center_area > ul > li:nth-child(3) > a > i {
+          background-repeat: no-repeat;
+          background-position: -145px -252px;
+          background-size: auto;
+          background-image: url("../../img/ico_main.png"); }
     #center .center_area .c_slide {
       width: 100%;
       height: 90%; }
@@ -427,27 +476,98 @@ html, body {
           position: absolute;
           top: 0;
           bottom: 0;
-          width: 50px;
+          width: 30px;
           height: 50px;
-          margin: auto;
-          background-color: #aaa; }
+          margin: auto; }
           #center .center_area .c_slide .btn_zone > button.prev {
-            left: -20px; }
+            left: -80px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: auto;
+            background-image: url("../../img/ico_mcommon.png"); }
           #center .center_area .c_slide .btn_zone > button.next {
-            right: -20px;
-            background-color: #777; }
-      #center .center_area .c_slide .pic_zone {
-        width: 90%;
-        height: 90%;
-        margin: auto;
-        border: 1px solid #e8e8e8;
-        box-sizing: border-box;
-        border-radius: 20px;
-        background-color: #fff; }
+            right: -80px;
+            background-repeat: no-repeat;
+            background-position: -70px 0;
+            background-size: auto;
+            background-image: url("../../img/ico_mcommon.png"); }
+      #center .center_area .c_slide .pic_slideBox {
+        width: 100%;
+        height: 500px;
+        overflow: hidden; }
+        #center .center_area .c_slide .pic_slideBox > .pic_slide {
+          position: relative;
+          left: 0;
+          width: 400%;
+          height: 100%; }
+          #center .center_area .c_slide .pic_slideBox > .pic_slide > li {
+            float: left;
+            width: 25%;
+            height: 100%; }
+            #center .center_area .c_slide .pic_slideBox > .pic_slide > li.pic_li01 .icon_pic {
+              width: 285px;
+              height: 280px; }
+            #center .center_area .c_slide .pic_slideBox > .pic_slide > li.pic_li02 .icon_pic {
+              width: 250px;
+              height: 250px; }
+            #center .center_area .c_slide .pic_slideBox > .pic_slide > li.pic_li03 .icon_pic {
+              width: 300px;
+              height: 260px; }
+            #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone {
+              width: 100%;
+              height: 100%;
+              margin: auto;
+              border: 1px solid #e8e8e8;
+              box-sizing: border-box;
+              border-radius: 20px;
+              background-color: #fff; }
+              #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone > .icon_pic {
+                display: block;
+                float: left;
+                margin-top: 100px;
+                margin-left: 110px;
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-image: url("../../img/ico_main.png"); }
+              #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone > .text_box {
+                float: left;
+                width: auto;
+                min-width: 250px;
+                max-width: 370px;
+                height: auto;
+                min-height: 160px;
+                margin-top: 150px;
+                margin-left: 100px; }
+                #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone > .text_box > h4 {
+                  font-size: 26px;
+                  font-size: 1.625rem;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  color: #171717; }
+                #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone > .text_box > p {
+                  position: relative;
+                  font-size: 18px;
+                  font-size: 1.125rem;
+                  color: #555;
+                  word-break: keep-all;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                  margin-top: 70px;
+                  text-align: left; }
+                  #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone > .text_box > p:before, #center .center_area .c_slide .pic_slideBox > .pic_slide > li > .pic_zone > .text_box > p::before {
+                    content: " ";
+                    position: absolute;
+                    top: -20px;
+                    display: block;
+                    width: 48px;
+                    height: 3px;
+                    background-color: #555; }
 
 #withBox {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding-top: 90px;
+  box-sizing: border-box; }
   #withBox h2 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -615,7 +735,7 @@ html, body {
       #footBox .family_zone > dd a {
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
         margin-bottom: 4px; }
         #footBox .family_zone > dd a:hover {
           color: #171717; }

@@ -1,24 +1,50 @@
-#center{width: 100%; height: 100%;
+#center{width: 100%; height: 100%; padding-top:90px; box-sizing: border-box;
   h2{@include h2; text-align: center; padding-top:50px;}
   p{@include text_con; text-align: center; text-transform: uppercase;}
   $w:300px; $m:20px;
   .center_area{width:($w * 3) + ($m * 2); height: 60%; margin:auto; margin-top:100px;
-  ul{width: 100%; height: 10%; margin-bottom:40px;
-    li{position:relative; float:left; width: $w; height: 100%; margin-right:$m; text-align: center; line-height: 250%; text-transform: uppercase;
-      &:after,&::after{content:" "; position: absolute; top:25%; right:0; display:block; width: 1px; height: 50%; background-color: #e8e8e8;}
+  >ul{width: 100%; height: 50px; margin-bottom:40px;
+    >li{position:relative; float:left; width: $w; height: 100%; margin-right:$m; text-align: center; line-height: 250%; text-transform: uppercase;
+      &:after,&::after{content:" "; position: absolute; top:0; right:0; display:block; width: 2px; height: 100%; background-color: #e8e8e8;}
       &:last-child{margin-right:0;
         &:after,&::after{width: 0;}
         }
+        a{display:block; width: 100%; height: 100%;line-height:50px;
+        >i{display:block; float:left; width: 60px; height: 66px; margin-left:50px;margin-right:10px;}
+        >p{float:left; @include text_m_bold;}
+        }
+        &:nth-child(1)>a>i{@include bg_base($url:"../../img/ico_main.png",$s:auto,$p:-28px -333px);}
+        &:nth-child(2)>a>i{@include bg_base($url:"../../img/ico_main.png",$s:auto,$p:-264px -253px)}
+        &:nth-child(3)>a>i{@include bg_base($url:"../../img/ico_main.png",$s:auto,$p:-145px -252px)}
       }//li
     }//ul
   .c_slide{width: 100%; height: 90%;
     .btn_zone{position:relative;top:50%; width: 100%; height: 0; transform: translateY(-50%);
-    >button{position: absolute; top:0; bottom:0; width: 50px; height: 50px; margin:auto; background-color: #aaa;
-      &.prev{left:-20px;}
-      &.next{right:-20px; background-color: #777;}}
-    
+    >button{position: absolute; top:0; bottom:0; width: 30px; height: 50px; margin:auto;
+      &.prev{left:-80px;@include bg_base($url:"../../img/ico_mcommon.png",$s:auto,$p:0 0)}
+      &.next{right:-80px;@include bg_base($url:"../../img/ico_mcommon.png",$s:auto,$p:-70px 0)}}
     }
-    .pic_zone{width: 90%; height: 90%; margin:auto; border:1px solid #e8e8e8; box-sizing: border-box; border-radius:20px; background-color: #fff;}
+    .pic_slideBox{ width: 100%; height: 500px; overflow: hidden;
+     >.pic_slide{position:relative; left:0; width: 400%; height: 100%; 
+      $c:4;
+      >li{float:left; width: 100% / $c; height: 100%;
+        &.pic_li01 .icon_pic{width: 285px; height: 280px;}
+        &.pic_li02 .icon_pic{width: 250px; height: 250px;}
+        &.pic_li03 .icon_pic{width: 300px; height: 260px;}
+        >.pic_zone{width: 100%; height: 100%; margin:auto; border:1px solid #e8e8e8; box-sizing: border-box; border-radius:20px; background-color: #fff;
+          >.icon_pic{display:block; float:left; margin-top:100px; margin-left:110px;@include bg_baseJs; background-image: url("../../img/ico_main.png");
+          }
+          >.text_box{float:left; width: auto; min-width:250px; max-width:370px; height: auto; min-height:160px; margin-top:150px; margin-left:100px;
+            >h4{@include h4}
+            >p{position: relative; @include text_m($c:#555);font-weight: 500; text-transform: uppercase; margin-top:70px; text-align: left;
+            &:before,&::before{content:" ";position: absolute; top:-20px;display:block; width: 48px; height: 3px; background-color: #555;}
+            }//p
+            }//text_box
+            }//.pic_zone
+          }//li
+        }//pic_slide(ul)
+      }//.pic_slideBox
+
     }//c_slide
   }//.center_area
 }//#center
