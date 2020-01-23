@@ -1,0 +1,29 @@
+#trend_area{@include main_bg;
+  h2{@include h2}
+  .trend_form{width: 100%; height: 48rem; padding:0 4rem;  box-sizing:border-box;}
+  $h:8rem; $m:2rem;
+  .list_zone{float:left; width: 15%; height: ($h * 5) + ($m * 4);
+  >li{width: 100%; height: $h; margin-bottom:$m;
+    &:nth-child(1){@include bg_base("../../img/t_01_hidden.jpeg",$s:100% auto)}
+    &:nth-child(2){@include bg_base("../../img/t_02_ninja.jpeg",$s:100% auto)}
+    &:nth-child(3){@include bg_base("../../img/t_03_friend.jpeg",$s:100% auto)}
+    &:nth-child(4){@include bg_base("../../img/t_04_city.jpeg",$s:100% auto)}
+    &:nth-child(5){@include bg_base("../../img/t_05_duplo.jpg",$s:100% auto)}
+  }
+  }//.list_zone
+  .pic_zone{float:left; width: 45%; height: 100%; padding:0 3rem; box-sizing: border-box;
+  .pic{width: 100%; height: 100%; @include bg_base("../../img/t_01_hidden.jpeg",$s:auto 100%);}}
+  .text_zone{float:left; width: 40%; height: 100%;
+  padding:2rem; box-sizing: border-box;
+  >h3{@include h3; margin-bottom:2rem;}
+  >p{@include text_20; margin-bottom:5rem;}
+  >.btn{@include btn; border:1px solid $black; box-sizing: border-box;
+    }//btn
+  }
+}//trend_area
+
+// 반응형 ====================================
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}

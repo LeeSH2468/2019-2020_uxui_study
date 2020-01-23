@@ -1,0 +1,26 @@
+#slide_area{width: 100%; height: 35rem; background-color: #aaa;
+  .s_btn{position:absolute; width: 100%; height: 0; margin-top: 17.5rem; background-color: #add; padding:0 5rem; box-sizing: border-box;
+    button{width: 50px; height: 50px; background-color: #faa;
+    &:first-child{float:left;}
+    &:last-child{float:right;}
+    }//button
+  }
+  .s_form{width: 100%; height: 100%; overflow: hidden;
+    $c:4;
+    .guide{width: 100%*$c; height: 100%; background-color: #dda;
+      li{float:left; width: 100%/$c; height: 100%;}
+      .slide_01{@include bg_base("../../img/s_01.jpg",$s:100% auto);}
+      .slide_02{@include bg_base("../../img/s_02.jpg",$s:100% auto);}
+      .slide_03{@include bg_base("../../img/s_03.jpg",$s:100% auto);}
+      .slide_04{@include bg_base("../../img/s_04.jpg",$s:100% auto);}
+
+    }//ul.guide
+  }//.s_form
+
+}//recom_area
+
+// 반응형 ====================================
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}

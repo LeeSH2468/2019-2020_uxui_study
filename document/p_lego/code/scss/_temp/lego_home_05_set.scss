@@ -1,0 +1,21 @@
+#set_area{@include main_bg; background-color: #aaa;
+  h2{@include h2}
+  .s_form{width: 100%; height: 32rem; overflow: hidden;
+    $c:4;
+    .guide{width: 100%*$c; height: 100%; background-color: #dda;
+      li{float:left; width: 100%/$c; height: 100%;}
+      .slide_01{background-color: #fdd;}
+      .slide_02{background-color: #aad;}
+      .slide_03{background-color: #ffa;}
+      .slide_04{background-color: #add;}
+
+    }//ul.guide
+  }//.s_form
+  
+}//set_area
+
+// 반응형 ====================================
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}

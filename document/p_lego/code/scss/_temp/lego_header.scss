@@ -1,0 +1,30 @@
+#gnb{width: 100%; height: 90px; background-color: $primary; margin-top:40px; padding:18px 10%; box-sizing:border-box;
+  h1{float: left; width: 55px; height: 55px; @include bg_base($url:"../../img/lego_logo.gif");}
+  ul{float: left; width: auto; height: auto; margin-left:10rem; margin-right:10rem;
+    li{float: left; width: auto; height: auto; margin-right:4rem;
+      &:last-child{margin-right:0;}
+      a{@include aLink; @include text_20; font-weight: 600; line-height: 3rem;}
+    } //li
+  }//ul
+  form{display:block; float:left;
+  input[type=search]{width: 20rem; height: 2rem; border:0; border-radius: 2rem; margin-top:0.5rem;}
+  }
+}//#gnb
+
+#unb{position: absolute; top:0; left:0; width: 100%; height: 40px; background-color: $white;
+ul{width: 100%; height: 100%;
+  li{float:left; width: 200px; height: 100%;
+    &:nth-child(1){float:left; background-color: #0ad;}
+    &:nth-child(2){float:right; background-color: #faa;}
+  }//li
+}//ul
+
+}//#unb
+
+
+// ======================
+
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}
