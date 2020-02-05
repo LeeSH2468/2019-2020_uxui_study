@@ -1,4 +1,4 @@
-#cate_area{@include main_bg;
+#cate_area{width: 100%; height: auto; box-sizing:border-box;
   $w:15rem; $m:6rem;
   ul{width: ($w * 4) + ($m * 3); height: auto; margin:auto; padding:7rem 0;
     li{position:relative; float:left; width: $w; height: 25rem; padding:2rem; box-sizing: border-box;
@@ -39,7 +39,7 @@
 }//cate_area
 
 // 반응형 ====================================
-@include mobile{}
-@include tablet{}
-@include labtop{}
-@include pcfull{}
+@include mo_ta{#cate_area{display:none;}}
+@include labtop{#cate_area{padding:5rem 0;}
+}
+@include pcfull{#cate_area{padding:5rem 10%;}}
