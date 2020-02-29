@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>웹디자인기능사</title>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="#"><span class="hidden">Just 쇼핑몰</span></a></h1>
+      <nav id="gnb">
+        <!-- dl>(dt>a[href="#"]^dd>ul>(li>a[href="#"])*4)*4 -->
+        <dl>
+          <dt><a href="#">탑</a></dt>
+          <dd>
+             <ul>
+              <li><a href="#">블라우스</a></li>
+              <li><a href="#">티</a></li>
+              <li><a href="#">셔츠</a></li>
+              <li><a href="#">니트</a></li>
+             </ul>
+          </dd>
+      </dl>
+      <dl>
+          <dt><a href="#">아우터</a></dt>
+          <dd>
+             <ul>
+              <li><a href="#">자켓</a></li>
+              <li><a href="#">코트</a></li>
+              <li><a href="#">가디건</a></li>
+              <li><a href="#">머플러</a></li>
+             </ul>
+          </dd>
+      </dl> 
+      <dl>
+          <dt><a href="#">팬츠</a></dt>
+          <dd>
+             <ul>
+              <li><a href="#">청바지</a></li>
+              <li><a href="#">짧은바지</a></li>
+              <li><a href="#">긴바지</a></li>
+              <li><a href="#">레깅스</a></li>
+             </ul>
+          </dd>
+      </dl>
+      <dl>
+          <dt><a href="#">악세서리</a></dt>
+          <dd>
+             <ul>
+              <li><a href="#">귀고리</a></li>
+              <li><a href="#">목걸이</a></li>
+              <li><a href="#">반지</a></li>
+              <li><a href="#">팔찌</a></li>
+             </ul>
+          </dd>
+      </dl>
+      </nav>
+    </header>
+
+    <section id="viewBox">
+      <div class="slide">
+        <div class="img_01"><img src="./img/images1.png" alt="금랑이" /></div>    
+        <div class="img_02"><img src="./img/images2.png" alt="닌텐도" /></div>    
+        <div class="img_03"><img src="./img/images3.png" alt="사고싶다" /></div>    
+      </div>
+    </section>
+
+    <article id = "conBox">
+      <div class="con01"></div>
+      <div class="con02"></div>
+      <div class="con03"></div>
+    </article>
+
+    <footer id="footBox">
+      <h2><span class="hidden">Just 쇼핑몰</span></h2>
+      <address>copyright 제공되는 문구</address>
+      <div class="sns"></div>
+    </footer>
+  </div>
+    <script src="./js/jquery-1.12.3.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

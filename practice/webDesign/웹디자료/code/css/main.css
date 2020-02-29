@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+html,body{width:100%; height:100%; font-family: sans-serif;background-color:#fff;} 
+/* 시험지 컬러가이드에 나와있는 배경색 */
+*{margin:0; padding:0; border:0; outline:0; list-style:none;}
+a{display:block; width:100%; height:100%; text-decoration:none;color:#222328}
+p{color:#222328}
+/* 시험지 컬러가이드에 나와있는 글자색 */
+.hidden{display:none;}
+header,article,section,nav,footer{display:block;}
+*:focus{border:1px solid #f00; box-sizing:border-box;}
+/* ===================== */
+
+#wrap{width: 1200px; height:auto; margin:auto; background-color:#f00;} 
+/*
+가운데정렬 - margin:auto;
+왼쪽정렬 - float:left;(안쓰면 왼쪽정렬)
+오른쪽정렬 - float:right;
+*/
+#headBox{position:relative; z-index:1; width: 100%; height:100px;background-color:#efe;}
+  h1{float:left;width: 200px; height: 40px; margin-top:30px; background-color: #aaa;}
+  #gnb{float:right;width: 1000px; height: 100%; padding:40px 0 0 180px; box-sizing: border-box; background-color: #ddd;}
+  #gnb>dl{float:left; width: 200px; height: auto; padding:15px; box-sizing: border-box; background-color: #fff;text-align:center;}
+  #gnb>dl>dt{width: auto; height: 30px; background-color: #add;}
+  #gnb>dl>dd{display:none; width: auto; height: auto;}
+  #gnb>dl>dd>ul{width: auto; height: auto;}
+  #gnb>dl>dd>ul>li{width: auto; height: 30px; background-color: #dda;}
+
+/* ==================== */
+#viewBox{width:100%; height:300px;background-color:#eef;overflow:hidden;}
+/* div가 가로로 길게 나오는 것 확인 후 #viewBox에  overflow:hidden;*/
+  .slide{position: relative; z-index: 0; width: 300%; height: 100%;  background-color: #777;}
+  .slide>div{float:left; width: 1200px; height: 100%; background-color: #add;}
+/* ==================== */
+#conBox{width:100%; height:200px;background-color:#ffd;}
+  .con01{float:left; width: 500px; height: 100%; background-color: #555;}
+  .con02{float:left; width: 400px; height: 100%; background-color: #aaa;}
+  .con03{float:left; width: 300px; height: 100%; background-color: #333;}
+
+/* ==================== */
+#footBox{width:100%; height:100px;background-color:#dff;}
+  h2{float:left;width: 200px; height: 40px; margin-top:30px; background-color: #aaa;}
+  address{float:left; width: 800px;height: 100%; text-align: center; line-height: 100px; color:#222328; background-color: #444;}
+  .sns{float:left; width: 200px; height: 100%; background-color: #aaa;}
