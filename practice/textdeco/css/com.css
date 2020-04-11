@@ -1,0 +1,20 @@
+@charset "UTF-8";
+html,body{width:100%; height:100%; font-family: sans-serif;background-color:#fff;}
+*{margin:0; padding:0; border:0; outline:0; list-style:none;}
+.hidden{display:none;}
+.clearfix::before,.clearfix::after{content:" ";display:block; clear: both;}
+
+
+/* ======================== */
+#wrap{width: 100%; height: 100%; background-color:#aaa;}
+.text_box{width:W 1200px; height: 500px; margin:auto; padding:50px; box-sizing: border-box; background-color: #fdd;}
+p{text-align:center; color:#777; font-size:30px; font-weight: bold;}
+
+.text01{width: auto; height: 40px;line-height: 50px;}
+
+div.text{float:left; width: auto; height: auto; margin:auto; box-sizing: border-box;}
+.text03{margin:auto;}
+.text03>.box{position: relative; margin:auto; width: 100px;}
+.text03 .aBox{float:left; width: 20px; height: 50px;}
+.text03 div>span{display:block; position: absolute; bottom:0; width: 20px; height: auto; font-size:20px; font-weight: bold;}
+.action{top:0;}
