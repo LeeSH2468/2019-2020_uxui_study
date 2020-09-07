@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  test
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    var filter = "win16|win32|win64|mac|macintel"; 
+if ( navigator.platform ){ 
+  if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
+     //mobile
+      alert('mobile 접속'); 
+      } else { //pc 
+      alert('pc 접속'); } }
+  </script>
+</body>
+</html>
