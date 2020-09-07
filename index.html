@@ -7,7 +7,7 @@
   <style>
     *{padding:0; margin:0; border:0; border-style:none;}
     .wrap{background-color: #ddd;}
-    .mo_footmenu{height:100px; padding:0 5%; background-color: #dcd;}
+    .mo_footmenu{width:100%; height:100px; padding:0 5%; background-color: #dcd;}
     .mo_footmenu ul{display:flex;justify-content: space-between; height:100px;}
     .mo_footmenu ul li{display:flex; justify-items: center;}
     .mo_footmenu ul li img{display:block; width: auto; height: 100%; margin:auto;}
@@ -48,8 +48,10 @@
 if ( navigator.platform ){ 
   if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
      //mobile
-      // alert('mobile 접속'); 
+      alert('mobile 접속'); 
+      $('.mo_footmenu').show();
       } else { //pc 
+      $('.mo_footmenu').hide();
       // alert('pc 접속');
       }
     }
