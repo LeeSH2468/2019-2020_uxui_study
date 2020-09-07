@@ -4,9 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{padding:0; margin:0; border:0; border-style:none;}
+    .wrap{background-color: #ddd;}
+    .mo_footmenu{height:100px; padding:0 5%; background-color: #dcd;}
+    .mo_footmenu ul{display:flex;justify-content: space-between; height:100px;}
+    .mo_footmenu ul li{display:flex; justify-items: center;}
+    .mo_footmenu ul li img{display:block; width: auto; height: 100%; margin:auto;}
+  </style>
 </head>
 <body>
-  test
+<div class="wrap">
+  <div class="mo_footmenu">
+    <ul>
+      <li>
+        <img src="./mo_footmenu01.jpg" alt="">
+      </li>
+      <li>
+        <img src="./mo_footmenu02.jpg" alt="">
+      </li>
+      <li>
+        <img src="./mo_footmenu03.jpg" alt="">
+      </li>
+      <li>
+        <img src="./mo_footmenu04.jpg" alt="">
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
@@ -14,9 +48,12 @@
 if ( navigator.platform ){ 
   if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
      //mobile
-      alert('mobile 접속'); 
+      // alert('mobile 접속'); 
       } else { //pc 
-      alert('pc 접속'); } }
+      // alert('pc 접속');
+      }
+    }
+
   </script>
 </body>
 </html>
